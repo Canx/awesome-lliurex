@@ -26,12 +26,11 @@ def get_existing_repos(file_path: str) -> Set[str]:
         return set()
     
     with open(file_path, 'r', encoding='utf-8') as f:
-        # Handle empty file
         try:
-            projects = yaml.safe_load(f)
-            if not projects:
-                return set()
-            return {p['repo'] for p in projects if 'repo' in p}
+            data = yaml.safe_load(f)
+            if isinstance(data, dict) and 'projects' in data and isinstance(data['projects'], list):
+                return {p['repo'] for p in data['projects'] if 'repo' in p}
+            return set()
         except yaml.YAMLError:
             return set()
 
@@ -43,10 +42,10 @@ def get_project_categories(file_path: str) -> List[str]:
 
     with open(file_path, 'r', encoding='utf-8') as f:
         try:
-            projects = yaml.safe_load(f)
-            if not projects:
-                return []
-            return sorted(list(set(p['category'] for p in projects if 'category' in p)))
+            data = yaml.safe_load(f)
+            if isinstance(data, dict) and 'projects' in data and isinstance(data['projects'], list):
+                return sorted(list(set(p['category'] for p in data['projects'] if 'category' in p)))
+            return []
         except yaml.YAMLError:
             return []
 
@@ -136,7 +135,7 @@ def save_projects(file_path: str, projects: List[Dict[str, Any]]):
     # Sort projects by category, then by name for consistency
     projects.sort(key=lambda p: (p['category'], p['name']))
     with open(file_path, 'w', encoding='utf-8') as f:
-        yaml.dump(projects, f, allow_unicode=True, sort_keys=False, default_flow_style=False)
+        yaml.dump({'projects': projects}, f, allow_unicode=True, sort_keys=False, default_flow_style=False)
     print(f"Successfully saved {len(projects)} projects to {file_path}")
 
 
@@ -167,12 +166,10 @@ def main():
     if os.path.exists(yaml_path):
         with open(yaml_path, 'r', encoding='utf-8') as f:
             loaded_data = yaml.safe_load(f)
-            if isinstance(loaded_data, list):
-                all_projects = loaded_data
+            if isinstance(loaded_data, dict) and 'projects' in loaded_data and isinstance(loaded_data['projects'], list):
+                all_projects = loaded_data['projects']
             elif loaded_data is not None:
-                # If projects.yaml exists but its content is not a list (e.g., a dict or scalar),
-                # we'll treat it as an empty list to avoid errors.
-                print(f"Warning: {yaml_path} exists but its content is not a list. Initializing with an empty list.")
+                print(f"Warning: {yaml_path} exists but its content is not a dictionary with a 'projects' list. Initializing with an empty list.")
                 all_projects = []
 
     found_repos = search_github_repos(GITHUB_SEARCH_QUERY, GITHUB_TOKEN)
