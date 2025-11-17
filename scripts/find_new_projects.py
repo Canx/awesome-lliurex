@@ -89,8 +89,13 @@ def classify_repo_with_gemini(repo: Dict[str, Any], readme: str, categories: Lis
         print("GEMINI_API_KEY not found. Skipping classification.")
         return "Sin clasificar"
 
-    genai.configure(api_key=GEMINI_API_KEY)
-    model = genai.GenerativeModel('gemini-pro')
+    try:
+        genai.configure(api_key=GEMINI_API_KEY)
+        model = genai.GenerativeModel('gemini-pro')
+    except Exception as e:
+        print(f"Error configuring Gemini model or model not found: {e}")
+        print("Please check your GEMINI_API_KEY and ensure 'gemini-pro' is available in your region.")
+        return "Sin clasificar"
 
     prompt = f"""
     Eres un experto en el ecosistema de software LliureX. Tu tarea es clasificar un repositorio de GitHub en una de las siguientes categorías predefinidas.
@@ -121,7 +126,8 @@ def classify_repo_with_gemini(repo: Dict[str, Any], readme: str, categories: Lis
             print(f"Warning: Model returned an invalid category '{category}'. Defaulting to 'General'.")
             return "General"
     except Exception as e:
-        print(f"Error during classification with Gemini: {e}")
+        print(f"Error during classification with Gemini for {repo['full_name']}: {e}")
+        print("This might be due to API rate limits, an invalid prompt, or temporary service issues.")
         return "Sin clasificar"
 
 
@@ -160,7 +166,14 @@ def main():
     all_projects = []
     if os.path.exists(yaml_path):
         with open(yaml_path, 'r', encoding='utf-8') as f:
-            all_projects = yaml.safe_load(f) or []
+            loaded_data = yaml.safe_load(f)
+            if isinstance(loaded_data, list):
+                all_projects = loaded_data
+            elif loaded_data is not None:
+                # If projects.yaml exists but its content is not a list (e.g., a dict or scalar),
+                # we'll treat it as an empty list to avoid errors.
+                print(f"Warning: {yaml_path} exists but its content is not a list. Initializing with an empty list.")
+                all_projects = []
 
     found_repos = search_github_repos(GITHUB_SEARCH_QUERY, GITHUB_TOKEN)
     print(f"Found {len(found_repos)} potential repositories on GitHub.")
