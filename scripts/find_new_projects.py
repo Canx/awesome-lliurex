@@ -153,62 +153,101 @@ def main():
 
     print("Starting process to find new LliureX projects...")
     
-    existing_repos = get_existing_repos(yaml_path)
-    print(f"Found {len(existing_repos)} existing repositories.")
+    # Load existing projects into a map for efficient lookup and modification
+    existing_projects_map: Dict[str, Dict[str, Any]] = {}
+    if os.path.exists(yaml_path):
+        with open(yaml_path, 'r', encoding='utf-8') as f:
+            loaded_data = yaml.safe_load(f)
+            if isinstance(loaded_data, dict) and 'projects' in loaded_data and isinstance(loaded_data['projects'], list):
+                for p in loaded_data['projects']:
+                    if 'repo' in p:
+                        existing_projects_map[p['repo']] = p
+            elif loaded_data is not None:
+                print(f"Warning: {yaml_path} exists but its content is not a dictionary with a 'projects' list. Initializing with an empty list.")
+    
+    print(f"Found {len(existing_projects_map)} existing repositories in {PROJECTS_YAML_PATH}.")
     
     categories = get_project_categories(yaml_path)
     if not categories:
         print("Warning: No categories found in projects.yaml. Classification might be poor.")
         # Add a default list if empty
-        categories = ["Aplicaciones", "Desarrollo", "Infraestructura", "Utilidades", "Documentación", "General", "Sin clasificar"]
-
-    all_projects = []
-    if os.path.exists(yaml_path):
-        with open(yaml_path, 'r', encoding='utf-8') as f:
-            loaded_data = yaml.safe_load(f)
-            if isinstance(loaded_data, dict) and 'projects' in loaded_data and isinstance(loaded_data['projects'], list):
-                all_projects = loaded_data['projects']
-            elif loaded_data is not None:
-                print(f"Warning: {yaml_path} exists but its content is not a dictionary with a 'projects' list. Initializing with an empty list.")
-                all_projects = []
+        categories = ["AD/LDAP", "Aplicaciones", "Desarrollo", "Documentación", "Infraestructura", "Utilidades", "General", "Sin clasificar"]
 
     found_repos = search_github_repos(GITHUB_SEARCH_QUERY, GITHUB_TOKEN)
     print(f"Found {len(found_repos)} potential repositories on GitHub.")
 
     new_projects_added = 0
+    projects_reclassified = 0
+    
+    # This list will hold all projects, including new, re-classified, and unchanged ones
+    updated_all_projects: List[Dict[str, Any]] = []
+    # Use a set to track repo URLs that have been processed from found_repos
+    processed_found_repo_urls: Set[str] = set()
+
     for repo in found_repos:
         repo_url = repo['html_url']
-        if repo_url in existing_repos:
+        
+        if repo_url in processed_found_repo_urls: # Skip if already processed from search results
             continue
 
-        print(f"\nProcessing new repository: {repo['full_name']}")
-        
-        readme_content = get_readme_content(repo['full_name'], GITHUB_TOKEN)
-        
-        # If classification is enabled, use it
-        if GEMINI_API_KEY:
-            category = classify_repo_with_gemini(repo, readme_content, categories)
+        processed_found_repo_urls.add(repo_url)
+
+        if repo_url in existing_projects_map:
+            existing_project = existing_projects_map[repo_url]
+            
+            if existing_project.get('category') == "Sin clasificar":
+                print(f"\nRe-classifying existing project (was 'Sin clasificar'): {repo['full_name']}")
+                readme_content = get_readme_content(repo['full_name'], GITHUB_TOKEN)
+                
+                if GEMINI_API_KEY:
+                    category = classify_repo_with_gemini(repo, readme_content, categories)
+                else:
+                    category = "Sin clasificar"
+                
+                print(f"  -> Re-classified as: {category}")
+                
+                # Update the existing project entry
+                existing_project['name'] = repo['name'] # Update name in case it changed
+                existing_project['desc'] = repo.get('description', 'Sin descripción.') or 'Sin descripción.'
+                existing_project['category'] = category
+                updated_all_projects.append(existing_project)
+                projects_reclassified += 1
+                # Remove from existing_projects_map so it's not added again later
+                del existing_projects_map[repo_url]
+            else:
+                # Project exists and is already properly classified, just add it to the updated list
+                updated_all_projects.append(existing_project)
+                # Remove from existing_projects_map so it's not added again later
+                del existing_projects_map[repo_url]
         else:
-            category = "Sin clasificar"
-        
-        print(f"  -> Classified as: {category}")
+            # This is a completely new project
+            print(f"\nProcessing new repository: {repo['full_name']}")
+            readme_content = get_readme_content(repo['full_name'], GITHUB_TOKEN)
+            
+            if GEMINI_API_KEY:
+                category = classify_repo_with_gemini(repo, readme_content, categories)
+            else:
+                category = "Sin clasificar"
+            
+            print(f"  -> Classified as: {category}")
 
-        new_project = {
-            'name': repo['name'],
-            'repo': repo_url,
-            'desc': repo.get('description', 'Sin descripción.') or 'Sin descripción.',
-            'category': category
-        }
-        
-        all_projects.append(new_project)
-        existing_repos.add(repo_url)
-        new_projects_added += 1
+            new_project_entry = {
+                'name': repo['name'],
+                'repo': repo_url,
+                'desc': repo.get('description', 'Sin descripción.') or 'Sin descripción.',
+                'category': category
+            }
+            updated_all_projects.append(new_project_entry)
+            new_projects_added += 1
 
-    if new_projects_added > 0:
-        print(f"\nAdded {new_projects_added} new projects. Saving to YAML file...")
-        save_projects(yaml_path, all_projects)
+    # Add back any remaining projects from existing_projects_map
+    # These are projects that were in projects.yaml but not found in the GitHub search results
+    # (e.g., deleted from GitHub, or didn't match the search query anymore)
+    for repo_url, project_data in existing_projects_map.items():
+        updated_all_projects.append(project_data)
+
+    if new_projects_added > 0 or projects_reclassified > 0:
+        print(f"\nAdded {new_projects_added} new projects and re-classified {projects_reclassified} projects. Saving to YAML file...")
+        save_projects(yaml_path, updated_all_projects)
     else:
-        print("\nNo new projects found to add.")
-
-if __name__ == "__main__":
-    main()
+        print("\nNo new projects found or projects to re-classify.")
