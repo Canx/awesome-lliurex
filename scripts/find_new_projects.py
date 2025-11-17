@@ -88,12 +88,23 @@ def classify_repo_with_gemini(repo: Dict[str, Any], readme: str, categories: Lis
         print("GEMINI_API_KEY not found. Skipping classification.")
         return "Sin clasificar"
 
+    print(f"Attempting to use Gemini API for classification. API Key present: {bool(GEMINI_API_KEY)}")
+
     try:
         genai.configure(api_key=GEMINI_API_KEY)
         model = genai.GenerativeModel('gemini-pro')
     except Exception as e:
         print(f"Error configuring Gemini model or model not found: {e}")
         print("Please check your GEMINI_API_KEY and ensure 'gemini-pro' is available in your region.")
+        print("Attempting to list available models for debugging:")
+        try:
+            for m in genai.list_models():
+                if "generateContent" in m.supported_generation_methods:
+                    print(f"- {m.name} (supported)")
+                else:
+                    print(f"- {m.name} (not supported for generateContent)")
+        except Exception as list_e:
+            print(f"Could not list models: {list_e}")
         return "Sin clasificar"
 
     prompt = f"""
