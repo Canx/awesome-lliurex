@@ -12,11 +12,7 @@ GITHUB_API_URL = "https://api.github.com"
 # We can expand this query to be more specific if needed
 GITHUB_SEARCH_QUERY = "lliurex in:name,description,readme,topics"
 
-# --- Environment Variables ---
-# The default token provided by GitHub Actions
-GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
-# User-provided secret for the classification AI
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+
 
 # --- Helper Functions ---
 
@@ -86,18 +82,18 @@ def get_readme_content(repo_full_name: str, token: str) -> str:
         print(f"Could not fetch README for {repo_full_name}: {e}")
         return ""
 
-def classify_repo_with_gemini(repo: Dict[str, Any], readme: str, categories: List[str]) -> str:
+def classify_repo_with_gemini(repo: Dict[str, Any], readme: str, categories: List[str], gemini_api_key: str) -> str:
     """
     Classifies a repository into one of the given categories using the Gemini API.
     """
-    if not GEMINI_API_KEY:
+    if not gemini_api_key:
         print("GEMINI_API_KEY not found. Skipping classification.")
         return "Sin clasificar"
 
-    print(f"Attempting to use Gemini API for classification. API Key present: {bool(GEMINI_API_KEY)}")
+    print(f"Attempting to use Gemini API for classification. API Key present: {bool(gemini_api_key)}")
 
     try:
-        genai.configure(api_key=GEMINI_API_KEY)
+        genai.configure(api_key=gemini_api_key)
         model = genai.GenerativeModel('gemini-pro')
     except Exception as e:
         print(f"Error configuring Gemini model or model not found: {e}")
@@ -158,9 +154,14 @@ def save_projects(file_path: str, projects: List[Dict[str, Any]]):
 
 # --- Main Execution ---
 
-def main():
+def main(github_token: str = None, gemini_api_key: str = None):
     """Main function to find, classify, and add new projects."""
-    if not GITHUB_TOKEN:
+    if github_token is None:
+        github_token = os.getenv("GITHUB_TOKEN")
+    if gemini_api_key is None:
+        gemini_api_key = os.getenv("GEMINI_API_KEY")
+
+    if not github_token:
         print("Error: GITHUB_TOKEN environment variable not set.")
         return
 
@@ -193,7 +194,7 @@ def main():
         # Add a default list if empty
         categories = ["AD/LDAP", "Aplicaciones", "Desarrollo", "Documentación", "Infraestructura", "Utilidades", "General", "Sin clasificar"]
 
-    found_repos = search_github_repos(GITHUB_SEARCH_QUERY, GITHUB_TOKEN)
+    found_repos = search_github_repos(GITHUB_SEARCH_QUERY, github_token)
     print(f"Found {len(found_repos)} potential repositories on GitHub.")
 
     new_projects_added = 0
@@ -217,10 +218,10 @@ def main():
             
             if existing_project.get('category') == "Sin clasificar":
                 print(f"\nRe-classifying existing project: {repo['full_name']}")
-                readme_content = get_readme_content(repo['full_name'], GITHUB_TOKEN)
+                readme_content = get_readme_content(repo['full_name'], github_token)
                 
-                if GEMINI_API_KEY:
-                    category = classify_repo_with_gemini(repo, readme_content, categories)
+                if gemini_api_key:
+                    category = classify_repo_with_gemini(repo, readme_content, categories, gemini_api_key)
                 else:
                     category = "Sin clasificar"
                 
@@ -242,10 +243,10 @@ def main():
         else:
             # This is a completely new project
             print(f"\nProcessing new repository: {repo['full_name']}")
-            readme_content = get_readme_content(repo['full_name'], GITHUB_TOKEN)
+            readme_content = get_readme_content(repo['full_name'], github_token)
             
-            if GEMINI_API_KEY:
-                category = classify_repo_with_gemini(repo, readme_content, categories)
+            if gemini_api_key:
+                category = classify_repo_with_gemini(repo, readme_content, categories, gemini_api_key)
             else:
                 category = "Sin clasificar"
             
