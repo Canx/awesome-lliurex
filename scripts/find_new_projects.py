@@ -59,9 +59,15 @@ def search_github_repos(query: str, token: str) -> List[Dict[str, Any]]:
     params = {'q': query, 'per_page': 100} # Fetch up to 100 results
     
     print(f"Searching GitHub with query: {query}")
+    print(f"  URL: {url}")
+    print(f"  Params: {params}")
     response = requests.get(url, headers=headers, params=params)
     response.raise_for_status()
-    return response.json().get('items', [])
+    
+    json_response = response.json()
+    total_count = json_response.get('total_count', 0)
+    print(f"  GitHub API returned {total_count} total results for the query.")
+    return json_response.get('items', [])
 
 def get_readme_content(repo_full_name: str, token: str) -> str:
     """Fetches the README content for a given repository."""
@@ -177,6 +183,9 @@ def main():
                 print(f"Warning: {yaml_path} exists but its content is not a dictionary with a 'projects' list. Initializing with an empty list.")
     
     print(f"Found {len(existing_projects_map)} existing repositories in {PROJECTS_YAML_PATH}.")
+    if existing_projects_map:
+        print(f"  First 5 existing project URLs: {[url for url in existing_projects_map.keys()][:5]}")
+    print(f"Existing projects map keys: {list(existing_projects_map.keys())[:5]}...") # Print first 5 keys for debugging
     
     categories = get_project_categories(yaml_path)
     if not categories:
