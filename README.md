@@ -4,10 +4,19 @@ Una lista curada de software, herramientas y recursos increíbles para el ecosis
 
 ## Contenidos
 
+- [Proyectos](#proyectos)
 - [Aplicaciones](#aplicaciones)
 - [Herramientas](#herramientas)
 - [Desarrollo](#desarrollo)
 - [Recursos](#recursos)
+
+## Proyectos
+
+<!-- PROJECTS_START -->
+- **[Lliurex-Up](https://github.com/lliurex/lliurex-up)**: Herramienta para actualizar el sistema Lliurex.
+- **[Lliurex-Net](https://github.com/lliurex/lliurex-net)**: Asistente para la configuración de la red en Lliurex.
+- **[Zero-server](https://github.com/lliurex/zero-server)**: Panel de gestión de servidores Lliurex.
+<!-- PROJECTS_END -->
 
 ## Aplicaciones
 
