@@ -29,7 +29,7 @@ def get_existing_repos(file_path: str) -> Set[str]:
         try:
             data = yaml.safe_load(f)
             if isinstance(data, dict) and 'projects' in data and isinstance(data['projects'], list):
-                return {p['repo'] for p in data['projects'] if 'repo' in p}
+                return {p['url'] for p in data['projects'] if 'url' in p}
             return set()
         except yaml.YAMLError:
             return set()
@@ -150,7 +150,7 @@ def classify_repo_with_gemini(repo: Dict[str, Any], readme: str, categories: Lis
 def save_projects(file_path: str, projects: List[Dict[str, Any]]):
     """Saves the list of projects to the YAML file."""
     # Sort projects by category, then by name for consistency
-    projects.sort(key=lambda p: (p['category'], p['name']))
+    projects.sort(key=lambda p: (p.get('category', 'zzz'), p.get('name', 'zzz')))
     with open(file_path, 'w', encoding='utf-8') as f:
         yaml.dump({'projects': projects}, f, allow_unicode=True, sort_keys=False, default_flow_style=False)
     print(f"Successfully saved {len(projects)} projects to {file_path}")
@@ -177,8 +177,8 @@ def main():
             loaded_data = yaml.safe_load(f)
             if isinstance(loaded_data, dict) and 'projects' in loaded_data and isinstance(loaded_data['projects'], list):
                 for p in loaded_data['projects']:
-                    if 'repo' in p:
-                        existing_projects_map[p['repo']] = p
+                    if 'url' in p:
+                        existing_projects_map[p['url']] = p
             elif loaded_data is not None:
                 print(f"Warning: {yaml_path} exists but its content is not a dictionary with a 'projects' list. Initializing with an empty list.")
     
@@ -228,7 +228,7 @@ def main():
                 
                 # Update the existing project entry
                 existing_project['name'] = repo['name'] # Update name in case it changed
-                existing_project['desc'] = repo.get('description', 'Sin descripción.') or 'Sin descripción.'
+                existing_project['description'] = repo.get('description', 'Sin descripción.') or 'Sin descripción.'
                 existing_project['category'] = category
                 updated_all_projects.append(existing_project)
                 projects_reclassified += 1
@@ -253,8 +253,8 @@ def main():
 
             new_project_entry = {
                 'name': repo['name'],
-                'repo': repo_url,
-                'desc': repo.get('description', 'Sin descripción.') or 'Sin descripción.',
+                'url': repo_url,
+                'description': repo.get('description', 'Sin descripción.') or 'Sin descripción.',
                 'category': category
             }
             updated_all_projects.append(new_project_entry)
@@ -271,3 +271,7 @@ def main():
         save_projects(yaml_path, updated_all_projects)
     else:
         print("\nNo new projects found or projects to re-classify.")
+
+
+if __name__ == "__main__":
+    main()
