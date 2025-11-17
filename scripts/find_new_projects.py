@@ -216,7 +216,7 @@ def main():
             existing_project = existing_projects_map[repo_url]
             
             if existing_project.get('category') == "Sin clasificar":
-                print(f"\nRe-classifying existing project (was 'Sin clasificar'): {repo['full_name']}")
+                print(f"\nRe-classifying existing project: {repo['full_name']}")
                 readme_content = get_readme_content(repo['full_name'], GITHUB_TOKEN)
                 
                 if GEMINI_API_KEY:
