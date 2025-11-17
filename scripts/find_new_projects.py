@@ -5,6 +5,7 @@ import requests
 import base64
 import google.generativeai as genai
 from typing import List, Dict, Any, Set
+from dotenv import load_dotenv
 
 # --- Constants ---
 PROJECTS_YAML_PATH = "projects.yaml"
@@ -156,6 +157,8 @@ def save_projects(file_path: str, projects: List[Dict[str, Any]]):
 
 def main(github_token: str = None, gemini_api_key: str = None):
     """Main function to find, classify, and add new projects."""
+    load_dotenv() # Load environment variables from .env file
+    
     if github_token is None:
         github_token = os.getenv("GITHUB_TOKEN")
     if gemini_api_key is None:
