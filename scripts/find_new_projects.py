@@ -160,10 +160,20 @@ def get_available_gemini_models(gemini_api_key: str):
         AVAILABLE_GEMINI_MODELS = []
         return AVAILABLE_GEMINI_MODELS
 
+# Variable global para indicar si se ha alcanzado la cuota diaria
+GEMINI_DAILY_QUOTA_EXCEEDED = False
+
 def classify_repo_with_gemini(repo: Dict[str, Any], readme: str, categories: List[str], gemini_api_key: str) -> str:
     """
     Classifies a repository into one of the given categories using the Gemini API.
     """
+    global GEMINI_DAILY_QUOTA_EXCEEDED
+
+    # Si ya hemos superado la cuota diaria, no intentar más clasificaciones
+    if GEMINI_DAILY_QUOTA_EXCEEDED:
+        print(f"Daily quota already exceeded. Skipping classification for {repo['full_name']}")
+        return "Sin clasificar"
+
     if not GEMINI_AVAILABLE:
         print("Gemini API no está disponible. Skipping classification.")
         return "Sin clasificar"
@@ -288,14 +298,18 @@ def classify_repo_with_gemini(repo: Dict[str, Any], readme: str, categories: Lis
                 # Si no podemos extraer el tiempo, usar el valor por defecto
                 print("Quota/rate limit error detected. Waiting for 60 seconds before continuing...")
                 time.sleep(60)  # Esperar 60 segundos si se detecta un error de cuota
+
+            # Marcar que hemos superado la cuota diaria
+            GEMINI_DAILY_QUOTA_EXCEEDED = True
+            print("Daily quota exceeded. Further classifications will be skipped until next restart.")
         print("This might be due to API rate limits, an invalid prompt, or temporary service issues.")
         return "Sin clasificar"
 
 
 def save_projects(file_path: str, projects: List[Dict[str, Any]]):
     """Saves the list of projects to the YAML file."""
-    # Sort projects by category, then by name for consistency
-    projects.sort(key=lambda p: (p.get('category', 'zzz'), p.get('name', 'zzz')))
+    # Sort projects by official status (official projects first), then by category, then by name for consistency
+    projects.sort(key=lambda p: (not p.get('official', False), p.get('category', 'zzz'), p.get('name', 'zzz')))
     with open(file_path, 'w', encoding='utf-8') as f:
         yaml.dump({'projects': projects}, f, allow_unicode=True, sort_keys=False, default_flow_style=False)
     print(f"Successfully saved {len(projects)} projects to {file_path}")
@@ -303,8 +317,8 @@ def save_projects(file_path: str, projects: List[Dict[str, Any]]):
 
 def update_projects_batch(file_path: str, all_current_projects: List[Dict[str, Any]]):
     """Updates the projects file with all current projects."""
-    # Sort projects by category, then by name for consistency
-    all_current_projects.sort(key=lambda p: (p.get('category', 'zzz'), p.get('name', 'zzz')))
+    # Sort projects by official status (official projects first), then by category, then by name for consistency
+    all_current_projects.sort(key=lambda p: (not p.get('official', False), p.get('category', 'zzz'), p.get('name', 'zzz')))
 
     # Save the updated projects
     with open(file_path, 'w', encoding='utf-8') as f:
@@ -329,14 +343,33 @@ def update_readme_progressively():
     with open(projects_file, 'r', encoding='utf-8') as f:
         data = yaml.safe_load(f)
 
-    # Generate Markdown list
-    markdown_list = []
-    for project in data.get('projects', []):
-        markdown_list.append(
-            f"- **[{project['name']}]({project['url']})**: {project['description']}"
-        )
+    # Separate official and third-party projects
+    official_projects = []
+    third_party_projects = []
 
-    markdown_content = "\n".join(markdown_list)
+    for project in data.get('projects', []):
+        if project.get('official', False):
+            official_projects.append(project)
+        else:
+            third_party_projects.append(project)
+
+    # Generate markdown content with separate sections
+    markdown_content = ""
+
+    if official_projects:
+        markdown_content += "### Proyectos Oficiales de LliureX\n\n"
+        for project in official_projects:
+            markdown_content += f"- **[{project['name']}]({project['url']})**: {project['description']}\n"
+        markdown_content += "\n"
+
+    if third_party_projects:
+        markdown_content += "### Proyectos de Terceros\n\n"
+        for project in third_party_projects:
+            markdown_content += f"- **[{project['name']}]({project['url']})**: {project['description']}\n"
+        markdown_content += "\n"
+
+    # Remove the trailing newline
+    markdown_content = markdown_content.rstrip()
 
     # Read README.md content
     with open(readme_file, 'r', encoding='utf-8') as f:
@@ -391,6 +424,9 @@ def main(github_token: str = None, gemini_api_key: str = None, batch_size: int =
                 all_projects = loaded_data['projects']
                 for p in loaded_data['projects']:
                     if 'url' in p:
+                        # Initialize the 'official' property for backward compatibility if it doesn't exist
+                        if 'official' not in p:
+                            p['official'] = p['url'].startswith('https://github.com/lliurex/')
                         existing_projects_map[p['url']] = p
             elif loaded_data is not None:
                 print(f"Warning: {yaml_path} exists but its content is not a dictionary with a 'projects' list. Initializing with an empty list.")
@@ -450,10 +486,13 @@ def main(github_token: str = None, gemini_api_key: str = None, batch_size: int =
                     existing_project['name'] = repo['name'] # Update name in case it changed
                     existing_project['description'] = repo.get('description', 'Sin descripción.') or 'Sin descripción.'
                     existing_project['category'] = category
+                    # Detectar si es un proyecto oficial de LliureX (en el repositorio lliurex)
+                    existing_project['official'] = repo_url.startswith('https://github.com/lliurex/')
                     projects_reclassified += 1
                 else:
                     # Project exists and is already properly classified
-                    pass
+                    # Make sure the official property is set correctly
+                    existing_project['official'] = repo_url.startswith('https://github.com/lliurex/')
 
                 # Add to batch projects so we can update the global all_projects list
                 batch_projects.append(existing_project)
@@ -469,11 +508,14 @@ def main(github_token: str = None, gemini_api_key: str = None, batch_size: int =
 
                 print(f"  -> Classified as: {category}")
 
+                # Detectar si es un proyecto oficial de LliureX (en el repositorio lliurex)
+                is_official = repo_url.startswith('https://github.com/lliurex/')
                 new_project_entry = {
                     'name': repo['name'],
                     'url': repo_url,
                     'description': repo.get('description', 'Sin descripción.') or 'Sin descripción.',
-                    'category': category
+                    'category': category,
+                    'official': is_official
                 }
                 batch_projects.append(new_project_entry)
                 new_projects_added += 1
@@ -504,6 +546,11 @@ def main(github_token: str = None, gemini_api_key: str = None, batch_size: int =
             # Add to all_projects if not already there
             if not any(p['url'] == url for p in all_projects):
                 all_projects.append(project)
+
+        # Initialize the 'official' property for any existing projects that don't have it yet (for backward compatibility)
+        for project in all_projects:
+            if 'official' not in project:
+                project['official'] = project['url'].startswith('https://github.com/lliurex/')
 
         # Update the projects file one final time to include unprocessed original projects
         update_projects_batch(yaml_path, all_projects)

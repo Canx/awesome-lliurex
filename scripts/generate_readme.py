@@ -16,14 +16,33 @@ readme_file = os.path.join(project_root, 'README.md')
 with open(projects_file, 'r', encoding='utf-8') as f:
     data = yaml.safe_load(f)
 
-# Generate Markdown list
-markdown_list = []
-for project in data.get('projects', []):
-    markdown_list.append(
-        f"- **[{project['name']}]({project['url']})**: {project['description']}"
-    )
+# Separate official and third-party projects
+official_projects = []
+third_party_projects = []
 
-markdown_content = "\n".join(markdown_list)
+for project in data.get('projects', []):
+    if project.get('official', False):
+        official_projects.append(project)
+    else:
+        third_party_projects.append(project)
+
+# Generate markdown content with separate sections
+markdown_content = ""
+
+if official_projects:
+    markdown_content += "### Proyectos Oficiales de LliureX\n\n"
+    for project in official_projects:
+        markdown_content += f"- **[{project['name']}]({project['url']})**: {project['description']}\n"
+    markdown_content += "\n"
+
+if third_party_projects:
+    markdown_content += "### Proyectos de Terceros\n\n"
+    for project in third_party_projects:
+        markdown_content += f"- **[{project['name']}]({project['url']})**: {project['description']}\n"
+    markdown_content += "\n"
+
+# Remove the trailing newline
+markdown_content = markdown_content.rstrip()
 
 # Read README.md content
 with open(readme_file, 'r', encoding='utf-8') as f:
