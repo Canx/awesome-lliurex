@@ -121,6 +121,41 @@ def get_readme_content(repo_full_name: str, token: str) -> str:
         print(f"Could not fetch README for {repo_full_name}: {e}")
         return ""
 
+# Variable global para almacenar modelos disponibles (para evitar múltiples llamadas a la API)
+AVAILABLE_GEMINI_MODELS = None
+
+def get_available_gemini_models(gemini_api_key: str):
+    """Obtiene la lista de modelos Gemini disponibles, cacheándolos para reutilizar."""
+    global AVAILABLE_GEMINI_MODELS
+
+    if AVAILABLE_GEMINI_MODELS is not None:
+        return AVAILABLE_GEMINI_MODELS
+
+    if not GEMINI_AVAILABLE or not gemini_api_key:
+        AVAILABLE_GEMINI_MODELS = []
+        return AVAILABLE_GEMINI_MODELS
+
+    try:
+        genai.configure(api_key=gemini_api_key)
+
+        available_models = []
+        try:
+            for m in genai.list_models():
+                if "generateContent" in m.supported_generation_methods:
+                    available_models.append(m.name.replace("models/", ""))
+                    print(f"- {m.name} (supported)")
+                else:
+                    print(f"- {m.name} (not supported for generateContent)")
+        except Exception as list_e:
+            print(f"Could not list models: {list_e}")
+
+        AVAILABLE_GEMINI_MODELS = available_models
+        return available_models
+    except Exception as e:
+        print(f"Error configuring Gemini API to list models: {e}")
+        AVAILABLE_GEMINI_MODELS = []
+        return AVAILABLE_GEMINI_MODELS
+
 def classify_repo_with_gemini(repo: Dict[str, Any], readme: str, categories: List[str], gemini_api_key: str) -> str:
     """
     Classifies a repository into one of the given categories using the Gemini API.
@@ -136,19 +171,8 @@ def classify_repo_with_gemini(repo: Dict[str, Any], readme: str, categories: Lis
     print(f"Attempting to use Gemini API for classification. API Key present: {bool(gemini_api_key)}")
 
     try:
-        genai.configure(api_key=gemini_api_key)
-
-        # Listar los modelos disponibles para depuración
-        available_models = []
-        try:
-            for m in genai.list_models():
-                if "generateContent" in m.supported_generation_methods:
-                    available_models.append(m.name.replace("models/", ""))
-                    print(f"- {m.name} (supported)")
-                else:
-                    print(f"- {m.name} (not supported for generateContent)")
-        except Exception as list_e:
-            print(f"Could not list models: {list_e}")
+        # Obtener modelos disponibles (una sola vez, usando cache)
+        available_models = get_available_gemini_models(gemini_api_key)
 
         # Priorizar modelos flash de la versión 2.5, intentando gemini-2.5-flash-lite primero
         preferred_models = []
