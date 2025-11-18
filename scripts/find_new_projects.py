@@ -120,7 +120,18 @@ def classify_repo_with_gemini(repo: Dict[str, Any], readme: str, categories: Lis
 
     try:
         genai.configure(api_key=gemini_api_key)
-        model = genai.GenerativeModel('gemini-pro')
+        # Intentar usar diferentes modelos en orden de preferencia, empezando con el más asequible
+        for model_name in ['gemini-1.5-flash', 'gemini-flash', 'gemini-1.5-pro', 'gemini-pro', 'gemini-1.0-pro']:
+            try:
+                model = genai.GenerativeModel(model_name)
+                print(f"Using model: {model_name}")
+                break
+            except Exception as e:
+                print(f"Model {model_name} not available: {e}")
+                continue
+        else:
+            print("No Gemini models available, defaulting to 'Sin clasificar'")
+            return "Sin clasificar"
     except Exception as e:
         print(f"Error configuring Gemini model or model not found: {e}")
         print("Please check your GEMINI_API_KEY and ensure 'gemini-pro' is available in your region.")
@@ -157,11 +168,23 @@ def classify_repo_with_gemini(repo: Dict[str, Any], readme: str, categories: Lis
         print(f"Classifying repo: {repo['full_name']}")
         response = model.generate_content(prompt)
         category = response.text.strip()
-        # Ensure the model returns a valid category
+
+        # Clean up the category response - sometimes the model returns extra text
+        # Extract just the category by looking for the last meaningful word
+        possible_categories = [cat.strip() for cat in category.split()]
+        # Check if any of the possible categories match our valid categories
+        for possible_cat in reversed(possible_categories):
+            cleaned_cat = possible_cat.strip(' .:,;')
+            if cleaned_cat in categories:
+                return cleaned_cat
+            elif cleaned_cat == "General":
+                return cleaned_cat
+
+        # If no match found in the above process, try to match exactly
         if category in categories or category == "General":
             return category
         else:
-            print(f"Warning: Model returned an invalid category '{category}'. Defaulting to 'General'.")
+            print(f"Warning: Model returned an invalid category '{category}'. Available categories: {categories}. Defaulting to 'General'.")
             return "General"
     except Exception as e:
         print(f"Error during classification with Gemini for {repo['full_name']}: {e}")
@@ -218,9 +241,11 @@ def main(github_token: str = None, gemini_api_key: str = None):
     
     categories = get_project_categories(yaml_path)
     if not categories:
-        print("Warning: No categories found in projects.yaml. Classification might be poor.")
+        print("Warning: No categories found in projects.yaml. Using default categories.")
         # Add a default list if empty
         categories = ["AD/LDAP", "Aplicaciones", "Desarrollo", "Documentación", "Infraestructura", "Utilidades", "General", "Sin clasificar"]
+    else:
+        print(f"Found {len(categories)} existing categories: {categories}")
 
     found_repos = search_github_repos(GITHUB_SEARCH_QUERY, github_token)
     print(f"Found {len(found_repos)} potential repositories on GitHub.")
