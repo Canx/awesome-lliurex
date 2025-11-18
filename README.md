@@ -65,6 +65,7 @@ Una lista curada de software, herramientas y recursos increíbles para el ecosis
 - **[lliurex-miniscreen](https://github.com/lliurex/lliurex-miniscreen)**: A Mini Screen to able people with motor disabilities  and children to interact easily with Interactive Digital Boards
 - **[lliurex-mirror](https://github.com/joamuran/lliurex-mirror)**: lliurex-mirror
 - **[lliurex-moodle](https://github.com/lliurex/lliurex-moodle)**: This package configures moodle to integrate it on LliureX environment
+- **[lliurex-news](https://github.com/lliurex/lliurex-news)**: Sin descripción.
 - **[lliurex-nextcloud](https://github.com/lliurex/lliurex-nextcloud)**: Scripts and n4d plugins to initialize nextcloud
 - **[lliurex-ntpdate](https://github.com/lliurex/lliurex-ntpdate)**: Configure service ntpdate  in the classroom client
 - **[lliurex-onedrive](https://github.com/lliurex/lliurex-onedrive)**: A gui for Onedrive client
