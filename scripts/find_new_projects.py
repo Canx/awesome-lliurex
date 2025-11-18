@@ -3,6 +3,7 @@ import os
 import yaml
 import requests
 import base64
+import time
 from typing import List, Dict, Any, Set
 from dotenv import load_dotenv
 
@@ -124,6 +125,9 @@ def get_readme_content(repo_full_name: str, token: str) -> str:
 # Variable global para almacenar modelos disponibles (para evitar múltiples llamadas a la API)
 AVAILABLE_GEMINI_MODELS = None
 
+# Variable global para controlar la tasa de solicitudes a la API
+GEMINI_REQUEST_COUNT = 0
+
 def get_available_gemini_models(gemini_api_key: str):
     """Obtiene la lista de modelos Gemini disponibles, cacheándolos para reutilizar."""
     global AVAILABLE_GEMINI_MODELS
@@ -230,8 +234,23 @@ def classify_repo_with_gemini(repo: Dict[str, Any], readme: str, categories: Lis
     Basándote en la información anterior, ¿cuál es la categoría más adecuada para este repositorio? Responde únicamente con el nombre de la categoría. Si ninguna categoría parece adecuada, responde "General".
     """
 
+    global GEMINI_REQUEST_COUNT
+
     try:
         print(f"Classifying repo: {repo['full_name']}")
+
+        # Incrementar el contador de solicitudes
+        GEMINI_REQUEST_COUNT += 1
+
+        # Introducir un retraso para no exceder la cuota de la API
+        # La API tiene un límite de 15 solicitudes por minuto por modelo
+        # Por lo tanto, máximo 1 solicitud cada 4 segundos aprox. (60s/15 = 4s)
+        # Usamos un retraso de 4.5 a 5.5 segundos para estar seguros
+        import random
+        delay = random.uniform(4.5, 5.5)  # Aproximadamente 4-5 solicitudes por minuto
+        print(f"Waiting {delay:.2f} seconds before next request to respect API quota...")
+        time.sleep(delay)
+
         response = model.generate_content(prompt)
         category = response.text.strip()
 
@@ -254,6 +273,10 @@ def classify_repo_with_gemini(repo: Dict[str, Any], readme: str, categories: Lis
             return "General"
     except Exception as e:
         print(f"Error during classification with Gemini for {repo['full_name']}: {e}")
+        # Si es un error de cuota, esperar un tiempo adicional antes de continuar
+        if "quota" in str(e).lower() or "rate" in str(e).lower() or "limit" in str(e).lower():
+            print("Quota/rate limit error detected. Waiting for 60 seconds before continuing...")
+            time.sleep(60)  # Esperar 60 segundos si se detecta un error de cuota
         print("This might be due to API rate limits, an invalid prompt, or temporary service issues.")
         return "Sin clasificar"
 
