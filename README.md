@@ -2,6 +2,8 @@
 
 Una lista curada de software, herramientas y recursos increíbles para el ecosistema Lliurex, con un enfoque en proyectos mantenidos por la comunidad.
 
+**Nota:** Esta lista se actualiza automáticamente cada semana buscando nuevos proyectos relacionados con Lliurex en GitHub.
+
 ## Contenidos
 
 - [Proyectos](#proyectos)
