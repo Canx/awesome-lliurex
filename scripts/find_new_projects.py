@@ -3,9 +3,16 @@ import os
 import yaml
 import requests
 import base64
-import google.generativeai as genai
 from typing import List, Dict, Any, Set
 from dotenv import load_dotenv
+
+# Importar google.generativeai de forma opcional
+try:
+    import google.generativeai as genai
+    GEMINI_AVAILABLE = True
+except ImportError:
+    GEMINI_AVAILABLE = False
+    print("Advertencia: google-generativeai no está disponible. La clasificación automática no funcionará.")
 
 # --- Constants ---
 PROJECTS_YAML_PATH = "projects.yaml"
@@ -101,6 +108,10 @@ def classify_repo_with_gemini(repo: Dict[str, Any], readme: str, categories: Lis
     """
     Classifies a repository into one of the given categories using the Gemini API.
     """
+    if not GEMINI_AVAILABLE:
+        print("Gemini API no está disponible. Skipping classification.")
+        return "Sin clasificar"
+
     if not gemini_api_key:
         print("GEMINI_API_KEY not found. Skipping classification.")
         return "Sin clasificar"
@@ -237,7 +248,7 @@ def main(github_token: str = None, gemini_api_key: str = None):
                 print(f"\nRe-classifying existing project: {repo['full_name']}")
                 readme_content = get_readme_content(repo['full_name'], github_token)
                 
-                if gemini_api_key:
+                if gemini_api_key and GEMINI_AVAILABLE:
                     category = classify_repo_with_gemini(repo, readme_content, categories, gemini_api_key)
                 else:
                     category = "Sin clasificar"
@@ -262,7 +273,7 @@ def main(github_token: str = None, gemini_api_key: str = None):
             print(f"\nProcessing new repository: {repo['full_name']}")
             readme_content = get_readme_content(repo['full_name'], github_token)
             
-            if gemini_api_key:
+            if gemini_api_key and GEMINI_AVAILABLE:
                 category = classify_repo_with_gemini(repo, readme_content, categories, gemini_api_key)
             else:
                 category = "Sin clasificar"
