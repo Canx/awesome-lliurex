@@ -1,1 +1,3032 @@
-projects: []
+projects:
+- name: HIG
+  url: https://github.com/lliurex/HIG
+  description: Human Guide Lines
+  category: Sin clasificar
+  official: true
+- name: accesshelper
+  url: https://github.com/lliurex/accesshelper
+  description: Wizard with accessibility settings
+  category: Sin clasificar
+  official: true
+- name: accesshelper-data
+  url: https://github.com/lliurex/accesshelper-data
+  description: Preconfigured profiles for accesshelper
+  category: Sin clasificar
+  official: true
+- name: activinspire-32bitdependsfor64bit-lliurex
+  url: https://github.com/lliurex/activinspire-32bitdependsfor64bit-lliurex
+  description: Metapackage that provides the depends for promethean boards
+  category: Sin clasificar
+  official: true
+- name: admin-center
+  url: https://github.com/lliurex/admin-center
+  description: Web interface to manage some LliureX server functionalities
+  category: Sin clasificar
+  official: true
+- name: admin-center-lliurex-apt
+  url: https://github.com/lliurex/admin-center-lliurex-apt
+  description: Gui module for LliureX admin-center, needed to configure /etc/apt/sources.list
+  category: Sin clasificar
+  official: true
+- name: admin-center-zerolink
+  url: https://github.com/lliurex/admin-center-zerolink
+  description: Desktops for main menu and ZeroCenter menu
+  category: Sin clasificar
+  official: true
+- name: ainur
+  url: https://github.com/lliurex/ainur
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: airapps-fixes
+  url: https://github.com/lliurex/airapps-fixes
+  description: Files invoked by air-installer for fix installation issues of air apps
+  category: Sin clasificar
+  official: true
+- name: airmanager
+  url: https://github.com/lliurex/airmanager
+  description: Air Manager provides an easy way for installing and manage adobe air
+    packages.
+  category: Sin clasificar
+  official: true
+- name: alea
+  url: https://github.com/lliurex/alea
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: analytics-server
+  url: https://github.com/lliurex/analytics-server
+  description: Analytics report server for Lliurex
+  category: Sin clasificar
+  official: true
+- name: antlr-tools
+  url: https://github.com/lliurex/antlr-tools
+  description: Command line, graphical editor and mono cil for antlr parser generation
+    tool
+  category: Sin clasificar
+  official: true
+- name: appimage-manager
+  url: https://github.com/lliurex/appimage-manager
+  description: Helper for manage appimages
+  category: Sin clasificar
+  official: true
+- name: appinfo
+  url: https://github.com/lliurex/appinfo
+  description: This app displays info from a package
+  category: Sin clasificar
+  official: true
+- name: arasuite
+  url: https://github.com/lliurex/arasuite
+  description: ' Set of tools for augmentative and adaptative communication '
+  category: Sin clasificar
+  official: true
+- name: ardublock
+  url: https://github.com/lliurex/ardublock
+  description: ' A graphical programming language for Arduino'
+  category: Sin clasificar
+  official: true
+- name: arduino-ide
+  url: https://github.com/lliurex/arduino-ide
+  description: IDE for arduino
+  category: Sin clasificar
+  official: true
+- name: audacity-ai-noble
+  url: https://github.com/lliurex/audacity-ai-noble
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: audacity-ia-jammy
+  url: https://github.com/lliurex/audacity-ia-jammy
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: avahi
+  url: https://github.com/lliurex/avahi
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: baikonur
+  url: https://github.com/lliurex/baikonur
+  description: Lliurex custom build bot
+  category: Sin clasificar
+  official: true
+- name: bell-scheduler
+  url: https://github.com/lliurex/bell-scheduler
+  description: Gui to schedule alarms. It can play system sounds, youtube urls, play
+    random files from a folder...
+  category: Sin clasificar
+  official: true
+- name: bell-scheduler-plasmoid
+  url: https://github.com/lliurex/bell-scheduler-plasmoid
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: blockly-arduino
+  url: https://github.com/lliurex/blockly-arduino
+  description: Includes deb with the blockly @ arduino code and a wizard for its installation
+    and configuration
+  category: Sin clasificar
+  official: true
+- name: bluegriffon
+  url: https://github.com/lliurex/bluegriffon
+  description: Web editor based on the rendering engine of Firefox
+  category: Sin clasificar
+  official: true
+- name: boost1.67
+  url: https://github.com/lliurex/boost1.67
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: breeze-text-only
+  url: https://github.com/lliurex/breeze-text-only
+  description: SDDM Theme
+  category: Sin clasificar
+  official: true
+- name: brltty
+  url: https://github.com/lliurex/brltty
+  description: BRLTTY is a background process (daemon) providing access to the Linux/Unix
+    console (when in text mode) for a blind person using a refreshable braille display.  (Backport
+    from Eoan)
+  category: Sin clasificar
+  official: true
+- name: byob-snap
+  url: https://github.com/lliurex/byob-snap
+  description: A visual, drag-and-drop programming language
+  category: Sin clasificar
+  official: true
+- name: calamares-desktop-layout
+  url: https://github.com/lliurex/calamares-desktop-layout
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: calamares-lliurex-modules
+  url: https://github.com/lliurex/calamares-lliurex-modules
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: calamares-lliurex-settings
+  url: https://github.com/lliurex/calamares-lliurex-settings
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: calamares-system-addons-module
+  url: https://github.com/lliurex/calamares-system-addons-module
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: calamares-uiselector-module
+  url: https://github.com/lliurex/calamares-uiselector-module
+  description: Calamares module that enables installation process to select a default
+    desktop layout
+  category: Sin clasificar
+  official: true
+- name: casimir-editor
+  url: https://github.com/lliurex/casimir-editor
+  description: 'WebOdf based text editor for dyslexics '
+  category: Sin clasificar
+  official: true
+- name: casper-mods
+  url: https://github.com/lliurex/casper-mods
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: cdc-mapper
+  url: https://github.com/lliurex/cdc-mapper
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: classroom-control-plasmoid
+  url: https://github.com/lliurex/classroom-control-plasmoid
+  description: A widget to control carts with ADI
+  category: Sin clasificar
+  official: true
+- name: classroom-mountmode
+  url: https://github.com/lliurex/classroom-mountmode
+  description: Apps to manage the mount mode in classroom
+  category: Sin clasificar
+  official: true
+- name: client-mount
+  url: https://github.com/lliurex/client-mount
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: client-register
+  url: https://github.com/lliurex/client-register
+  description: Tool to link a computer to a specific laptop cart
+  category: Sin clasificar
+  official: true
+- name: client-register-plasmoid
+  url: https://github.com/lliurex/client-register-plasmoid
+  description: Widget to quickly display the cart number to which the laptop is assigned
+  category: Sin clasificar
+  official: true
+- name: clipit-lliurex-data
+  url: https://github.com/lliurex/clipit-lliurex-data
+  description: Clipit custom configuration
+  category: Sin clasificar
+  official: true
+- name: debhelper
+  url: https://github.com/lliurex/debhelper
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: deferred-snap-install
+  url: https://github.com/lliurex/deferred-snap-install
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: deskedit
+  url: https://github.com/lliurex/deskedit
+  description: Desktop files editor for LliureX
+  category: Sin clasificar
+  official: true
+- name: desktream
+  url: https://github.com/lliurex/desktream
+  description: A utility to generate valid appstream info from a debian package tree
+  category: Sin clasificar
+  official: true
+- name: disable-apparmor
+  url: https://github.com/lliurex/disable-apparmor
+  description: Disable some apparmor services
+  category: Sin clasificar
+  official: true
+- name: disable-epoptes-client
+  url: https://github.com/lliurex/disable-epoptes-client
+  description: Package to disable epoptes-client on any classroom machine, client
+    or server
+  category: Sin clasificar
+  official: true
+- name: docker-smart
+  url: https://github.com/lliurex/docker-smart
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: docker-starboard
+  url: https://github.com/lliurex/docker-starboard
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: dpkg-unlocker
+  url: https://github.com/lliurex/dpkg-unlocker
+  description: Tool to unlock Apt, Dpkg and LliureX-Up
+  category: Sin clasificar
+  official: true
+- name: dr-valentin
+  url: https://github.com/lliurex/dr-valentin
+  description: Lliurex Diagnostic tool
+  category: Sin clasificar
+  official: true
+- name: dr-valentin-client-common
+  url: https://github.com/lliurex/dr-valentin-client-common
+  description: Client tests for dr valentin
+  category: Sin clasificar
+  official: true
+- name: dr-valentin-common
+  url: https://github.com/lliurex/dr-valentin-common
+  description: Common tests for dr valentin
+  category: Sin clasificar
+  official: true
+- name: dr-valentin-server-common
+  url: https://github.com/lliurex/dr-valentin-server-common
+  description: Server tests for dr valentin
+  category: Sin clasificar
+  official: true
+- name: enmarcado
+  url: https://github.com/lliurex/enmarcado
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: epi
+  url: https://github.com/lliurex/epi
+  description: Installer for external apps
+  category: Sin clasificar
+  official: true
+- name: epoptes
+  url: https://github.com/lliurex/epoptes
+  description: Computer lab monitoring tool. Lliurex modified version
+  category: Sin clasificar
+  official: true
+- name: epoptes-client-register
+  url: https://github.com/lliurex/epoptes-client-register
+  description: App to register new computers in Epoptes-center-controller
+  category: Sin clasificar
+  official: true
+- name: eshare-newline-dongle
+  url: https://github.com/lliurex/eshare-newline-dongle
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: eviacam
+  url: https://github.com/lliurex/eviacam
+  description: webcam based mouse emulator. Forked from https://github.com/cmauri/eviacam
+  category: Sin clasificar
+  official: true
+- name: export-web-sites
+  url: https://github.com/lliurex/export-web-sites
+  description: 'App to export some lliurex sites: pmb and moodle'
+  category: Sin clasificar
+  official: true
+- name: fakelib-notebook
+  url: https://github.com/lliurex/fakelib-notebook
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: festival-spanish-voices
+  url: https://github.com/lliurex/festival-spanish-voices
+  description: This is a diphone-based male Spanish voice for the Festival speech  synthesis
+    system developed by the Consejeria de Innovacion, Ciencia y Empresa  of the Junta
+    de Andalucia
+  category: Sin clasificar
+  official: true
+- name: festival-valcat-voices
+  url: https://github.com/lliurex/festival-valcat-voices
+  description: Valencian-catalan voices for festival
+  category: Sin clasificar
+  official: true
+- name: ffconversor
+  url: https://github.com/lliurex/ffconversor
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: firefox-esr
+  url: https://github.com/lliurex/firefox-esr
+  description: Custom build of firefox-esr
+  category: Sin clasificar
+  official: true
+- name: firefox-locale-ca-va
+  url: https://github.com/lliurex/firefox-locale-ca-va
+  description: Firefox langpack for valencian
+  category: Sin clasificar
+  official: true
+- name: first-aid-kit
+  url: https://github.com/lliurex/first-aid-kit
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: flash-java-insecure-perms
+  url: https://github.com/lliurex/flash-java-insecure-perms
+  description: Configure secure perms in flash and java
+  category: Sin clasificar
+  official: true
+- name: flatlock
+  url: https://github.com/lliurex/flatlock
+  description: block flatpak for users
+  category: Sin clasificar
+  official: true
+- name: fonts-atkinson
+  url: https://github.com/lliurex/fonts-atkinson
+  description: Atkinson-hyperlegible font
+  category: Sin clasificar
+  official: true
+- name: foo
+  url: https://github.com/lliurex/foo
+  description: test packages
+  category: Sin clasificar
+  official: true
+- name: fotoalbum
+  url: https://github.com/lliurex/fotoalbum
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: fuse-overlayfs
+  url: https://github.com/lliurex/fuse-overlayfs
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: fuse-xattrs
+  url: https://github.com/lliurex/fuse-xattrs
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: gbpconfig
+  url: https://github.com/lliurex/gbpconfig
+  description: Git-buildpackage config
+  category: Sin clasificar
+  official: true
+- name: gcompris
+  url: https://github.com/lliurex/gcompris
+  description: Educational software suite for children aged 2 to 10
+  category: Sin clasificar
+  official: true
+- name: gcompris-qt-voices
+  url: https://github.com/lliurex/gcompris-qt-voices
+  description: Voices for the educational game gcompris-qt
+  category: Sin clasificar
+  official: true
+- name: germinate
+  url: https://github.com/lliurex/germinate
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: gfxboot-theme-ubuntu
+  url: https://github.com/lliurex/gfxboot-theme-ubuntu
+  description: This is an LliureX theme for the gfxboot graphical boot loader extension.
+    It  should be suitable for Ubuntu derivatives as well as Ubuntu itself.
+  category: Sin clasificar
+  official: true
+- name: hdmi-monitor-switch
+  url: https://github.com/lliurex/hdmi-monitor-switch
+  description: Script and rule for udev that poweroffs internal output when an external
+    hdmi is plugged
+  category: Sin clasificar
+  official: true
+- name: hodor
+  url: https://github.com/lliurex/hodor
+  description: keep home folder safe
+  category: Sin clasificar
+  official: true
+- name: holiday-manager
+  url: https://github.com/lliurex/holiday-manager
+  description: Provides the API to manage holidays and Gtk component
+  category: Sin clasificar
+  official: true
+- name: home-eraser
+  url: https://github.com/lliurex/home-eraser
+  description: Automatic remove home directories for selected groups from server and
+    fat clients
+  category: Sin clasificar
+  official: true
+- name: home-linker
+  url: https://github.com/lliurex/home-linker
+  description: Application to mount samba shared dirs on user login
+  category: Sin clasificar
+  official: true
+- name: hotpotatoes
+  url: https://github.com/lliurex/hotpotatoes
+  description: Tools to create Digital Educational Objects
+  category: Sin clasificar
+  official: true
+- name: hwdetector
+  url: https://github.com/lliurex/hwdetector
+  description: Simple system detector
+  category: Sin clasificar
+  official: true
+- name: initramfs-options
+  url: https://github.com/lliurex/initramfs-options
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: iptables
+  url: https://github.com/lliurex/iptables
+  description: bionic backport iptables for add support to suppl-group
+  category: Sin clasificar
+  official: true
+- name: ipxe
+  url: https://github.com/lliurex/ipxe
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: kconfig-dump
+  url: https://github.com/lliurex/kconfig-dump
+  description: Simple tool to dump a full kconfig file
+  category: Sin clasificar
+  official: true
+- name: kde-service-menu-reimage
+  url: https://github.com/lliurex/kde-service-menu-reimage
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: kde_translations
+  url: https://github.com/lliurex/kde_translations
+  description: Temporally project to process translations with weblate
+  category: Sin clasificar
+  official: true
+- name: keepass
+  url: https://github.com/lliurex/keepass
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: keepass-plugin-keepasshttp
+  url: https://github.com/lliurex/keepass-plugin-keepasshttp
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: kmixtest
+  url: https://github.com/lliurex/kmixtest
+  description: Qt test pdf generator
+  category: Sin clasificar
+  official: true
+- name: krfb
+  url: https://github.com/lliurex/krfb
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: krita-ai-diffusion
+  url: https://github.com/lliurex/krita-ai-diffusion
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: kscreen-system-settings
+  url: https://github.com/lliurex/kscreen-system-settings
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: kscreen_replicator
+  url: https://github.com/lliurex/kscreen_replicator
+  description: Script that sets the max common resolution for two output sources and
+    activates screen mirroring between them
+  category: Sin clasificar
+  official: true
+- name: kscreenlocker
+  url: https://github.com/lliurex/kscreenlocker
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: kwin-colorcorrection-effect
+  url: https://github.com/lliurex/kwin-colorcorrection-effect
+  description: Kwin effect for helping with color blindness
+  category: Sin clasificar
+  official: true
+- name: kwin-focustrack-effect
+  url: https://github.com/lliurex/kwin-focustrack-effect
+  description: Kwin effect that draws a frame around the focused item in desktop
+  category: Sin clasificar
+  official: true
+- name: kwin-script-mouseframe
+  url: https://github.com/lliurex/kwin-script-mouseframe
+  description: Script for kwin that draws a frame around the pointer
+  category: Sin clasificar
+  official: true
+- name: kwin-script-mousestrip
+  url: https://github.com/lliurex/kwin-script-mousestrip
+  description: Kwin effect that displays a read strip around the mouse
+  category: Sin clasificar
+  official: true
+- name: kwin-script-rgbfilter
+  url: https://github.com/lliurex/kwin-script-rgbfilter
+  description: KWin script that applies a rgb filter to the screen
+  category: Sin clasificar
+  official: true
+- name: ldm
+  url: https://github.com/lliurex/ldm
+  description: LTSP Display manager. LliureX remix
+  category: Sin clasificar
+  official: true
+- name: ldm-lliurex-theme
+  url: https://github.com/lliurex/ldm-lliurex-theme
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: lgi
+  url: https://github.com/lliurex/lgi
+  description: LliureX Graphic Interface
+  category: Sin clasificar
+  official: true
+- name: libcrypt
+  url: https://github.com/lliurex/libcrypt
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: libcrypto
+  url: https://github.com/lliurex/libcrypto
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: libcurl3-foo
+  url: https://github.com/lliurex/libcurl3-foo
+  description: Foo package that provides libcurl3
+  category: Sin clasificar
+  official: true
+- name: libicu
+  url: https://github.com/lliurex/libicu
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: libmono-lliurex-utils
+  url: https://github.com/lliurex/libmono-lliurex-utils
+  description: Provides a CLI library for mono
+  category: Sin clasificar
+  official: true
+- name: libnss-lliurex
+  url: https://github.com/lliurex/libnss-lliurex
+  description: lliurex NSS plugin to list groups of CDC server
+  category: Sin clasificar
+  official: true
+- name: lightdm-running
+  url: https://github.com/lliurex/lightdm-running
+  description: Lightdm configuration for LliureX server and clients
+  category: Sin clasificar
+  official: true
+- name: live-build
+  url: https://github.com/lliurex/live-build
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: lliurex-abies2pmb
+  url: https://github.com/lliurex/lliurex-abies2pmb
+  description: Imports abies mdb to pmb
+  category: Sin clasificar
+  official: true
+- name: lliurex-access-control
+  url: https://github.com/lliurex/lliurex-access-control
+  description: 'Tool that allows you to control whether a user can use a computer '
+  category: Sin clasificar
+  official: true
+- name: lliurex-adobe-settings
+  url: https://github.com/lliurex/lliurex-adobe-settings
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: lliurex-apache-config
+  url: https://github.com/lliurex/lliurex-apache-config
+  description: Install and configure an Apache server
+  category: Sin clasificar
+  official: true
+- name: lliurex-apt-divert
+  url: https://github.com/lliurex/lliurex-apt-divert
+  description: Diverts custom apt from neon
+  category: Sin clasificar
+  official: true
+- name: lliurex-apt2
+  url: https://github.com/lliurex/lliurex-apt2
+  description: manage repositories from gui
+  category: Sin clasificar
+  official: true
+- name: lliurex-artwork
+  url: https://github.com/lliurex/lliurex-artwork
+  description: 'Lliurex theming: kwin theme, color scheme, desktop layout,...'
+  category: Sin clasificar
+  official: true
+- name: lliurex-artwork-defaults
+  url: https://github.com/lliurex/lliurex-artwork-defaults
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: lliurex-artwork-fonts
+  url: https://github.com/lliurex/lliurex-artwork-fonts
+  description: Optional fonts for LliureX
+  category: Sin clasificar
+  official: true
+- name: lliurex-auto-upgrade
+  url: https://github.com/lliurex/lliurex-auto-upgrade
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: lliurex-autorun
+  url: https://github.com/lliurex/lliurex-autorun
+  description: Lliurex autorun launch autorun files
+  category: Sin clasificar
+  official: true
+- name: lliurex-backup
+  url: https://github.com/lliurex/lliurex-backup
+  description: GUI to backup and restore lliurex services and folders
+  category: Sin clasificar
+  official: true
+- name: lliurex-base-files
+  url: https://github.com/lliurex/lliurex-base-files
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: lliurex-cdc-control
+  url: https://github.com/lliurex/lliurex-cdc-control
+  description: Tool to enable o disable the integration with the CDC
+  category: Sin clasificar
+  official: true
+- name: lliurex-cdlocker
+  url: https://github.com/lliurex/lliurex-cdlocker
+  description: Locks drive tray for classroom computers
+  category: Sin clasificar
+  official: true
+- name: lliurex-certificates
+  url: https://github.com/lliurex/lliurex-certificates
+  description: GVA Certificates
+  category: Sin clasificar
+  official: true
+- name: lliurex-chboot
+  url: https://github.com/lliurex/lliurex-chboot
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: lliurex-classroom-actions
+  url: https://github.com/lliurex/lliurex-classroom-actions
+  description: sytray tool with quick classroom control actions
+  category: Sin clasificar
+  official: true
+- name: lliurex-classroom-env-configuration
+  url: https://github.com/lliurex/lliurex-classroom-env-configuration
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: lliurex-client-env-configuration
+  url: https://github.com/lliurex/lliurex-client-env-configuration
+  description: Environment configurations for LliureX Clients
+  category: Sin clasificar
+  official: true
+- name: lliurex-cmaptools
+  url: https://github.com/lliurex/lliurex-cmaptools
+  description: Packages that contains cmaptoos bin and custom files from LliureX
+  category: Sin clasificar
+  official: true
+- name: lliurex-common-utils
+  url: https://github.com/lliurex/lliurex-common-utils
+  description: LliureX utils
+  category: Sin clasificar
+  official: true
+- name: lliurex-conky
+  url: https://github.com/lliurex/lliurex-conky
+  description: LliurexCONKY configured special settings  - Show user, hostname, IP
+    address and Lliurex Version  For LliureX
+  category: Sin clasificar
+  official: true
+- name: lliurex-connect
+  url: https://github.com/lliurex/lliurex-connect
+  description: Tools to connect Android tablets  with a LliureX Desktop
+  category: Sin clasificar
+  official: true
+- name: lliurex-cssh
+  url: https://github.com/lliurex/lliurex-cssh
+  description: Simple wrapper to install the Cluster SSH with lliurex pluggin
+  category: Sin clasificar
+  official: true
+- name: lliurex-cups-client
+  url: https://github.com/lliurex/lliurex-cups-client
+  description: Package for configure cups in client
+  category: Sin clasificar
+  official: true
+- name: lliurex-custom-desktops
+  url: https://github.com/lliurex/lliurex-custom-desktops
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: lliurex-custom-xrdp
+  url: https://github.com/lliurex/lliurex-custom-xrdp
+  description: xrdp extension that runs a run-parts directory before opening session
+  category: Sin clasificar
+  official: true
+- name: lliurex-deskreen
+  url: https://github.com/lliurex/lliurex-deskreen
+  description: Converte cualquier dispositivo en una pantalla secundaria para tu computadora
+  category: Sin clasificar
+  official: true
+- name: lliurex-desktop-layout-selector
+  url: https://github.com/lliurex/lliurex-desktop-layout-selector
+  description: Just a in-house Plasma look-and-feel selector tool
+  category: Sin clasificar
+  official: true
+- name: lliurex-desktops-keeper
+  url: https://github.com/lliurex/lliurex-desktops-keeper
+  description: ' Lliurex Desktop keeper'
+  category: Sin clasificar
+  official: true
+- name: lliurex-disable-discover-indicator
+  url: https://github.com/lliurex/lliurex-disable-discover-indicator
+  description: Package to hide discovernotifier indicator from systray (for new users)
+  category: Sin clasificar
+  official: true
+- name: lliurex-documentator
+  url: https://github.com/lliurex/lliurex-documentator
+  description: Shell script that generates internal documentation from partial documents.
+  category: Sin clasificar
+  official: true
+- name: lliurex-easy-sites
+  url: https://github.com/lliurex/lliurex-easy-sites
+  description: Contains lliurex-easy-sites
+  category: Sin clasificar
+  official: true
+- name: lliurex-emblemador
+  url: https://github.com/lliurex/lliurex-emblemador
+  description: LliureX Automatic emblem shared folders
+  category: Sin clasificar
+  official: true
+- name: lliurex-enterprise-mount
+  url: https://github.com/lliurex/lliurex-enterprise-mount
+  description: This package mounts shares everywhere
+  category: Sin clasificar
+  official: true
+- name: lliurex-extra-configs
+  url: https://github.com/lliurex/lliurex-extra-configs
+  description: Custom lliurex configurations for various packages
+  category: Sin clasificar
+  official: true
+- name: lliurex-firefox-plugins
+  url: https://github.com/lliurex/lliurex-firefox-plugins
+  description: ' Package to allows install firefox plugins from server to clients'
+  category: Sin clasificar
+  official: true
+- name: lliurex-firefox-settings
+  url: https://github.com/lliurex/lliurex-firefox-settings
+  description: Lliurex settings for Firefox
+  category: Sin clasificar
+  official: true
+- name: lliurex-fix-translations-kde
+  url: https://github.com/lliurex/lliurex-fix-translations-kde
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: lliurex-flash-installer
+  url: https://github.com/lliurex/lliurex-flash-installer
+  description: Package to install adobe-flashplugin and add canonical   repositories
+  category: Sin clasificar
+  official: true
+- name: lliurex-freeradius
+  url: https://github.com/lliurex/lliurex-freeradius
+  description: GUI to initialize freeradius service
+  category: Sin clasificar
+  official: true
+- name: lliurex-gdrive
+  url: https://github.com/lliurex/lliurex-gdrive
+  description: App to manage google drive accounts
+  category: Sin clasificar
+  official: true
+- name: lliurex-grub-custom
+  url: https://github.com/lliurex/lliurex-grub-custom
+  description: LliureX Grub configuration
+  category: Sin clasificar
+  official: true
+- name: lliurex-guard
+  url: https://github.com/lliurex/lliurex-guard
+  description: Easy interface to manage Squid3 filters
+  category: Sin clasificar
+  official: true
+- name: lliurex-guard-data
+  url: https://github.com/lliurex/lliurex-guard-data
+  description: Provides lists of domains for  LliureX Guard / Squid proxy
+  category: Sin clasificar
+  official: true
+- name: lliurex-gva-gate
+  url: https://github.com/lliurex/lliurex-gva-gate
+  description: GVA remote authentication and group management system
+  category: Sin clasificar
+  official: true
+- name: lliurex-gva-hwdb
+  url: https://github.com/lliurex/lliurex-gva-hwdb
+  description: Simple library and tool to check if a computer belongs to GVA hardware
+    set
+  category: Sin clasificar
+  official: true
+- name: lliurex-gva-presets
+  url: https://github.com/lliurex/lliurex-gva-presets
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: lliurex-gva-quirks
+  url: https://github.com/lliurex/lliurex-gva-quirks
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: lliurex-help
+  url: https://github.com/lliurex/lliurex-help
+  description: A nwjs based desktop application for help documentation writen in markdown.
+  category: Sin clasificar
+  official: true
+- name: lliurex-homework-harvester
+  url: https://github.com/lliurex/lliurex-homework-harvester
+  description: Application to send files to teachers
+  category: Sin clasificar
+  official: true
+- name: lliurex-hot-fix
+  url: https://github.com/lliurex/lliurex-hot-fix
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: lliurex-hotpotatoes-data
+  url: https://github.com/lliurex/lliurex-hotpotatoes-data
+  description: This package adds configuration, icon and desktop files for hotpotatoes
+  category: Sin clasificar
+  official: true
+- name: lliurex-inventory
+  url: https://github.com/lliurex/lliurex-inventory
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: lliurex-inventory-agent
+  url: https://github.com/lliurex/lliurex-inventory-agent
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: lliurex-java-panel
+  url: https://github.com/lliurex/lliurex-java-panel
+  description: ' Lliurex Java Panel Administration'
+  category: Sin clasificar
+  official: true
+- name: lliurex-jclic-shared
+  url: https://github.com/lliurex/lliurex-jclic-shared
+  description: LliureX Jclic Library Service for LliureX classrooms and clients
+  category: Sin clasificar
+  official: true
+- name: lliurex-journald-settings
+  url: https://github.com/lliurex/lliurex-journald-settings
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: lliurex-kde-hotkeys
+  url: https://github.com/lliurex/lliurex-kde-hotkeys
+  description: Set of default kde hotkeys
+  category: Sin clasificar
+  official: true
+- name: lliurex-kdeconnect-disabler
+  url: https://github.com/lliurex/lliurex-kdeconnect-disabler
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: lliurex-keyring
+  url: https://github.com/lliurex/lliurex-keyring
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: lliurex-lab
+  url: https://github.com/lliurex/lliurex-lab
+  description: LliureX language laboratory tools
+  category: Sin clasificar
+  official: true
+- name: lliurex-langpack-kde
+  url: https://github.com/lliurex/lliurex-langpack-kde
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: lliurex-libreoffice-aula-settings
+  url: https://github.com/lliurex/lliurex-libreoffice-aula-settings
+  description: Libreoffice customization
+  category: Sin clasificar
+  official: true
+- name: lliurex-live-fixes
+  url: https://github.com/lliurex/lliurex-live-fixes
+  description: Dpkg fixes to create LliureX ISOs
+  category: Sin clasificar
+  official: true
+- name: lliurex-maker
+  url: https://github.com/lliurex/lliurex-maker
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: lliurex-megaphone
+  url: https://github.com/lliurex/lliurex-megaphone
+  description: Graphic interface than enables user to easily enable/disable pulseaudio
+    loopback module
+  category: Sin clasificar
+  official: true
+- name: lliurex-menus
+  url: https://github.com/lliurex/lliurex-menus
+  description: Extra Apps and Shortcuts for LliureX
+  category: Sin clasificar
+  official: true
+- name: lliurex-meta
+  url: https://github.com/lliurex/lliurex-meta
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: lliurex-meta-maker
+  url: https://github.com/lliurex/lliurex-meta-maker
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: lliurex-meta-tools
+  url: https://github.com/lliurex/lliurex-meta-tools
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: lliurex-mime-settings
+  url: https://github.com/lliurex/lliurex-mime-settings
+  description: Lliurex mime configuration
+  category: Sin clasificar
+  official: true
+- name: lliurex-miniscreen
+  url: https://github.com/lliurex/lliurex-miniscreen
+  description: A Mini Screen to able people with motor disabilities  and children
+    to interact easily with Interactive Digital Boards
+  category: Sin clasificar
+  official: true
+- name: lliurex-mirror
+  url: https://github.com/lliurex/lliurex-mirror
+  description: Tool to manage LliureX repositories
+  category: Sin clasificar
+  official: true
+- name: lliurex-mirror-redirect
+  url: https://github.com/lliurex/lliurex-mirror-redirect
+  description: Allows a slave server to use the mirror of the master server
+  category: Sin clasificar
+  official: true
+- name: lliurex-moodle
+  url: https://github.com/lliurex/lliurex-moodle
+  description: This package configures moodle to integrate it on LliureX environment
+  category: Sin clasificar
+  official: true
+- name: lliurex-moving-core
+  url: https://github.com/lliurex/lliurex-moving-core
+  description: Lliurex moving profile manager
+  category: Sin clasificar
+  official: true
+- name: lliurex-moving-editor
+  url: https://github.com/lliurex/lliurex-moving-editor
+  description: ' Lliurex moving graphical interface settings manager'
+  category: Sin clasificar
+  official: true
+- name: lliurex-ms-teams
+  url: https://github.com/lliurex/lliurex-ms-teams
+  description: Package to launch MS Teams with a chromium "app"
+  category: Sin clasificar
+  official: true
+- name: lliurex-news
+  url: https://github.com/lliurex/lliurex-news
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: lliurex-news-slideshow
+  url: https://github.com/lliurex/lliurex-news-slideshow
+  description: This software is the perfect complement to make slideshows from RSS
+    service
+  category: Sin clasificar
+  official: true
+- name: lliurex-nextcloud
+  url: https://github.com/lliurex/lliurex-nextcloud
+  description: Scripts and n4d plugins to initialize nextcloud
+  category: Sin clasificar
+  official: true
+- name: lliurex-ntpdate
+  url: https://github.com/lliurex/lliurex-ntpdate
+  description: Configure service ntpdate  in the classroom client
+  category: Sin clasificar
+  official: true
+- name: lliurex-on-fire
+  url: https://github.com/lliurex/lliurex-on-fire
+  description: Lliurex add-on for firefox/chromium
+  category: Sin clasificar
+  official: true
+- name: lliurex-onedrive
+  url: https://github.com/lliurex/lliurex-onedrive
+  description: A gui for Onedrive client
+  category: Sin clasificar
+  official: true
+- name: lliurex-onedrive-plasmoid
+  url: https://github.com/lliurex/lliurex-onedrive-plasmoid
+  description: A widget for Lliurex OneDrive
+  category: Sin clasificar
+  official: true
+- name: lliurex-openmeetings
+  url: https://github.com/lliurex/lliurex-openmeetings
+  description: This package allows users to install openmeetings from zero-center
+  category: Sin clasificar
+  official: true
+- name: lliurex-openmeetings-data
+  url: https://github.com/lliurex/lliurex-openmeetings-data
+  description: Openmeetings tar.gz project
+  category: Sin clasificar
+  official: true
+- name: lliurex-perfilreset
+  url: https://github.com/lliurex/lliurex-perfilreset
+  description: Resets the desktop profile to LliureX defaults
+  category: Sin clasificar
+  official: true
+- name: lliurex-permission-control
+  url: https://github.com/lliurex/lliurex-permission-control
+  description: Tool to manage permissions
+  category: Sin clasificar
+  official: true
+- name: lliurex-plymouth-theme
+  url: https://github.com/lliurex/lliurex-plymouth-theme
+  description: Lliurex custom plymouth plugin
+  category: Sin clasificar
+  official: true
+- name: lliurex-pmb
+  url: https://github.com/lliurex/lliurex-pmb
+  description: This package configures pmb   on LliureX biblio environment
+  category: Sin clasificar
+  official: true
+- name: lliurex-polkit-settings
+  url: https://github.com/lliurex/lliurex-polkit-settings
+  description: Modify polkit variables
+  category: Sin clasificar
+  official: true
+- name: lliurex-pool-tools
+  url: https://github.com/lliurex/lliurex-pool-tools
+  description: Scripts to manage repository operations
+  category: Sin clasificar
+  official: true
+- name: lliurex-preseed
+  url: https://github.com/lliurex/lliurex-preseed
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: lliurex-printa-classroom
+  url: https://github.com/lliurex/lliurex-printa-classroom
+  description: PRINTA config for LliureX classroom
+  category: Sin clasificar
+  official: true
+- name: lliurex-profile-d
+  url: https://github.com/lliurex/lliurex-profile-d
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: lliurex-quota
+  url: https://github.com/lliurex/lliurex-quota
+  description: Quota's manager for LliureX
+  category: Sin clasificar
+  official: true
+- name: lliurex-quota-gui
+  url: https://github.com/lliurex/lliurex-quota-gui
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: lliurex-quota-plasmoid
+  url: https://github.com/lliurex/lliurex-quota-plasmoid
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: lliurex-remote-installer
+  url: https://github.com/lliurex/lliurex-remote-installer
+  description: lliurex-remote-installer
+  category: Sin clasificar
+  official: true
+- name: lliurex-remote-installer-plasmoid
+  url: https://github.com/lliurex/lliurex-remote-installer-plasmoid
+  description: A wiget to report Remote Installer activitiy
+  category: Sin clasificar
+  official: true
+- name: lliurex-resolver
+  url: https://github.com/lliurex/lliurex-resolver
+  description: This cli tool computes a list of dependencies, helping with pool maintaining
+  category: Sin clasificar
+  official: true
+- name: lliurex-robotics
+  url: https://github.com/lliurex/lliurex-robotics
+  description: ' Udev rules to permit all users total access to some devices'
+  category: Sin clasificar
+  official: true
+- name: lliurex-rsyslog-filters
+  url: https://github.com/lliurex/lliurex-rsyslog-filters
+  description: Add some filters to rsyslog
+  category: Sin clasificar
+  official: true
+- name: lliurex-screen-mirroring
+  url: https://github.com/lliurex/lliurex-screen-mirroring
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: lliurex-sddm-theme
+  url: https://github.com/lliurex/lliurex-sddm-theme
+  description: LliureX custom sddm theme
+  category: Sin clasificar
+  official: true
+- name: lliurex-server-page
+  url: https://github.com/lliurex/lliurex-server-page
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: lliurex-sgbd
+  url: https://github.com/lliurex/lliurex-sgbd
+  description: Several utilities to create and manage mysql databases
+  category: Sin clasificar
+  official: true
+- name: lliurex-shutdowner
+  url: https://github.com/lliurex/lliurex-shutdowner
+  description: Manage automatic clients shutdown using n4d calls
+  category: Sin clasificar
+  official: true
+- name: lliurex-smart
+  url: https://github.com/lliurex/lliurex-smart
+  description: ' This package contains the: lliurex-smart resources'
+  category: Sin clasificar
+  official: true
+- name: lliurex-smart-tagging
+  url: https://github.com/lliurex/lliurex-smart-tagging
+  description: Package to hot tag machines depending on certain logic
+  category: Sin clasificar
+  official: true
+- name: lliurex-smartcard-udev-fixer
+  url: https://github.com/lliurex/lliurex-smartcard-udev-fixer
+  description: Contains lliurex-smartcard-udev-fixer
+  category: Sin clasificar
+  official: true
+- name: lliurex-snapd-fix
+  url: https://github.com/lliurex/lliurex-snapd-fix
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: lliurex-ssh-login
+  url: https://github.com/lliurex/lliurex-ssh-login
+  description: Lliurex SSH LOGIN configured special settings
+  category: Sin clasificar
+  official: true
+- name: lliurex-statistics
+  url: https://github.com/lliurex/lliurex-statistics
+  description: Analytics reporting agent for Lliurex
+  category: Sin clasificar
+  official: true
+- name: lliurex-statistics-blacklist
+  url: https://github.com/lliurex/lliurex-statistics-blacklist
+  description: Blacklist 4 analytics agent
+  category: Sin clasificar
+  official: true
+- name: lliurex-store
+  url: https://github.com/lliurex/lliurex-store
+  description: LiureX Software store. Works with repositories, zomandos, snap and
+    appimage.
+  category: Sin clasificar
+  official: true
+- name: lliurex-store-blacklist
+  url: https://github.com/lliurex/lliurex-store-blacklist
+  description: Blacklisted packages
+  category: Sin clasificar
+  official: true
+- name: lliurex-sudoers
+  url: https://github.com/lliurex/lliurex-sudoers
+  description: Configuration file to allow admins and llxadmin to gain root privileges
+  category: Sin clasificar
+  official: true
+- name: lliurex-swftools
+  url: https://github.com/lliurex/lliurex-swftools
+  description: Tools to convert different file types to swf
+  category: Sin clasificar
+  official: true
+- name: lliurex-tts
+  url: https://github.com/lliurex/lliurex-tts
+  description: ' Some text to speech for  LliureX.'
+  category: Sin clasificar
+  official: true
+- name: lliurex-tuxpaint-stamps
+  url: https://github.com/lliurex/lliurex-tuxpaint-stamps
+  description: LliureX Tux Paint is meant to be a simple drawing program,   with LLiureX
+    official image
+  category: Sin clasificar
+  official: true
+- name: lliurex-unattended-upgrades
+  url: https://github.com/lliurex/lliurex-unattended-upgrades
+  description: package to stop unattended-upgraded from installing
+  category: Sin clasificar
+  official: true
+- name: lliurex-up
+  url: https://github.com/lliurex/lliurex-up
+  description: Tool to update the systen
+  category: Sin clasificar
+  official: true
+- name: lliurex-up-auto-upgrade
+  url: https://github.com/lliurex/lliurex-up-auto-upgrade
+  description: Provides systemd service and n4d-plugin to manage automatic system
+    update with LliureX-Up
+  category: Sin clasificar
+  official: true
+- name: lliurex-up-plasmoid
+  url: https://github.com/lliurex/lliurex-up-plasmoid
+  description: Plasmoid to info about available updates
+  category: Sin clasificar
+  official: true
+- name: lliurex-valencianize
+  url: https://github.com/lliurex/lliurex-valencianize
+  description: Change default language to valencian
+  category: Sin clasificar
+  official: true
+- name: lliurex-version-timestamp
+  url: https://github.com/lliurex/lliurex-version-timestamp
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: lliurex-wifi-gva-control
+  url: https://github.com/lliurex/lliurex-wifi-gva-control
+  description: Tool to configure the educational WIFI of GVA
+  category: Sin clasificar
+  official: true
+- name: lliurex-www
+  url: https://github.com/lliurex/lliurex-www
+  description: This package installs server web site
+  category: Sin clasificar
+  official: true
+- name: lliurex.github.io
+  url: https://github.com/lliurex/lliurex.github.io
+  description: 'LliureX github''s web page '
+  category: Sin clasificar
+  official: true
+- name: lliuwin-wizard
+  url: https://github.com/lliurex/lliuwin-wizard
+  description: Wizard for create user account
+  category: Sin clasificar
+  official: true
+- name: llum
+  url: https://github.com/lliurex/llum
+  description: LDAP User Manager
+  category: Sin clasificar
+  official: true
+- name: llx-alumnat-wifi
+  url: https://github.com/lliurex/llx-alumnat-wifi
+  description: Create a user for automatic login to the EscolesConectades Wi-Fi for
+    students
+  category: Sin clasificar
+  official: true
+- name: llx-apt
+  url: https://github.com/lliurex/llx-apt
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: llx-bootmanager
+  url: https://github.com/lliurex/llx-bootmanager
+  description: Package to manage netboot options
+  category: Sin clasificar
+  official: true
+- name: llx-bootmanager-gui
+  url: https://github.com/lliurex/llx-bootmanager-gui
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: llx-edition-studio
+  url: https://github.com/lliurex/llx-edition-studio
+  description: Programs collage to record and edit video tutorial
+  category: Sin clasificar
+  official: true
+- name: llx-guest
+  url: https://github.com/lliurex/llx-guest
+  description: Create guest user to kde
+  category: Sin clasificar
+  official: true
+- name: llx-ltsp-xrandr
+  url: https://github.com/lliurex/llx-ltsp-xrandr
+  description: Special configuration for LTSP video cards
+  category: Sin clasificar
+  official: true
+- name: llx-netinstall
+  url: https://github.com/lliurex/llx-netinstall
+  description: LliureX netinstall configuration
+  category: Sin clasificar
+  official: true
+- name: llx-network-config
+  url: https://github.com/lliurex/llx-network-config
+  description: Gui to allow to edit network configuration after  server initialization
+  category: Sin clasificar
+  official: true
+- name: llx-pam-configs
+  url: https://github.com/lliurex/llx-pam-configs
+  description: LliureX Server & Client pam configuration
+  category: Sin clasificar
+  official: true
+- name: llx-qjack-pulse-integrator
+  url: https://github.com/lliurex/llx-qjack-pulse-integrator
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: llx-upgrade-release
+  url: https://github.com/lliurex/llx-upgrade-release
+  description: Experimental release upgrader for LliureX
+  category: Sin clasificar
+  official: true
+- name: llx-valencianitzador
+  url: https://github.com/lliurex/llx-valencianitzador
+  description: Valencianitzador de .pos
+  category: Sin clasificar
+  official: true
+- name: llxamp
+  url: https://github.com/lliurex/llxamp
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: llxansible
+  url: https://github.com/lliurex/llxansible
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: llxdoc-admin
+  url: https://github.com/lliurex/llxdoc-admin
+  description: Guía de Administración de LliureX Servidor
+  category: Sin clasificar
+  official: true
+- name: llxdoc-gc
+  url: https://github.com/lliurex/llxdoc-gc
+  description: Guía de Colaboración con LliureX
+  category: Sin clasificar
+  official: true
+- name: llxdoc-ltsp
+  url: https://github.com/lliurex/llxdoc-ltsp
+  description: Guía de Usuario de LliureX LTSP
+  category: Sin clasificar
+  official: true
+- name: llxdoc-update
+  url: https://github.com/lliurex/llxdoc-update
+  description: Guía de actualización de LliureX
+  category: Sin clasificar
+  official: true
+- name: llxfederation
+  url: https://github.com/lliurex/llxfederation
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: llxsrchelper
+  url: https://github.com/lliurex/llxsrchelper
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: lmd
+  url: https://github.com/lliurex/lmd
+  description: Package to manage LTSP
+  category: Sin clasificar
+  official: true
+- name: lmd-client
+  url: https://github.com/lliurex/lmd-client
+  description: Lliurex custom ltsp options
+  category: Sin clasificar
+  official: true
+- name: lsf
+  url: https://github.com/lliurex/lsf
+  description: LliureX System Framework
+  category: Sin clasificar
+  official: true
+- name: ltsp
+  url: https://github.com/lliurex/ltsp
+  description: Ltsp - LliureX Remix
+  category: Sin clasificar
+  official: true
+- name: make-mini-image
+  url: https://github.com/lliurex/make-mini-image
+  description: Mini-image maker
+  category: Sin clasificar
+  official: true
+- name: marcapaginas
+  url: https://github.com/lliurex/marcapaginas
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: moodle
+  url: https://github.com/lliurex/moodle
+  description: Package to install moodle file in lliurex environment
+  category: Sin clasificar
+  official: true
+- name: mrpdi
+  url: https://github.com/lliurex/mrpdi
+  description: MrPDI allows digital whiteboards to work under Gnu/Linux
+  category: Sin clasificar
+  official: true
+- name: mrpdi-cli
+  url: https://github.com/lliurex/mrpdi-cli
+  description: CLI tools for mrpdi
+  category: Sin clasificar
+  official: true
+- name: mrpdi-drivers
+  url: https://github.com/lliurex/mrpdi-drivers
+  description: Mainstream drivers kit enabling support for miscelanea of input devices
+  category: Sin clasificar
+  official: true
+- name: mrpdi-gui
+  url: https://github.com/lliurex/mrpdi-gui
+  description: Gtk Manager for mrpdi
+  category: Sin clasificar
+  official: true
+- name: mysql-tuneup
+  url: https://github.com/lliurex/mysql-tuneup
+  description: Configs for fine tuning mysql
+  category: Sin clasificar
+  official: true
+- name: n4d
+  url: https://github.com/lliurex/n4d
+  description: Xmlrpc server to allow the remote execution of pluggable functions
+  category: Sin clasificar
+  official: true
+- name: n4d-apache
+  url: https://github.com/lliurex/n4d-apache
+  description: N4D Package to configure Apache
+  category: Sin clasificar
+  official: true
+- name: n4d-autofs
+  url: https://github.com/lliurex/n4d-autofs
+  description: N4D Autofs plugin
+  category: Sin clasificar
+  official: true
+- name: n4d-backup-manager
+  url: https://github.com/lliurex/n4d-backup-manager
+  description: N4D Plugin to make/restore backups from specified apps
+  category: Sin clasificar
+  official: true
+- name: n4d-cdc
+  url: https://github.com/lliurex/n4d-cdc
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: n4d-cdlocker-client
+  url: https://github.com/lliurex/n4d-cdlocker-client
+  description: Locks client drive CD tray
+  category: Sin clasificar
+  official: true
+- name: n4d-cdlocker-server
+  url: https://github.com/lliurex/n4d-cdlocker-server
+  description: ' Plugins supporting lliurex cdlocker server functionality'
+  category: Sin clasificar
+  official: true
+- name: n4d-client-exe-consumer
+  url: https://github.com/lliurex/n4d-client-exe-consumer
+  description: Plugin to consume n4d-client-exe-manager scripts
+  category: Sin clasificar
+  official: true
+- name: n4d-client-exe-manager
+  url: https://github.com/lliurex/n4d-client-exe-manager
+  description: N4D plugin to configure serve scripts via n4d-client-exe-consumer
+  category: Sin clasificar
+  official: true
+- name: n4d-client-plugins
+  url: https://github.com/lliurex/n4d-client-plugins
+  description: N4D client plugins
+  category: Sin clasificar
+  official: true
+- name: n4d-clientvars
+  url: https://github.com/lliurex/n4d-clientvars
+  description: N4D client variables
+  category: Sin clasificar
+  official: true
+- name: n4d-cups
+  url: https://github.com/lliurex/n4d-cups
+  description: ' n4d cups plugin'
+  category: Sin clasificar
+  official: true
+- name: n4d-dnsmasq
+  url: https://github.com/lliurex/n4d-dnsmasq
+  description: N4D Package to configure DNSMASQ
+  category: Sin clasificar
+  official: true
+- name: n4d-epoptes-client
+  url: https://github.com/lliurex/n4d-epoptes-client
+  description: N4D Package to configure epoptes-client on every boot
+  category: Sin clasificar
+  official: true
+- name: n4d-epoptes-common
+  url: https://github.com/lliurex/n4d-epoptes-common
+  description: N4D epoptes common operations to enforce extra security
+  category: Sin clasificar
+  official: true
+- name: n4d-epoptes-desktop
+  url: https://github.com/lliurex/n4d-epoptes-desktop
+  description: N4D Plugin to manage epoptes-client in natfree networks
+  category: Sin clasificar
+  official: true
+- name: n4d-epoptes-server
+  url: https://github.com/lliurex/n4d-epoptes-server
+  description: N4D plugin to add epoptes some more n4d functionalities
+  category: Sin clasificar
+  official: true
+- name: n4d-escoles-conectades
+  url: https://github.com/lliurex/n4d-escoles-conectades
+  description: n4d plugin which help to stablish a networkmanager connection to GVA
+    Escoles Conectades Wireless
+  category: Sin clasificar
+  official: true
+- name: n4d-freeradius
+  url: https://github.com/lliurex/n4d-freeradius
+  description: N4D plugin for configuring radius server
+  category: Sin clasificar
+  official: true
+- name: n4d-homecleaner
+  url: https://github.com/lliurex/n4d-homecleaner
+  description: n4d home cleaner plugin
+  category: Sin clasificar
+  official: true
+- name: n4d-hostname
+  url: https://github.com/lliurex/n4d-hostname
+  description: N4D server hostname configuration plugin
+  category: Sin clasificar
+  official: true
+- name: n4d-iptablesmanager
+  url: https://github.com/lliurex/n4d-iptablesmanager
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: n4d-kerberos
+  url: https://github.com/lliurex/n4d-kerberos
+  description: Kerberos configure utils
+  category: Sin clasificar
+  official: true
+- name: n4d-ldap
+  url: https://github.com/lliurex/n4d-ldap
+  description: N4D Package to configure LDAP
+  category: Sin clasificar
+  official: true
+- name: n4d-lliurex-base
+  url: https://github.com/lliurex/n4d-lliurex-base
+  description: N4D basic plugins
+  category: Sin clasificar
+  official: true
+- name: n4d-locale-manager
+  url: https://github.com/lliurex/n4d-locale-manager
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: n4d-moving-profiles
+  url: https://github.com/lliurex/n4d-moving-profiles
+  description: N4D plugin for configuring moving profiles
+  category: Sin clasificar
+  official: true
+- name: n4d-mysql
+  url: https://github.com/lliurex/n4d-mysql
+  description: N4d mysql plugin
+  category: Sin clasificar
+  official: true
+- name: n4d-netfolders
+  url: https://github.com/lliurex/n4d-netfolders
+  description: N4D plugin to configured samba network folders
+  category: Sin clasificar
+  official: true
+- name: n4d-network
+  url: https://github.com/lliurex/n4d-network
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: n4d-nfs
+  url: https://github.com/lliurex/n4d-nfs
+  description: N4D Plugin that offers nfs exportation functionalities
+  category: Sin clasificar
+  official: true
+- name: n4d-pamnss
+  url: https://github.com/lliurex/n4d-pamnss
+  description: N4D plugin to configure pamnss related files
+  category: Sin clasificar
+  official: true
+- name: n4d-proxy
+  url: https://github.com/lliurex/n4d-proxy
+  description: N4D Plugin to configure LliureX proxy
+  category: Sin clasificar
+  official: true
+- name: n4d-remote-gui-plugins
+  url: https://github.com/lliurex/n4d-remote-gui-plugins
+  description: N4D pluginthat allows execution of remote GUIs
+  category: Sin clasificar
+  official: true
+- name: n4d-samba
+  url: https://github.com/lliurex/n4d-samba
+  description: N4D Package to configure samba
+  category: Sin clasificar
+  official: true
+- name: n4d-server-plugins
+  url: https://github.com/lliurex/n4d-server-plugins
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: n4d-shutdowner-client
+  url: https://github.com/lliurex/n4d-shutdowner-client
+  description: Plugin allowing lliurex-shutdowner to shutdown clients
+  category: Sin clasificar
+  official: true
+- name: n4d-shutdowner-server
+  url: https://github.com/lliurex/n4d-shutdowner-server
+  description: Plugins supporting lliurex shutdowner server functionality
+  category: Sin clasificar
+  official: true
+- name: n4d-taskscheduler
+  url: https://github.com/lliurex/n4d-taskscheduler
+  description: TaskScheduler plugin for n4d
+  category: Sin clasificar
+  official: true
+- name: n4d-testing
+  url: https://github.com/lliurex/n4d-testing
+  description: Temporary repository for N4D v1.0
+  category: Sin clasificar
+  official: true
+- name: n4d-wifiedugva
+  url: https://github.com/lliurex/n4d-wifiedugva
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: natfree
+  url: https://github.com/lliurex/natfree
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: nerd-dictation-plasmoid
+  url: https://github.com/lliurex/nerd-dictation-plasmoid
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: netinstall-boot
+  url: https://github.com/lliurex/netinstall-boot
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: netinstall-kernel
+  url: https://github.com/lliurex/netinstall-kernel
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: netinstall-seeds
+  url: https://github.com/lliurex/netinstall-seeds
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: netplan
+  url: https://github.com/lliurex/netplan
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: news-admin
+  url: https://github.com/lliurex/news-admin
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: news-server
+  url: https://github.com/lliurex/news-server
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: nextcloud
+  url: https://github.com/lliurex/nextcloud
+  description: Package to install nextcloud files in lliurex
+  category: Sin clasificar
+  official: true
+- name: nextcloud-desktop
+  url: https://github.com/lliurex/nextcloud-desktop
+  description: 3.2.3 Backport from impish
+  category: Sin clasificar
+  official: true
+- name: nextcloud19
+  url: https://github.com/lliurex/nextcloud19
+  description: Deb to install nextcloud19 in LliureX
+  category: Sin clasificar
+  official: true
+- name: nextcloud21
+  url: https://github.com/lliurex/nextcloud21
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: node-webkit
+  url: https://github.com/lliurex/node-webkit
+  description: ' Node-Webit package that depends on nwjs0.21'
+  category: Sin clasificar
+  official: true
+- name: noteshrink-gui
+  url: https://github.com/lliurex/noteshrink-gui
+  description: Graphical interface to convert scans of handwritten notes to beautiful,
+    compact PDFs
+  category: Sin clasificar
+  official: true
+- name: numptyphysics
+  url: https://github.com/lliurex/numptyphysics
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: nwjs0.21
+  url: https://github.com/lliurex/nwjs0.21
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: nwjs0.30
+  url: https://github.com/lliurex/nwjs0.30
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: open-sysclone
+  url: https://github.com/lliurex/open-sysclone
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: open-sysclone-system
+  url: https://github.com/lliurex/open-sysclone-system
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: openstereogram
+  url: https://github.com/lliurex/openstereogram
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: pam_autologin
+  url: https://github.com/lliurex/pam_autologin
+  description: PAM autologin module
+  category: Sin clasificar
+  official: true
+- name: panel-design-manager
+  url: https://github.com/lliurex/panel-design-manager
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: partitionmanager
+  url: https://github.com/lliurex/partitionmanager
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: pdfarranger
+  url: https://github.com/lliurex/pdfarranger
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: pdfarranger-pikepdf
+  url: https://github.com/lliurex/pdfarranger-pikepdf
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: pintascreen
+  url: https://github.com/lliurex/pintascreen
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: pmb5.0
+  url: https://github.com/lliurex/pmb5.0
+  description: Package to install pmb5.0 with docker
+  category: Sin clasificar
+  official: true
+- name: pmb7.0
+  url: https://github.com/lliurex/pmb7.0
+  description: Repository to custom PMB used in LliureX
+  category: Sin clasificar
+  official: true
+- name: pmb_base
+  url: https://github.com/lliurex/pmb_base
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: pmb_translations
+  url: https://github.com/lliurex/pmb_translations
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: polin
+  url: https://github.com/lliurex/polin
+  description: Eines per a l'assistència a les traduccions
+  category: Sin clasificar
+  official: true
+- name: presentations
+  url: https://github.com/lliurex/presentations
+  description: presentaciones para jornadas, cursos, etc.
+  category: Sin clasificar
+  official: true
+- name: printa
+  url: https://github.com/lliurex/printa
+  description: Printing service
+  category: Sin clasificar
+  official: true
+- name: promethean-compat-libs
+  url: https://github.com/lliurex/promethean-compat-libs
+  description: Legacy libs for promethean activinspire
+  category: Sin clasificar
+  official: true
+- name: promethean-fixboot
+  url: https://github.com/lliurex/promethean-fixboot
+  description: Deletes /dev/shm/pem.promethean on boot
+  category: Sin clasificar
+  official: true
+- name: pyromaths-qt
+  url: https://github.com/lliurex/pyromaths-qt
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: pyside2
+  url: https://github.com/lliurex/pyside2
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: pyside6
+  url: https://github.com/lliurex/pyside6
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: pysiogame
+  url: https://github.com/lliurex/pysiogame
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: pysycache-qcv
+  url: https://github.com/lliurex/pysycache-qcv
+  description: Added some translations for Valencia on pysycache
+  category: Sin clasificar
+  official: true
+- name: python-llxnet
+  url: https://github.com/lliurex/python-llxnet
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: python-llxvars
+  url: https://github.com/lliurex/python-llxvars
+  description: Python package containing LliureX  initialization values for N4D variables
+  category: Sin clasificar
+  official: true
+- name: python-qtermwidget
+  url: https://github.com/lliurex/python-qtermwidget
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: python-superqt
+  url: https://github.com/lliurex/python-superqt
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: python-support
+  url: https://github.com/lliurex/python-support
+  description: Automated rebuilding support for Python modules
+  category: Sin clasificar
+  official: true
+- name: python-typing-extensions
+  url: https://github.com/lliurex/python-typing-extensions
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: python-uinput
+  url: https://github.com/lliurex/python-uinput
+  description: ': Pythonic API to Linux uinput kernel module (Python2) '
+  category: Sin clasificar
+  official: true
+- name: python3-app2menu
+  url: https://github.com/lliurex/python3-app2menu
+  description: library for generate desktop files
+  category: Sin clasificar
+  official: true
+- name: python3-appconfig
+  url: https://github.com/lliurex/python3-appconfig
+  description: Lib for managing config files for local apps or n4d servers
+  category: Sin clasificar
+  official: true
+- name: python3-appsedu
+  url: https://github.com/lliurex/python3-appsedu
+  description: Appsedu web scraper
+  category: Sin clasificar
+  official: true
+- name: python3-imutils
+  url: https://github.com/lliurex/python3-imutils
+  description: imutils is a package that provides convenience functions for basic
+    image processing tasks such as translation, rotation, resizing, skeletonization,
+    and more
+  category: Sin clasificar
+  official: true
+- name: python3-llxaccessibility
+  url: https://github.com/lliurex/python3-llxaccessibility
+  description: Python3 module for centralize the accessibility options of LliureX
+  category: Sin clasificar
+  official: true
+- name: python3-qtextrawidgets
+  url: https://github.com/lliurex/python3-qtextrawidgets
+  description: Custom PySide2 widgets
+  category: Sin clasificar
+  official: true
+- name: python3-rebost
+  url: https://github.com/lliurex/python3-rebost
+  description: Python3 module for the rebost software store
+  category: Sin clasificar
+  official: true
+- name: python3-repoman
+  url: https://github.com/lliurex/python3-repoman
+  description: python module for manage software sources
+  category: Sin clasificar
+  official: true
+- name: python3-software-properties-lliurex
+  url: https://github.com/lliurex/python3-software-properties-lliurex
+  description: Diversion for ppa.py file from python3-software-properties (ssl fix)
+  category: Sin clasificar
+  official: true
+- name: python3-taskscheduler
+  url: https://github.com/lliurex/python3-taskscheduler
+  description: Python module for cron
+  category: Sin clasificar
+  official: true
+- name: qml-module-gva-gate
+  url: https://github.com/lliurex/qml-module-gva-gate
+  description: Provides access to gva-gate api
+  category: Sin clasificar
+  official: true
+- name: qml-module-lliurex-ui
+  url: https://github.com/lliurex/qml-module-lliurex-ui
+  description: qml module with widgets and tools used on lliurex environment (sddm,
+    login, live wizard, ...)
+  category: Sin clasificar
+  official: true
+- name: qmltermwidget
+  url: https://github.com/lliurex/qmltermwidget
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: qtdatavis3d
+  url: https://github.com/lliurex/qtdatavis3d
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: qtremoteobjects
+  url: https://github.com/lliurex/qtremoteobjects
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: qtscxml
+  url: https://github.com/lliurex/qtscxml
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: rebost
+  url: https://github.com/lliurex/rebost
+  description: Rebost is a software management system for LliureX.
+  category: Sin clasificar
+  official: true
+- name: rebost-data
+  url: https://github.com/lliurex/rebost-data
+  description: appstream data for rebost
+  category: Sin clasificar
+  official: true
+- name: rebost-metadata
+  url: https://github.com/lliurex/rebost-metadata
+  description: Metadata - splitted from rebost-data
+  category: Sin clasificar
+  official: true
+- name: repoman
+  url: https://github.com/lliurex/repoman
+  description: Repository Manager for LliureX
+  category: Sin clasificar
+  official: true
+- name: resources-launcher
+  url: https://github.com/lliurex/resources-launcher
+  description: Launcher for the educational resources
+  category: Sin clasificar
+  official: true
+- name: robolliurex
+  url: https://github.com/lliurex/robolliurex
+  description: Robolliurex is a software which allows to use classic Lego RCX brick
+  category: Sin clasificar
+  official: true
+- name: rtl88x2ce
+  url: https://github.com/lliurex/rtl88x2ce
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: ruby-aubio
+  url: https://github.com/lliurex/ruby-aubio
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: ruby-rubame
+  url: https://github.com/lliurex/ruby-rubame
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: ruby-sys-proctable
+  url: https://github.com/lliurex/ruby-sys-proctable
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: ruby-websocket
+  url: https://github.com/lliurex/ruby-websocket
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: ruby-xmlrpc
+  url: https://github.com/lliurex/ruby-xmlrpc
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: ruby2.7
+  url: https://github.com/lliurex/ruby2.7
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: runomatic
+  url: https://github.com/lliurex/runomatic
+  description: Simple full-screen app launcher that embeds launched apps in tabs
+  category: Sin clasificar
+  official: true
+- name: runovnc
+  url: https://github.com/lliurex/runovnc
+  description: gvncviewer fork for use in runomatic
+  category: Sin clasificar
+  official: true
+- name: s4a
+  url: https://github.com/lliurex/s4a
+  description: ' A customized version of Scratch $ Arduino'
+  category: Sin clasificar
+  official: true
+- name: sagora
+  url: https://github.com/lliurex/sagora
+  description: Stream live music software
+  category: Sin clasificar
+  official: true
+- name: samba
+  url: https://github.com/lliurex/samba
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: schoolmedia
+  url: https://github.com/lliurex/schoolmedia
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: screensaver_manager
+  url: https://github.com/lliurex/screensaver_manager
+  description: Enable o disable screensaver to user
+  category: Sin clasificar
+  official: true
+- name: simplayer
+  url: https://github.com/lliurex/simplayer
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: sinadura
+  url: https://github.com/lliurex/sinadura
+  description: Installer for Sinadura
+  category: Sin clasificar
+  official: true
+- name: software-unlocker
+  url: https://github.com/lliurex/software-unlocker
+  description: Gui for lock/unlock software management under lliurex
+  category: Sin clasificar
+  official: true
+- name: sonic-pi
+  url: https://github.com/lliurex/sonic-pi
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: sonicpi-pulseaudio-compat
+  url: https://github.com/lliurex/sonicpi-pulseaudio-compat
+  description: Wrapper for executing sonicpi if jackd is not in use
+  category: Sin clasificar
+  official: true
+- name: squid-ssl
+  url: https://github.com/lliurex/squid-ssl
+  description: 'SSL-enabled Squid '
+  category: Sin clasificar
+  official: true
+- name: store
+  url: https://github.com/lliurex/store
+  description: Gui for appsedu web / General purpose
+  category: Sin clasificar
+  official: true
+- name: supercollider
+  url: https://github.com/lliurex/supercollider
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: supercollider-sc3-plugins
+  url: https://github.com/lliurex/supercollider-sc3-plugins
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: sync-on-server-ready
+  url: https://github.com/lliurex/sync-on-server-ready
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: syslinux
+  url: https://github.com/lliurex/syslinux
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: syslinux-themes-ubuntu
+  url: https://github.com/lliurex/syslinux-themes-ubuntu
+  description: This package contains the graphical bootloader theme
+  category: Sin clasificar
+  official: true
+- name: system-unlinked-server
+  url: https://github.com/lliurex/system-unlinked-server
+  description: Brings up the internal network interface if needed
+  category: Sin clasificar
+  official: true
+- name: taskscheduler
+  url: https://github.com/lliurex/taskscheduler
+  description: Schedule pre-configured tasks on your LliureX system
+  category: Sin clasificar
+  official: true
+- name: telegram-installer
+  url: https://github.com/lliurex/telegram-installer
+  description: LliureX Telegram installer
+  category: Sin clasificar
+  official: true
+- name: test-translation
+  url: https://github.com/lliurex/test-translation
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: thunderbird-locale-ca-va
+  url: https://github.com/lliurex/thunderbird-locale-ca-va
+  description: va langpack for thunderbird
+  category: Sin clasificar
+  official: true
+- name: tuxpaint
+  url: https://github.com/lliurex/tuxpaint
+  description: A paint program for young children
+  category: Sin clasificar
+  official: true
+- name: tuxpaint-config
+  url: https://github.com/lliurex/tuxpaint-config
+  description: Configuration tool for Tux Paint
+  category: Sin clasificar
+  official: true
+- name: ubiquity
+  url: https://github.com/lliurex/ubiquity
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: ubiquity-desktop-layout
+  url: https://github.com/lliurex/ubiquity-desktop-layout
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: ubiquity-extrapackages
+  url: https://github.com/lliurex/ubiquity-extrapackages
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: ubiquity-hooks
+  url: https://github.com/lliurex/ubiquity-hooks
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: ubiquity-slideshow-lliurex
+  url: https://github.com/lliurex/ubiquity-slideshow-lliurex
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: ubiquity-system-addons
+  url: https://github.com/lliurex/ubiquity-system-addons
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: update-hosts
+  url: https://github.com/lliurex/update-hosts
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: user-mount-check
+  url: https://github.com/lliurex/user-mount-check
+  description: Package to test network mounts
+  category: Sin clasificar
+  official: true
+- name: vigilia
+  url: https://github.com/lliurex/vigilia
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: wxwidgets3.2
+  url: https://github.com/lliurex/wxwidgets3.2
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: xdg-user-dirs
+  url: https://github.com/lliurex/xdg-user-dirs
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: xf86-input-nextwindow
+  url: https://github.com/lliurex/xf86-input-nextwindow
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: xmlrpcnet
+  url: https://github.com/lliurex/xmlrpcnet
+  description: Mono XMLRPC libraries
+  category: Sin clasificar
+  official: true
+- name: xournalpp
+  url: https://github.com/lliurex/xournalpp
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: xpanimated-yb
+  url: https://github.com/lliurex/xpanimated-yb
+  description: X cursor with focus on visibility
+  category: Sin clasificar
+  official: true
+- name: xpdf
+  url: https://github.com/lliurex/xpdf
+  description: 'Backport from impish '
+  category: Sin clasificar
+  official: true
+- name: xpra
+  url: https://github.com/lliurex/xpra
+  description: Tool to detach/reattach running X programas (like Screen for X)
+  category: Sin clasificar
+  official: true
+- name: xpra-www-data
+  url: https://github.com/lliurex/xpra-www-data
+  description: www folder for xpra
+  category: Sin clasificar
+  official: true
+- name: ydotool
+  url: https://github.com/lliurex/ydotool
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: youtube-dl
+  url: https://github.com/lliurex/youtube-dl
+  description: youtube-dl is a small command-line program to download videos
+  category: Sin clasificar
+  official: true
+- name: zero-center
+  url: https://github.com/lliurex/zero-center
+  description: Lliurex control center is a gtk frontend that enables user to administrate
+    a lliurex based system. Its extensible through new scripts.
+  category: Sin clasificar
+  official: true
+- name: zero-fp
+  url: https://github.com/lliurex/zero-fp
+  description: Package collection to Fp o r modules education.
+  category: Sin clasificar
+  official: true
+- name: zero-installer-kids
+  url: https://github.com/lliurex/zero-installer-kids
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: zero-installer-resourceapps
+  url: https://github.com/lliurex/zero-installer-resourceapps
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: zero-jclic-reports
+  url: https://github.com/lliurex/zero-jclic-reports
+  description: Configuration for jclic-reportserver
+  category: Sin clasificar
+  official: true
+- name: zero-lliurex-3d-print
+  url: https://github.com/lliurex/zero-lliurex-3d-print
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: zero-lliurex-accessibility
+  url: https://github.com/lliurex/zero-lliurex-accessibility
+  description: Accessibility for LliureX
+  category: Sin clasificar
+  official: true
+- name: zero-lliurex-adobereader
+  url: https://github.com/lliurex/zero-lliurex-adobereader
+  description: LliureX Adobe Reader installer
+  category: Sin clasificar
+  official: true
+- name: zero-lliurex-arasuite
+  url: https://github.com/lliurex/zero-lliurex-arasuite
+  description: Lliurex AraSuite installer
+  category: Sin clasificar
+  official: true
+- name: zero-lliurex-cdc
+  url: https://github.com/lliurex/zero-lliurex-cdc
+  description: Zomando to install cdc packages
+  category: Sin clasificar
+  official: true
+- name: zero-lliurex-clientize
+  url: https://github.com/lliurex/zero-lliurex-clientize
+  description: Zomando to install minimal client meta package
+  category: Sin clasificar
+  official: true
+- name: zero-lliurex-cmaptools
+  url: https://github.com/lliurex/zero-lliurex-cmaptools
+  description: LliureX CmapTools Installer
+  category: Sin clasificar
+  official: true
+- name: zero-lliurex-dni
+  url: https://github.com/lliurex/zero-lliurex-dni
+  description: Install DNI-E in firefox and thunderbird
+  category: Sin clasificar
+  official: true
+- name: zero-lliurex-docker
+  url: https://github.com/lliurex/zero-lliurex-docker
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: zero-lliurex-flavours
+  url: https://github.com/lliurex/zero-lliurex-flavours
+  description: Flavours Selection Tool for changing between LliureX flavour
+  category: Sin clasificar
+  official: true
+- name: zero-lliurex-gearth
+  url: https://github.com/lliurex/zero-lliurex-gearth
+  description: Lliurex Google Earth installer
+  category: Sin clasificar
+  official: true
+- name: zero-lliurex-installers
+  url: https://github.com/lliurex/zero-lliurex-installers
+  description: Some application installers for LliureX
+  category: Sin clasificar
+  official: true
+- name: zero-lliurex-itaca
+  url: https://github.com/lliurex/zero-lliurex-itaca
+  description: Wizard to install browser for Itaca
+  category: Sin clasificar
+  official: true
+- name: zero-lliurex-jamulus
+  url: https://github.com/lliurex/zero-lliurex-jamulus
+  description: Zero installer for Jamulus Server
+  category: Sin clasificar
+  official: true
+- name: zero-lliurex-jclic-biblio
+  url: https://github.com/lliurex/zero-lliurex-jclic-biblio
+  description: JCLIC Library Installer
+  category: Sin clasificar
+  official: true
+- name: zero-lliurex-jitsi
+  url: https://github.com/lliurex/zero-lliurex-jitsi
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: zero-lliurex-keepass
+  url: https://github.com/lliurex/zero-lliurex-keepass
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: zero-lliurex-musica
+  url: https://github.com/lliurex/zero-lliurex-musica
+  description: Zomando for Music education
+  category: Sin clasificar
+  official: true
+- name: zero-lliurex-nextcloud19
+  url: https://github.com/lliurex/zero-lliurex-nextcloud19
+  description: Wizard to update nextcloud15 to nextcloud19
+  category: Sin clasificar
+  official: true
+- name: zero-lliurex-openboard
+  url: https://github.com/lliurex/zero-lliurex-openboard
+  description: Openboard installer for LliureX
+  category: Sin clasificar
+  official: true
+- name: zero-lliurex-pmb
+  url: https://github.com/lliurex/zero-lliurex-pmb
+  description: PMB Installer for LliureX
+  category: Sin clasificar
+  official: true
+- name: zero-lliurex-printers
+  url: https://github.com/lliurex/zero-lliurex-printers
+  description: EPI to install printers drivers.
+  category: Sin clasificar
+  official: true
+- name: zero-lliurex-s4a
+  url: https://github.com/lliurex/zero-lliurex-s4a
+  description: Installer for S4A
+  category: Sin clasificar
+  official: true
+- name: zero-lliurex-sagora
+  url: https://github.com/lliurex/zero-lliurex-sagora
+  description: Agora Sonora jam session server
+  category: Sin clasificar
+  official: true
+- name: zero-lliurex-scratch2
+  url: https://github.com/lliurex/zero-lliurex-scratch2
+  description: Scratch2 offline editor installer
+  category: Sin clasificar
+  official: true
+- name: zero-lliurex-scratch3
+  url: https://github.com/lliurex/zero-lliurex-scratch3
+  description: Zero installer for scratch offline editor
+  category: Sin clasificar
+  official: true
+- name: zero-lliurex-sketchup
+  url: https://github.com/lliurex/zero-lliurex-sketchup
+  description: Google Sketchup Installer
+  category: Sin clasificar
+  official: true
+- name: zero-lliurex-smart
+  url: https://github.com/lliurex/zero-lliurex-smart
+  description: Zero-center helper, It downloads and installs lliurex-smart package
+  category: Sin clasificar
+  official: true
+- name: zero-lliurex-smart-ng
+  url: https://github.com/lliurex/zero-lliurex-smart-ng
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: zero-lliurex-starboard
+  url: https://github.com/lliurex/zero-lliurex-starboard
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: zero-lliurex-touch
+  url: https://github.com/lliurex/zero-lliurex-touch
+  description: Wizard to install everything necessary to adapt the LliureX user experience
+    to a touch device
+  category: Sin clasificar
+  official: true
+- name: zero-lliurex-transparent-proxy
+  url: https://github.com/lliurex/zero-lliurex-transparent-proxy
+  description: Transparent proxy management
+  category: Sin clasificar
+  official: true
+- name: zero-robolliurex
+  url: https://github.com/lliurex/zero-robolliurex
+  description: Zomando to install robolliurex
+  category: Sin clasificar
+  official: true
+- name: zero-server-wizard
+  url: https://github.com/lliurex/zero-server-wizard
+  description: Sin descripción.
+  category: Sin clasificar
+  official: true
+- name: ASIR-ISO
+  url: https://github.com/aberlanas/ASIR-ISO
+  description: Materiales para el módulo de ISO de ASIR
+  category: Sin clasificar
+  official: false
+- name: AyudantePMB
+  url: https://github.com/da-bid/AyudantePMB
+  description: Ayuda a crear acciones por lotes como crear libros o crear grupos en
+    el programa de gestión de biblioteca PMB
+  category: Sin clasificar
+  official: false
+- name: CPD_INSTITUT
+  url: https://github.com/marcbrines2003/CPD_INSTITUT
+  description: Centre de procesament de dades virtual que simula les necessitats de
+    una infraestructura tecnològica, per solventar un problema d'emmagatzematge a
+    l'IES Jaume II El Just
+  category: Sin clasificar
+  official: false
+- name: Instalar-ubuntu
+  url: https://github.com/madroboot/Instalar-ubuntu
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: LliuCrack
+  url: https://github.com/elpaspafe/LliuCrack
+  description: Cracking "Lliurex" the SO used in the schools of "Comunitat Valenciana"
+  category: Sin clasificar
+  official: false
+- name: LliurexBadLogin
+  url: https://github.com/elpaspafe/LliurexBadLogin
+  description: This is a prank.
+  category: Sin clasificar
+  official: false
+- name: LliurexNemo
+  url: https://github.com/sofiangrh/LliurexNemo
+  description: Metacity Theme
+  category: Sin clasificar
+  official: false
+- name: LliurexRepoBypass
+  url: https://github.com/PK2-Stimpy/LliurexRepoBypass
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: Massive-Unix-Identifier
+  url: https://github.com/andycharlespoenas/Massive-Unix-Identifier
+  description: Massive Unix Identifier
+  category: Sin clasificar
+  official: false
+- name: PYSH.SDK
+  url: https://github.com/wonnd3r/PYSH.SDK
+  description: PYSH.SDK helps you develop LliureX desktop apps easily!
+  category: Sin clasificar
+  official: false
+- name: SOR
+  url: https://github.com/manviny/SOR
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: Scripts_inventario_informatico
+  url: https://github.com/robinjgomez/Scripts_inventario_informatico
+  description: Scripts para Windows y Linux usados em le recogida de datos de inventario
+    informático de los centros educativos de la omunidad Valenciana
+  category: Sin clasificar
+  official: false
+- name: Sistemas-operativos
+  url: https://github.com/Joralofer/Sistemas-operativos
+  description: Repositorio cib las tareas entregadas de Aules la semaba pasada
+  category: Sin clasificar
+  official: false
+- name: UpdateManager
+  url: https://github.com/juanma1980/UpdateManager
+  description: Adaptation of python module UpdateManager from Ubuntu to Lliurex
+  category: Sin clasificar
+  official: false
+- name: Ventoy
+  url: https://github.com/ventoy/Ventoy
+  description: A new bootable USB solution.
+  category: Sin clasificar
+  official: false
+- name: Ventoy
+  url: https://github.com/nonamezhangsan/Ventoy
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: Ventoy
+  url: https://github.com/danielrsa97/Ventoy
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: Ventoy
+  url: https://github.com/retr0-13/Ventoy
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: Ventoy-bootable-usb
+  url: https://github.com/Marketgame99/Ventoy-bootable-usb
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: Ventoy1
+  url: https://github.com/Tirklee/Ventoy1
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: VentoyBack
+  url: https://github.com/mxfade/VentoyBack
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: VentoyCopi
+  url: https://github.com/Alexis38A/VentoyCopi
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: VentoySupportedOS
+  url: https://github.com/imjustbackup/VentoySupportedOS
+  description: List of supported OS's for Ventoy
+  category: Sin clasificar
+  official: false
+- name: aisoy
+  url: https://github.com/datunie/aisoy
+  description: Codi per al robot aisoy
+  category: Sin clasificar
+  official: false
+- name: alfonsoserranoalbert
+  url: https://github.com/alfonsoserranoalbert/alfonsoserranoalbert
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: ansible-apache-mysql
+  url: https://github.com/ranguitamartin/ansible-apache-mysql
+  description: This proyect use ansible for installation  webserver and DB( apache
+    with PHP and mysql)
+  category: Sin clasificar
+  official: false
+- name: appimage.github.io
+  url: https://github.com/AppImage/appimage.github.io
+  description: Given an URL to an AppImage, the GitHub action in this project inspects
+    the AppImage and puts it into a community-maintained catalog
+  category: Sin clasificar
+  official: false
+- name: aurex-meta
+  url: https://github.com/luisgg/aurex-meta
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: awesome
+  url: https://github.com/comunitatlliurex/awesome
+  description: Awesome Comunitat Lliurex
+  category: Sin clasificar
+  official: false
+- name: awesome-lliurex
+  url: https://github.com/Canx/awesome-lliurex
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: awesome-stars
+  url: https://github.com/shredthaGNAR/awesome-stars
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: awesome-telegram
+  url: https://github.com/Marzal/awesome-telegram
+  description: mirror of https://gitlab.com/listados/awesome-telegram
+  category: Sin clasificar
+  official: false
+- name: bellscheduler-dre
+  url: https://github.com/aosucas499/bellscheduler-dre
+  description: Aplicación dockerizada de la aplicación Bell-scheduler del sistema
+    Lliurex.
+  category: Sin clasificar
+  official: false
+- name: bellscheduler-pi
+  url: https://github.com/aosucas499/bellscheduler-pi
+  description: Aplicación dockerizada de la aplicación Bell-scheduler del sistema
+    Lliurex para raspberry pi
+  category: Sin clasificar
+  official: false
+- name: blender
+  url: https://github.com/manviny/blender
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: chrootvpn
+  url: https://github.com/ruyrybeyro/chrootvpn
+  description: Checkpoint R80+ VPN client chroot wrapper
+  category: Sin clasificar
+  official: false
+- name: clickcontrol
+  url: https://github.com/benigaslo/clickcontrol
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: clone_ventoy
+  url: https://github.com/geffreycc/clone_ventoy
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: distro-api
+  url: https://github.com/devnyxie/distro-api
+  description: Explore over 900 Linux distributions with Distro API. Get detailed
+    data on each distro, perfect for developers and Linux enthusiasts.
+  category: Sin clasificar
+  official: false
+- name: dubstdemon
+  url: https://github.com/albertp0rter/dubstdemon
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: edupals-n4d-toolkit
+  url: https://github.com/edupals/edupals-n4d-toolkit
+  description: A C++ toolkit based on edupals-base-toolkit for dealing with lliurex
+    n4d (xml-rpc) connections
+  category: Sin clasificar
+  official: false
+- name: hackbyNEXUS
+  url: https://github.com/NEXUSKITKAT/hackbyNEXUS
+  description: Es un script para quitar la pantalla de bloqueo de Epoptes
+  category: Sin clasificar
+  official: false
+- name: icons
+  url: https://github.com/M-L-P/icons
+  description: Collections of the logos of all active OSes, which can be used for
+    Multi-OSes_Bootloaders, such as rEFInd, CloverBootloader, and so on.
+  category: Sin clasificar
+  official: false
+- name: kisamono
+  url: https://github.com/kisamono/kisamono
+  description: Config files for my GitHub profile.
+  category: Sin clasificar
+  official: false
+- name: ksetwallpaper
+  url: https://github.com/Canx/ksetwallpaper
+  description: Change KDE wallpaper at startup (lliurex)
+  category: Sin clasificar
+  official: false
+- name: kwin-colorcorrection-effect
+  url: https://github.com/juanma1980/kwin-colorcorrection-effect
+  description: Effect for kwin that uses shaders for adressing color blindness issues
+  category: Sin clasificar
+  official: false
+- name: latex
+  url: https://github.com/inclusa/latex
+  description: Recull de templates i procediments
+  category: Sin clasificar
+  official: false
+- name: ldm-lliurex-theme
+  url: https://github.com/joamuran/ldm-lliurex-theme
+  description: LDM them for lliurex-ltsp
+  category: Sin clasificar
+  official: false
+- name: library
+  url: https://github.com/library7192025/library
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: libreappimagehub101.github.io
+  url: https://github.com/libreappimagehub101/libreappimagehub101.github.io
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: list-of-my-starred-repos
+  url: https://github.com/shredthaGNAR/list-of-my-starred-repos
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: lliurex-admin-course
+  url: https://github.com/chverma/lliurex-admin-course
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: lliurex-downloader
+  url: https://github.com/fercavi/lliurex-downloader
+  description: lliurex-downloader
+  category: Sin clasificar
+  official: false
+- name: lliurex-epoptes-exploit
+  url: https://github.com/unai-d/lliurex-epoptes-exploit
+  description: Single Python file that exploits a LliureX's Epoptes vulnerability
+    in order to gain access to any computer.
+  category: Sin clasificar
+  official: false
+- name: lliurex-facil
+  url: https://github.com/sasogu/lliurex-facil
+  description: LliureX es fácil si sabes como,  guías no oficiales, recetas, trucos,....
+  category: Sin clasificar
+  official: false
+- name: lliurex-java-panel
+  url: https://github.com/jrpelegrina/lliurex-java-panel
+  description: Qt version
+  category: Sin clasificar
+  official: false
+- name: lliurex-java-panel-pyside
+  url: https://github.com/jrpelegrina/lliurex-java-panel-pyside
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: lliurex-keyring
+  url: https://github.com/mijuanlo/lliurex-keyring
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: lliurex-ltsp
+  url: https://github.com/joamuran/lliurex-ltsp
+  description: LTSP Customization for LliureX
+  category: Sin clasificar
+  official: false
+- name: lliurex-ltsp-admin
+  url: https://github.com/joamuran/lliurex-ltsp-admin
+  description: Administration tool to manage LliureX LTSP thin client images.
+  category: Sin clasificar
+  official: false
+- name: lliurex-ltsp-client
+  url: https://github.com/joamuran/lliurex-ltsp-client
+  description: Client part of lliurex-ltsp
+  category: Sin clasificar
+  official: false
+- name: lliurex-mirror
+  url: https://github.com/joamuran/lliurex-mirror
+  description: lliurex-mirror
+  category: Sin clasificar
+  official: false
+- name: lliurex-netinstall
+  url: https://github.com/chverma/lliurex-netinstall
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: lliurex-scripts
+  url: https://github.com/chverma/lliurex-scripts
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: lliurex-up-plasmoid
+  url: https://github.com/jrpelegrina/lliurex-up-plasmoid
+  description: Plasmoid to show update notifications and LliureX-Up activity
+  category: Sin clasificar
+  official: false
+- name: lliurex-www
+  url: https://github.com/inclusa/lliurex-www
+  description: Adaptació de la pàgina principal del servidor de Lliurex 16 a un centre
+  category: Sin clasificar
+  official: false
+- name: lliurex-xdg-user-dirs
+  url: https://github.com/raurodse/lliurex-xdg-user-dirs
+  description: xdg user dirs update for LliureX systems
+  category: Sin clasificar
+  official: false
+- name: lliurexapp
+  url: https://github.com/dmontalva/lliurexapp
+  description: app para lliurex
+  category: Sin clasificar
+  official: false
+- name: lliurexproxmox
+  url: https://github.com/arvicenteboix/lliurexproxmox
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: llx-hacks
+  url: https://github.com/joamuran/llx-hacks
+  description: Non oficial lliurex hacks. Just for testing.
+  category: Sin clasificar
+  official: false
+- name: llx-netinst
+  url: https://github.com/joamuran/llx-netinst
+  description: Lliurex Net Installer
+  category: Sin clasificar
+  official: false
+- name: llx-resource-browser
+  url: https://github.com/joamuran/llx-resource-browser
+  description: A cefpython app to launch some online resources (such as Zac Browser,
+    a web browser for children with autism, and Mestre a Casa), and local LliureX
+    Resources.
+  category: Sin clasificar
+  official: false
+- name: llx-resource-markt
+  url: https://github.com/joamuran/llx-resource-markt
+  description: Web Market to educational resources download.
+  category: Sin clasificar
+  official: false
+- name: llx-shutdown-button-on-plank
+  url: https://github.com/joamuran/llx-shutdown-button-on-plank
+  description: Just a button for invoke lliurex-shutdowner from plank
+  category: Sin clasificar
+  official: false
+- name: lmd-lliurex-data
+  url: https://github.com/joamuran/lmd-lliurex-data
+  description: Some links, files and templates for using LTSP with LliureX.
+  category: Sin clasificar
+  official: false
+- name: lmd-server
+  url: https://github.com/joamuran/lmd-server
+  description: Version 2 of lliurex-ltsp-server, integrated in the LMD Project (LliureX
+    LTSP 2.0), for thin cient creation and management.
+  category: Sin clasificar
+  official: false
+- name: my-awesome-starred
+  url: https://github.com/shredthaGNAR/my-awesome-starred
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: my-awesome-stars
+  url: https://github.com/shredthaGNAR/my-awesome-stars
+  description: my list of github stars fork
+  category: Sin clasificar
+  official: false
+- name: my-gnarly-stars
+  url: https://github.com/shredthaGNAR/my-gnarly-stars
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: n4d-ltsp
+  url: https://github.com/joamuran/n4d-ltsp
+  description: 'n4d plugin suite for LTSP under a #lliurex environment.'
+  category: Sin clasificar
+  official: false
+- name: n4dGtkLoginComponent
+  url: https://github.com/edupals/n4dGtkLoginComponent
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: nautilus-properties-previous-versions
+  url: https://github.com/xabim/nautilus-properties-previous-versions
+  description: Extension to Nautilus with Nautilus-Python to work with .snapshot folders
+    in a network share
+  category: Sin clasificar
+  official: false
+- name: papelera-lliurex-net
+  url: https://github.com/TecnicoSai/papelera-lliurex-net
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: pmb-xarxallibres-bionic
+  url: https://github.com/aberlanas/pmb-xarxallibres-bionic
+  description: A PMB Modified for XarxaLlibres
+  category: Sin clasificar
+  official: false
+- name: pmb-xarxallibres-next
+  url: https://github.com/aberlanas/pmb-xarxallibres-next
+  description: pmb-xarxallibres-next
+  category: Sin clasificar
+  official: false
+- name: proves
+  url: https://github.com/migarcia/proves
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: python-sorting
+  url: https://github.com/WidziKasztany/python-sorting
+  description: Python Sorting Program
+  category: Sin clasificar
+  official: false
+- name: python3-n4d-client
+  url: https://github.com/edupals/python3-n4d-client
+  description: Python 3 client library for LliureX's N4D rpc protocol
+  category: Sin clasificar
+  official: false
+- name: remote-installer-plasmoid
+  url: https://github.com/jrpelegrina/remote-installer-plasmoid
+  description: Plasmoid to show LliureX Remote Installer activity
+  category: Sin clasificar
+  official: false
+- name: repo-ejercicio1
+  url: https://github.com/jfelis/repo-ejercicio1
+  description: Repositorio de ejemplo en clase de EDD
+  category: Sin clasificar
+  official: false
+- name: rojalex
+  url: https://github.com/rgmf/rojalex
+  description: Scripts para montar Linux Mint en las aulas de informática en el IES
+    La Encantá
+  category: Sin clasificar
+  official: false
+- name: sasogu.github.io
+  url: https://github.com/sasogu/sasogu.github.io
+  description: Espai personal per a compartir
+  category: Sin clasificar
+  official: false
+- name: sesion7-tarea-grupo-grupopedro
+  url: https://github.com/organizacion-sesion-3-nacho-santonja/sesion7-tarea-grupo-grupopedro
+  description: sesion7-tarea-grupo-grupopedro created by GitHub Classroom
+  category: Sin clasificar
+  official: false
+- name: sistemasOperativos
+  url: https://github.com/hugoarcuri/sistemasOperativos
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: smartdre
+  url: https://github.com/aosucas499/smartdre
+  description: A script to download a docker image, install dependencies and run the
+    drivers/software  for old digital boards "SmartBoard" in new ubuntu based distros.
+  category: Sin clasificar
+  official: false
+- name: starboardre
+  url: https://github.com/aosucas499/starboardre
+  description: A script to download a docker image, install dependencies and run the
+    drivers/software for old digital boards "Hitachi StarBoard" in new ubuntu based
+    distros.
+  category: Sin clasificar
+  official: false
+- name: system
+  url: https://github.com/theintrokey/system
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: taskscheduler
+  url: https://github.com/juanma1980/taskscheduler
+  description: Simple taskmanager that lets the user make some basic task schedule
+  category: Sin clasificar
+  official: false
+- name: usuarios_ldap
+  url: https://github.com/iesmarenostrumdev/usuarios_ldap
+  description: Script para crear usuarios y actualizar passwords LDAP en el servidor
+    de Centro de Lliurex
+  category: Sin clasificar
+  official: false
+- name: ventoy
+  url: https://github.com/sarblohw/ventoy
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: ventoy
+  url: https://github.com/kgranum963/ventoy
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: ventoy
+  url: https://github.com/miguel7penteado/ventoy
+  description: Gerenciador de Carregamento gráfico Ventoy
+  category: Sin clasificar
+  official: false
+- name: ventoy
+  url: https://github.com/kylemanel/ventoy
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: vt
+  url: https://github.com/rdp-studio/vt
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: wonnd3r
+  url: https://github.com/wonnd3r/wonnd3r
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
+- name: zero-lliurex-keepass
+  url: https://github.com/mijuanlo/zero-lliurex-keepass
+  description: Sin descripción.
+  category: Sin clasificar
+  official: false
