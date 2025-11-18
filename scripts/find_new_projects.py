@@ -244,10 +244,10 @@ def classify_repo_with_gemini(repo: Dict[str, Any], readme: str, categories: Lis
 
         # Introducir un retraso para no exceder la cuota de la API
         # La API tiene un límite de 15 solicitudes por minuto por modelo
-        # Por lo tanto, máximo 1 solicitud cada 4 segundos aprox. (60s/15 = 4s)
-        # Usamos un retraso de 4.5 a 5.5 segundos para estar seguros
+        # Para estar muy seguro de no exceder la cuota, vamos a usar un retraso más largo
+        # Aproximadamente 1 solicitud cada 8-12 segundos
         import random
-        delay = random.uniform(4.5, 5.5)  # Aproximadamente 4-5 solicitudes por minuto
+        delay = random.uniform(8.0, 12.0)  # Aproximadamente 5-7 solicitudes por minuto
         print(f"Waiting {delay:.2f} seconds before next request to respect API quota...")
         time.sleep(delay)
 
@@ -273,10 +273,21 @@ def classify_repo_with_gemini(repo: Dict[str, Any], readme: str, categories: Lis
             return "General"
     except Exception as e:
         print(f"Error during classification with Gemini for {repo['full_name']}: {e}")
-        # Si es un error de cuota, esperar un tiempo adicional antes de continuar
-        if "quota" in str(e).lower() or "rate" in str(e).lower() or "limit" in str(e).lower():
-            print("Quota/rate limit error detected. Waiting for 60 seconds before continuing...")
-            time.sleep(60)  # Esperar 60 segundos si se detecta un error de cuota
+        # Si es un error de cuota, intentar obtener el tiempo de espera de la API
+        error_str = str(e).lower()
+        if "quota" in error_str or "rate" in error_str or "limit" in error_str or "429" in error_str:
+            # Intentar extraer el tiempo de espera de la respuesta de error
+            import re
+            # Buscar el tiempo de espera en la respuesta: "Please retry in X.XXs"
+            retry_match = re.search(r"retry in (\d+\.?\d*)s", str(e))
+            if retry_match:
+                retry_time = float(retry_match.group(1)) + 2  # Agregar 2 segundos adicionales como margen de seguridad
+                print(f"Quota/rate limit error detected. Waiting for {retry_time:.2f} seconds (as indicated by API) before continuing...")
+                time.sleep(retry_time)
+            else:
+                # Si no podemos extraer el tiempo, usar el valor por defecto
+                print("Quota/rate limit error detected. Waiting for 60 seconds before continuing...")
+                time.sleep(60)  # Esperar 60 segundos si se detecta un error de cuota
         print("This might be due to API rate limits, an invalid prompt, or temporary service issues.")
         return "Sin clasificar"
 
