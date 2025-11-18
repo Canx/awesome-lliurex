@@ -290,12 +290,70 @@ def save_projects(file_path: str, projects: List[Dict[str, Any]]):
     print(f"Successfully saved {len(projects)} projects to {file_path}")
 
 
+def update_projects_batch(file_path: str, all_current_projects: List[Dict[str, Any]]):
+    """Updates the projects file with all current projects."""
+    # Sort projects by category, then by name for consistency
+    all_current_projects.sort(key=lambda p: (p.get('category', 'zzz'), p.get('name', 'zzz')))
+
+    # Save the updated projects
+    with open(file_path, 'w', encoding='utf-8') as f:
+        yaml.dump({'projects': all_current_projects}, f, allow_unicode=True, sort_keys=False, default_flow_style=False)
+    print(f"Successfully updated {file_path} with batch. Total projects: {len(all_current_projects)}")
+
+
+def update_readme_progressively():
+    """Update the README.md file with current projects data."""
+    import re
+
+    # Get the absolute path of the script's directory
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    # Get the project root directory by going one level up
+    project_root = os.path.dirname(script_dir)
+
+    # Construct absolute paths for the files
+    projects_file = os.path.join(project_root, 'projects.yaml')
+    readme_file = os.path.join(project_root, 'README.md')
+
+    # Read projects data
+    with open(projects_file, 'r', encoding='utf-8') as f:
+        data = yaml.safe_load(f)
+
+    # Generate Markdown list
+    markdown_list = []
+    for project in data.get('projects', []):
+        markdown_list.append(
+            f"- **[{project['name']}]({project['url']})**: {project['description']}"
+        )
+
+    markdown_content = "\n".join(markdown_list)
+
+    # Read README.md content
+    with open(readme_file, 'r', encoding='utf-8') as f:
+        readme_content = f.read()
+
+    # Replace the content between the markers
+    # Using re.DOTALL to make '.' match newlines
+    pattern = r"(<!-- PROJECTS_START -->)(.*)(<!-- PROJECTS_END -->)"
+    new_readme_content = re.sub(
+        pattern,
+        f"\\1\n{markdown_content}\n\\3",
+        readme_content,
+        flags=re.DOTALL
+    )
+
+    # Write the updated content back to README.md
+    with open(readme_file, 'w', encoding='utf-8') as f:
+        f.write(new_readme_content)
+
+    print("README.md has been successfully updated.")
+
+
 # --- Main Execution ---
 
-def main(github_token: str = None, gemini_api_key: str = None):
+def main(github_token: str = None, gemini_api_key: str = None, batch_size: int = 10):
     """Main function to find, classify, and add new projects."""
     load_dotenv() # Load environment variables from .env file
-    
+
     if github_token is None:
         github_token = os.getenv("GITHUB_TOKEN")
     if gemini_api_key is None:
@@ -310,24 +368,27 @@ def main(github_token: str = None, gemini_api_key: str = None):
     yaml_path = os.path.join(project_root, PROJECTS_YAML_PATH)
 
     print("Starting process to find new LliureX projects...")
-    
-    # Load existing projects into a map for efficient lookup and modification
+
+    # Load existing projects into a list for easy management
+    all_projects: List[Dict[str, Any]] = []
     existing_projects_map: Dict[str, Dict[str, Any]] = {}
+
     if os.path.exists(yaml_path):
         with open(yaml_path, 'r', encoding='utf-8') as f:
             loaded_data = yaml.safe_load(f)
             if isinstance(loaded_data, dict) and 'projects' in loaded_data and isinstance(loaded_data['projects'], list):
+                all_projects = loaded_data['projects']
                 for p in loaded_data['projects']:
                     if 'url' in p:
                         existing_projects_map[p['url']] = p
             elif loaded_data is not None:
                 print(f"Warning: {yaml_path} exists but its content is not a dictionary with a 'projects' list. Initializing with an empty list.")
-    
+
     print(f"Found {len(existing_projects_map)} existing repositories in {PROJECTS_YAML_PATH}.")
     if existing_projects_map:
         print(f"  First 5 existing project URLs: {[url for url in existing_projects_map.keys()][:5]}")
     print(f"Existing projects map keys: {list(existing_projects_map.keys())[:5]}...") # Print first 5 keys for debugging
-    
+
     categories = get_project_categories(yaml_path)
     if not categories:
         print("Warning: No categories found in projects.yaml. Using default categories.")
@@ -341,77 +402,106 @@ def main(github_token: str = None, gemini_api_key: str = None):
 
     new_projects_added = 0
     projects_reclassified = 0
-    
-    # This list will hold all projects, including new, re-classified, and unchanged ones
-    updated_all_projects: List[Dict[str, Any]] = []
+
     # Use a set to track repo URLs that have been processed from found_repos
     processed_found_repo_urls: Set[str] = set()
 
-    for repo in found_repos:
-        repo_url = repo['html_url']
-        
-        if repo_url in processed_found_repo_urls: # Skip if already processed from search results
-            continue
+    # Process repositories in batches to update the YAML file progressively
+    for i in range(0, len(found_repos), batch_size):
+        batch = found_repos[i:i + batch_size]
+        print(f"\nProcessing batch {i//batch_size + 1}/{(len(found_repos) + batch_size - 1)//batch_size}...")
 
-        processed_found_repo_urls.add(repo_url)
+        batch_projects = []  # Keep track of projects updated in this batch
 
-        if repo_url in existing_projects_map:
-            existing_project = existing_projects_map[repo_url]
-            
-            if existing_project.get('category') == "Sin clasificar":
-                print(f"\nRe-classifying existing project: {repo['full_name']}")
+        for repo in batch:
+            repo_url = repo['html_url']
+
+            if repo_url in processed_found_repo_urls: # Skip if already processed from search results
+                continue
+
+            processed_found_repo_urls.add(repo_url)
+
+            if repo_url in existing_projects_map:
+                existing_project = existing_projects_map[repo_url]
+
+                if existing_project.get('category') == "Sin clasificar":
+                    print(f"\nRe-classifying existing project: {repo['full_name']}")
+                    readme_content = get_readme_content(repo['full_name'], github_token)
+
+                    if gemini_api_key and GEMINI_AVAILABLE:
+                        category = classify_repo_with_gemini(repo, readme_content, categories, gemini_api_key)
+                    else:
+                        category = "Sin clasificar"
+
+                    print(f"  -> Re-classified as: {category}")
+
+                    # Update the existing project entry
+                    existing_project['name'] = repo['name'] # Update name in case it changed
+                    existing_project['description'] = repo.get('description', 'Sin descripción.') or 'Sin descripción.'
+                    existing_project['category'] = category
+                    projects_reclassified += 1
+                else:
+                    # Project exists and is already properly classified
+                    pass
+
+                # Add to batch projects so we can update the global all_projects list
+                batch_projects.append(existing_project)
+            else:
+                # This is a completely new project
+                print(f"\nProcessing new repository: {repo['full_name']}")
                 readme_content = get_readme_content(repo['full_name'], github_token)
-                
+
                 if gemini_api_key and GEMINI_AVAILABLE:
                     category = classify_repo_with_gemini(repo, readme_content, categories, gemini_api_key)
                 else:
                     category = "Sin clasificar"
-                
-                print(f"  -> Re-classified as: {category}")
-                
-                # Update the existing project entry
-                existing_project['name'] = repo['name'] # Update name in case it changed
-                existing_project['description'] = repo.get('description', 'Sin descripción.') or 'Sin descripción.'
-                existing_project['category'] = category
-                updated_all_projects.append(existing_project)
-                projects_reclassified += 1
-                # Remove from existing_projects_map so it's not added again later
-                del existing_projects_map[repo_url]
-            else:
-                # Project exists and is already properly classified, just add it to the updated list
-                updated_all_projects.append(existing_project)
-                # Remove from existing_projects_map so it's not added again later
-                del existing_projects_map[repo_url]
-        else:
-            # This is a completely new project
-            print(f"\nProcessing new repository: {repo['full_name']}")
-            readme_content = get_readme_content(repo['full_name'], github_token)
-            
-            if gemini_api_key and GEMINI_AVAILABLE:
-                category = classify_repo_with_gemini(repo, readme_content, categories, gemini_api_key)
-            else:
-                category = "Sin clasificar"
-            
-            print(f"  -> Classified as: {category}")
 
-            new_project_entry = {
-                'name': repo['name'],
-                'url': repo_url,
-                'description': repo.get('description', 'Sin descripción.') or 'Sin descripción.',
-                'category': category
-            }
-            updated_all_projects.append(new_project_entry)
-            new_projects_added += 1
+                print(f"  -> Classified as: {category}")
 
-    # Add back any remaining projects from existing_projects_map
-    # These are projects that were in projects.yaml but not found in the GitHub search results
-    # (e.g., deleted from GitHub, or didn't match the search query anymore)
-    for repo_url, project_data in existing_projects_map.items():
-        updated_all_projects.append(project_data)
+                new_project_entry = {
+                    'name': repo['name'],
+                    'url': repo_url,
+                    'description': repo.get('description', 'Sin descripción.') or 'Sin descripción.',
+                    'category': category
+                }
+                batch_projects.append(new_project_entry)
+                new_projects_added += 1
+
+        # Update the all_projects list with the batch results
+        for project in batch_projects:
+            # Remove if already in list to avoid duplicates
+            all_projects = [p for p in all_projects if p['url'] != project['url']]
+            # Add the updated/new version
+            all_projects.append(project)
+
+        # Update the projects file with all projects processed so far
+        update_projects_batch(yaml_path, all_projects)
+
+        # Also update the README.md file progresively
+        update_readme_progressively()
+
+    # After processing all found repositories, make sure to include any projects that
+    # were in the original file but were not found in the GitHub search
+    # These are projects that may have been deleted from GitHub or don't match search criteria anymore
+    original_urls = set(existing_projects_map.keys())
+    processed_urls = processed_found_repo_urls
+    unprocessed_original_urls = original_urls - processed_urls
+
+    if unprocessed_original_urls:
+        for url in unprocessed_original_urls:
+            project = existing_projects_map[url]
+            # Add to all_projects if not already there
+            if not any(p['url'] == url for p in all_projects):
+                all_projects.append(project)
+
+        # Update the projects file one final time to include unprocessed original projects
+        update_projects_batch(yaml_path, all_projects)
+
+        # Also update the README.md file one final time
+        update_readme_progressively()
 
     if new_projects_added > 0 or projects_reclassified > 0:
-        print(f"\nAdded {new_projects_added} new projects and re-classified {projects_reclassified} projects. Saving to YAML file...")
-        save_projects(yaml_path, updated_all_projects)
+        print(f"\nAdded {new_projects_added} new projects and re-classified {projects_reclassified} projects. Final update completed...")
     else:
         print("\nNo new projects found or projects to re-classify.")
 
