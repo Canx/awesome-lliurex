@@ -2,9 +2,12 @@ projects:
   - name: Lliurex-Up
     url: https://github.com/lliurex/lliurex-up
     description: Herramienta para actualizar el sistema Lliurex.
+    category: Aplicaciones
   - name: Lliurex-Net
     url: https://github.com/lliurex/lliurex-net
     description: Asistente para la configuración de la red en Lliurex.
+    category: Infraestructura
   - name: Zero-server
     url: https://github.com/lliurex/zero-server
     description: Panel de gestión de servidores Lliurex.
+    category: Infraestructura

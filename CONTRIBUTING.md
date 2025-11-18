@@ -22,4 +22,28 @@
     *   Añade tus cambios y haz commit.
     *   Envía una "Pull Request" con una descripción de lo que has añadido.
 
+## Configuración del buscador automático de repositorios
+
+El proyecto incluye un script `find_new_projects.py` que busca automáticamente nuevos repositorios de Lliurex en GitHub y los clasifica. Para que funcione correctamente, necesitas configurar variables de entorno:
+
+1.  **Crea un archivo `.env`** en la raíz del proyecto con el siguiente contenido:
+    ```env
+    GITHUB_TOKEN=tu_token_de_github_aqui
+    GEMINI_API_KEY=tu_clave_de_api_gemini_aqui
+    ```
+
+2.  **Obtener un token de GitHub:**
+    *   Ve a [https://github.com/settings/tokens](https://github.com/settings/tokens)
+    *   Haz clic en "Generate new token"
+    *   Selecciona "Fine-grained personal access token" o "Personal access token (classic)"
+    *   Para tokens clásicos, asegúrate de seleccionar el scope `public_repo` para acceder a repositorios públicos
+    *   Copia el token generado y úsalo en el archivo `.env`
+    *   **Importante:** ¡No compartas este token públicamente!
+
+3.  **Obtener una clave de API de Gemini (opcional):**
+    *   Ve a [Google AI Studio](https://aistudio.google.com/)
+    *   Crea una cuenta o inicia sesión
+    *   Genera una clave de API y úsala en el archivo `.env`
+    *   Esto se usa para clasificar automáticamente los repositorios en categorías
+
 ¡Gracias por ayudar a hacer esta lista más increíble!

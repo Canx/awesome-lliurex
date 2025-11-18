@@ -46,21 +46,35 @@ def get_project_categories(file_path: str) -> List[str]:
         except yaml.YAMLError:
             return []
 
-def search_github_repos(query: str, token: str) -> List[Dict[str, Any]]:
+def search_github_repos(query: str, token: str = None) -> List[Dict[str, Any]]:
     """Searches GitHub for repositories matching the query."""
-    headers = {
-        "Authorization": f"token {token}",
-        "Accept": "application/vnd.github.v3+json"
-    }
+    if not token:
+        print("ERROR: GitHub's search API requires authentication. Please provide a valid GitHub token.")
+        print("For more information, see CONTRIBUTING.md")
+        return []
+
+    # Check if it's a fine-grained token (starts with github_pat_) or classic token
+    if token.startswith("github_pat_"):
+        headers = {
+            "Authorization": f"Bearer {token}",
+            "Accept": "application/vnd.github.v3+json"
+        }
+    else:
+        # Classic token format
+        headers = {
+            "Authorization": f"token {token}",
+            "Accept": "application/vnd.github.v3+json"
+        }
+
     url = f"{GITHUB_API_URL}/search/repositories"
     params = {'q': query, 'per_page': 100} # Fetch up to 100 results
-    
+
     print(f"Searching GitHub with query: {query}")
     print(f"  URL: {url}")
     print(f"  Params: {params}")
     response = requests.get(url, headers=headers, params=params)
     response.raise_for_status()
-    
+
     json_response = response.json()
     total_count = json_response.get('total_count', 0)
     print(f"  GitHub API returned {total_count} total results for the query.")
