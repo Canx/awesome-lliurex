@@ -19,7 +19,7 @@ except ImportError:
 PROJECTS_YAML_PATH = "projects.yaml"
 GITHUB_API_URL = "https://api.github.com"
 # We can expand this query to be more specific if needed
-GITHUB_SEARCH_QUERY = "lliurex in:name,description,readme,topics"
+GITHUB_SEARCH_QUERY = "lliurex in:name,description,topics"
 
 
 
@@ -106,21 +106,64 @@ def search_github_repos(query: str, token: str = None) -> List[Dict[str, Any]]:
     return all_items
 
 def get_readme_content(repo_full_name: str, token: str) -> str:
-    """Fetches the README content for a given repository."""
+    """Fetches the README content for a given repository, trying different possible names and branches."""
     headers = {
         "Authorization": f"token {token}",
         "Accept": "application/vnd.github.v3.raw" # Get raw content
     }
-    url = f"{GITHUB_API_URL}/repos/{repo_full_name}/readme"
-    
+
+    # First, try the standard README endpoint which automatically finds the README
+    standard_url = f"{GITHUB_API_URL}/repos/{repo_full_name}/readme"
+
     try:
-        response = requests.get(url, headers=headers)
+        response = requests.get(standard_url, headers=headers)
         response.raise_for_status()
-        # Decode from bytes to string
         return response.text
-    except requests.exceptions.HTTPError as e:
-        print(f"Could not fetch README for {repo_full_name}: {e}")
-        return ""
+    except requests.exceptions.HTTPError:
+        # If standard README endpoint fails, try specific file names with contents endpoint
+        possible_readme_names = [
+            "README.md", "readme.md", "README", "readme",
+            "Readme.md", "ReadMe.md", "README.MD", "readme.MD",
+            "Readme", "ReadMe", "README.txt", "readme.txt"
+        ]
+
+        # Try to get default branch first to use in requests
+        try:
+            repo_info_response = requests.get(f"{GITHUB_API_URL}/repos/{repo_full_name}", headers=headers)
+            repo_info_response.raise_for_status()
+            default_branch = repo_info_response.json().get('default_branch', 'main')
+        except:
+            # If we can't get the default branch, try main and master
+            default_branch = 'main'
+
+        possible_branches = [default_branch, 'master', 'main']
+
+        for branch in possible_branches:
+            for readme_name in possible_readme_names:
+                url = f"{GITHUB_API_URL}/repos/{repo_full_name}/contents/{readme_name}?ref={branch}"
+
+                try:
+                    response = requests.get(url, headers=headers)
+                    response.raise_for_status()
+
+                    # For the contents endpoint, we get JSON with base64 encoded content
+                    content_json = response.json()
+                    if 'content' in content_json:
+                        import base64
+                        content = base64.b64decode(content_json['content']).decode('utf-8')
+                        return content
+                except requests.exceptions.HTTPError as e:
+                    if response.status_code == 404:
+                        continue  # Try the next file
+                    else:
+                        print(f"Could not fetch README file {readme_name} from branch {branch} for {repo_full_name}: {e}")
+                        continue
+                except Exception as e:
+                    print(f"Unexpected error while fetching README file {readme_name} from branch {branch} for {repo_full_name}: {e}")
+                    continue
+
+    print(f"Could not fetch README for {repo_full_name}: tried various file names and branches.")
+    return ""
 
 # Variable global para almacenar modelos disponibles (para evitar múltiples llamadas a la API)
 AVAILABLE_GEMINI_MODELS = None
