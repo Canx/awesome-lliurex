@@ -138,7 +138,9 @@ Una lista curada de software, herramientas y recursos increíbles para el ecosis
 
 ## Cómo Contribuir
 
-¡Las contribuciones son bienvenidas! Por favor, lee la [guía de contribución](CONTRIBUTING.md) para más detalles.
+Este repositorio se actualiza automáticamente cada semana. Si creas un nuevo repositorio en GitHub relacionado con Lliurex, simplemente asegúrate de incluir en su nombre, descripción, README o topics alguna mención a "lliurex" para que sea detectado por nuestro proceso automático de búsqueda.
+
+También puedes contribuir manualmente leyendo la [guía de contribución](CONTRIBUTING.md) para más detalles sobre cómo añadir proyectos manualmente.
 
 ## Licencia
 
