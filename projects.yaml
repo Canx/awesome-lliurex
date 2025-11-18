@@ -215,6 +215,10 @@ projects:
   url: https://github.com/lliurex/lliurex-moodle
   description: This package configures moodle to integrate it on LliureX environment
   category: Sin clasificar
+- name: lliurex-news
+  url: https://github.com/lliurex/lliurex-news
+  description: Sin descripción.
+  category: Sin clasificar
 - name: lliurex-nextcloud
   url: https://github.com/lliurex/lliurex-nextcloud
   description: Scripts and n4d plugins to initialize nextcloud
