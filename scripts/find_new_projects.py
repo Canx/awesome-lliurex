@@ -54,7 +54,7 @@ def get_project_categories(file_path: str) -> List[str]:
             return []
 
 def search_github_repos(query: str, token: str = None) -> List[Dict[str, Any]]:
-    """Searches GitHub for repositories matching the query."""
+    """Searches GitHub for repositories matching the query, handling pagination."""
     if not token:
         print("ERROR: GitHub's search API requires authentication. Please provide a valid GitHub token.")
         print("For more information, see CONTRIBUTING.md")
@@ -74,18 +74,35 @@ def search_github_repos(query: str, token: str = None) -> List[Dict[str, Any]]:
         }
 
     url = f"{GITHUB_API_URL}/search/repositories"
-    params = {'q': query, 'per_page': 100} # Fetch up to 100 results
+    params = {'q': query, 'per_page': 100, 'page': 1}  # Start with page 1
+    all_items = []
 
     print(f"Searching GitHub with query: {query}")
     print(f"  URL: {url}")
-    print(f"  Params: {params}")
-    response = requests.get(url, headers=headers, params=params)
-    response.raise_for_status()
 
-    json_response = response.json()
-    total_count = json_response.get('total_count', 0)
-    print(f"  GitHub API returned {total_count} total results for the query.")
-    return json_response.get('items', [])
+    # Fetch multiple pages of results (GitHub API has a maximum of 1000 results for search)
+    while True:
+        print(f"  Fetching page {params['page']}, params: {params}")
+        response = requests.get(url, headers=headers, params=params)
+        response.raise_for_status()
+
+        json_response = response.json()
+        items = json_response.get('items', [])
+        total_count = json_response.get('total_count', 0)
+
+        print(f"  Page {params['page']}: GitHub API returned {len(items)} results.")
+
+        all_items.extend(items)
+
+        # Check if we've reached the last page or hit the GitHub API limit (max 1000 results)
+        if len(items) < 100 or len(all_items) >= min(total_count, 1000):
+            break
+
+        # Move to the next page
+        params['page'] += 1
+
+    print(f"  Total results collected: {len(all_items)} out of {total_count} possible.")
+    return all_items
 
 def get_readme_content(repo_full_name: str, token: str) -> str:
     """Fetches the README content for a given repository."""
