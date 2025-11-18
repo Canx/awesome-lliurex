@@ -120,21 +120,46 @@ def classify_repo_with_gemini(repo: Dict[str, Any], readme: str, categories: Lis
 
     try:
         genai.configure(api_key=gemini_api_key)
-        # Intentar usar diferentes modelos en orden de preferencia, empezando con el más asequible
-        for model_name in ['gemini-1.5-flash', 'gemini-flash', 'gemini-1.5-pro', 'gemini-pro', 'gemini-1.0-pro']:
+
+        # Listar los modelos disponibles para depuración
+        available_models = []
+        try:
+            for m in genai.list_models():
+                if "generateContent" in m.supported_generation_methods:
+                    available_models.append(m.name.replace("models/", ""))
+                    print(f"- {m.name} (supported)")
+                else:
+                    print(f"- {m.name} (not supported for generateContent)")
+        except Exception as list_e:
+            print(f"Could not list models: {list_e}")
+
+        # Priorizar modelos flash de la versión 2.5, intentando gemini-2.5-flash-lite primero
+        preferred_models = []
+        for model_name in ['gemini-2.5-flash-lite', 'gemini-2.5-flash']:
+            if model_name in available_models:
+                preferred_models.append(model_name)
+
+        # Si no hay modelos flash 2.5 disponibles, usar cualquier otro modelo Gemini flash 2.5 disponible
+        if not preferred_models:
+            for model_name in available_models:
+                if 'gemini' in model_name.lower() and '2.5' in model_name and 'flash' in model_name.lower():
+                    preferred_models.append(model_name)
+
+        # Intentar usar modelos en orden de preferencia
+        for model_name in preferred_models:
             try:
                 model = genai.GenerativeModel(model_name)
                 print(f"Using model: {model_name}")
                 break
             except Exception as e:
-                print(f"Model {model_name} not available: {e}")
+                print(f"Model {model_name} not available for generation: {e}")
                 continue
         else:
-            print("No Gemini models available, defaulting to 'Sin clasificar'")
+            print("No suitable Gemini models available for text generation, defaulting to 'Sin clasificar'")
             return "Sin clasificar"
     except Exception as e:
         print(f"Error configuring Gemini model or model not found: {e}")
-        print("Please check your GEMINI_API_KEY and ensure 'gemini-pro' is available in your region.")
+        print("Please check your GEMINI_API_KEY and ensure Gemini 2.5 flash models are available in your region.")
         print("Attempting to list available models for debugging:")
         try:
             for m in genai.list_models():
