@@ -120,8 +120,8 @@ Una lista curada de software, herramientas y recursos increíbles para el ecosis
 - **[usuarios_ldap](https://github.com/iesmarenostrumdev/usuarios_ldap)**: Script para crear usuarios y actualizar passwords LDAP en el servidor de Centro de Lliurex
 - **[ventoy](https://github.com/sarblohw/ventoy)**: Sin descripción.
 - **[ventoy](https://github.com/kgranum963/ventoy)**: Sin descripción.
-- **[ventoy](https://github.com/miguel7penteado/ventoy)**: Gerenciador de Carregamento gráfico Ventoy
 - **[ventoy](https://github.com/kylemanel/ventoy)**: Sin descripción.
+- **[ventoy](https://github.com/miguel7penteado/ventoy)**: Gerenciador de Carregamento gráfico Ventoy
 - **[vt](https://github.com/rdp-studio/vt)**: Sin descripción.
 - **[wonnd3r](https://github.com/wonnd3r/wonnd3r)**: Sin descripción.
 - **[zero-lliurex-keepass](https://github.com/mijuanlo/zero-lliurex-keepass)**: Sin descripción.
