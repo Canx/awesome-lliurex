@@ -32,12 +32,6 @@ jobs:
       - name: Generate README
         run: python scripts/generate_readme.py
 
-      - name: Pull latest changes to avoid conflicts
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git pull --rebase origin main
-
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
