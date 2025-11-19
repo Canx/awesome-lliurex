@@ -18,8 +18,10 @@ except ImportError:
 # --- Constants ---
 PROJECTS_YAML_PATH = "projects.yaml"
 GITHUB_API_URL = "https://api.github.com"
-# We can expand this query to be more specific if needed
-GITHUB_SEARCH_QUERY = "lliurex in:name,description,topics"
+# Search only in name and description to avoid false positives from topics
+# Searching in topics can produce many false positives as any repository
+# with related topics might be incorrectly included
+GITHUB_SEARCH_QUERY = "lliurex in:name,description"
 
 
 
@@ -576,26 +578,23 @@ def main(github_token: str = None, gemini_api_key: str = None, batch_size: int =
         # Also update the README.md file progresively
         update_readme_progressively()
 
-    # After processing all found repositories, make sure to include any projects that
+    # After processing all found repositories, we no longer include projects that
     # were in the original file but were not found in the GitHub search
     # These are projects that may have been deleted from GitHub or don't match search criteria anymore
+    # Removing these projects from the list to keep the YAML file up to date
     original_urls = set(existing_projects_map.keys())
     processed_urls = processed_found_repo_urls
     unprocessed_original_urls = original_urls - processed_urls
 
     if unprocessed_original_urls:
+        print(f"Found {len(unprocessed_original_urls)} projects that were not found in GitHub search and will be removed:")
         for url in unprocessed_original_urls:
-            project = existing_projects_map[url]
-            # Add to all_projects if not already there
-            if not any(p['url'] == url for p in all_projects):
-                all_projects.append(project)
+            print(f"  - {url}")
 
-        # Initialize the 'official' property for any existing projects that don't have it yet (for backward compatibility)
-        for project in all_projects:
-            if 'official' not in project:
-                project['official'] = project['url'].startswith('https://github.com/lliurex/')
+        # Remove projects that were not found in the search from the all_projects list
+        all_projects = [p for p in all_projects if p['url'] not in unprocessed_original_urls]
 
-        # Update the projects file one final time to include unprocessed original projects
+        # Update the projects file one final time without the missing projects
         update_projects_batch(yaml_path, all_projects)
 
         # Also update the README.md file one final time
