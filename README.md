@@ -4,6 +4,10 @@ Una lista curada de software, herramientas y recursos increíbles para el ecosis
 
 **Nota:** Esta lista se actualiza automáticamente cada semana buscando nuevos proyectos relacionados con Lliurex en GitHub.
 
+## Cómo Contribuir
+
+Este repositorio se actualiza automáticamente cada semana. Si creas un nuevo repositorio en GitHub relacionado con Lliurex, simplemente asegúrate de incluir en su nombre, descripción, README o topics alguna mención a "lliurex" para que sea detectado por nuestro proceso automático de búsqueda.
+
 ## Contenidos
 
 - [Proyectos](#proyectos)
@@ -574,10 +578,6 @@ Una lista curada de software, herramientas y recursos increíbles para el ecosis
 ## Recursos
 
 *Documentación, guías, artículos y otros recursos útiles.*
-
-## Cómo Contribuir
-
-Este repositorio se actualiza automáticamente cada semana. Si creas un nuevo repositorio en GitHub relacionado con Lliurex, simplemente asegúrate de incluir en su nombre, descripción, README o topics alguna mención a "lliurex" para que sea detectado por nuestro proceso automático de búsqueda.
 
 ## Licencia
 
