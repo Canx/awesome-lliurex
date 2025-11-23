@@ -196,6 +196,12 @@ projects:
   description: Sin descripción.
   category: Sin clasificar
   official: true
+- name: cdc-mapper-vboxusers
+  url: https://github.com/lliurex/cdc-mapper-vboxusers
+  description: Package to configure the necessary permissions so that users in the
+    admin, teacher, and students groups can use VirtualBox
+  category: Sin clasificar
+  official: true
 - name: classroom-control-plasmoid
   url: https://github.com/lliurex/classroom-control-plasmoid
   description: A widget to control carts with ADI

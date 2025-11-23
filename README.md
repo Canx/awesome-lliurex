@@ -107,6 +107,7 @@ Este repositorio se actualiza automáticamente cada semana. Si creas un nuevo re
 - **[casimir-editor](https://github.com/lliurex/casimir-editor)**: WebOdf based text editor for dyslexics 
 - **[casper-mods](https://github.com/lliurex/casper-mods)**: Sin descripción.
 - **[cdc-mapper](https://github.com/lliurex/cdc-mapper)**: Sin descripción.
+- **[cdc-mapper-vboxusers](https://github.com/lliurex/cdc-mapper-vboxusers)**: Package to configure the necessary permissions so that users in the admin, teacher, and students groups can use VirtualBox
 - **[classroom-control-plasmoid](https://github.com/lliurex/classroom-control-plasmoid)**: A widget to control carts with ADI
 - **[classroom-mountmode](https://github.com/lliurex/classroom-mountmode)**: Apps to manage the mount mode in classroom
 - **[client-mount](https://github.com/lliurex/client-mount)**: Sin descripción.
