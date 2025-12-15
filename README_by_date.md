@@ -1,0 +1,603 @@
+# Awesome Lliurex
+
+Una lista curada de software, herramientas y recursos increíbles para el ecosistema Lliurex, con un enfoque en proyectos mantenidos por la comunidad.
+
+**Nota:** Esta lista se actualiza automáticamente cada semana. También puedes ver esta lista ordenada [por fecha de última actualización](README_by_date.md).
+Las fechas de actualización se obtienen al ejecutar el script `scripts/find_new_projects.py`.
+
+## Contenidos
+
+
+- [Proyectos](#proyectos)
+- [Aplicaciones](#aplicaciones)
+- [Herramientas](#herramientas)
+- [Desarrollo](#desarrollo)
+- [Recursos](#recursos)
+
+## Proyectos
+
+<!-- PROJECTS_START -->
+### Proyectos de la Comunidad
+
+#### Sin clasificar
+
+- **[awesome](https://github.com/comunitatlliurex/awesome)**: Awesome Comunitat Lliurex
+- **[awesome-lliurex](https://github.com/Canx/awesome-lliurex)**: Sin descripción.
+- **[bellscheduler-dre](https://github.com/aosucas499/bellscheduler-dre)**: Aplicación dockerizada de la aplicación Bell-scheduler del sistema Lliurex.
+- **[bellscheduler-pi](https://github.com/aosucas499/bellscheduler-pi)**: Aplicación dockerizada de la aplicación Bell-scheduler del sistema Lliurex para raspberry pi
+- **[edupals-n4d-toolkit](https://github.com/edupals/edupals-n4d-toolkit)**: A C++ toolkit based on edupals-base-toolkit for dealing with lliurex n4d (xml-rpc) connections
+- **[ksetwallpaper](https://github.com/Canx/ksetwallpaper)**: Change KDE wallpaper at startup (lliurex)
+- **[ldm-lliurex-theme](https://github.com/joamuran/ldm-lliurex-theme)**: LDM them for lliurex-ltsp
+- **[LliuCrack](https://github.com/elpaspafe/LliuCrack)**: Cracking "Lliurex" the SO used in the schools of "Comunitat Valenciana"
+- **[lliurex-admin-course](https://github.com/chverma/lliurex-admin-course)**: Sin descripción.
+- **[lliurex-downloader](https://github.com/fercavi/lliurex-downloader)**: lliurex-downloader
+- **[lliurex-epoptes-exploit](https://github.com/unai-d/lliurex-epoptes-exploit)**: Single Python file that exploits a LliureX's Epoptes vulnerability in order to gain access to any computer.
+- **[lliurex-facil](https://github.com/sasogu/lliurex-facil)**: LliureX es fácil si sabes como,  guías no oficiales, recetas, trucos,....
+- **[lliurex-java-panel](https://github.com/jrpelegrina/lliurex-java-panel)**: Qt version
+- **[lliurex-java-panel-pyside](https://github.com/jrpelegrina/lliurex-java-panel-pyside)**: Sin descripción.
+- **[lliurex-keyring](https://github.com/mijuanlo/lliurex-keyring)**: Sin descripción.
+- **[lliurex-ltsp](https://github.com/joamuran/lliurex-ltsp)**: LTSP Customization for LliureX
+- **[lliurex-ltsp-admin](https://github.com/joamuran/lliurex-ltsp-admin)**: Administration tool to manage LliureX LTSP thin client images.
+- **[lliurex-ltsp-client](https://github.com/joamuran/lliurex-ltsp-client)**: Client part of lliurex-ltsp
+- **[lliurex-mirror](https://github.com/joamuran/lliurex-mirror)**: lliurex-mirror
+- **[lliurex-netinstall](https://github.com/chverma/lliurex-netinstall)**: Sin descripción.
+- **[lliurex-scripts](https://github.com/chverma/lliurex-scripts)**: Sin descripción.
+- **[lliurex-up-plasmoid](https://github.com/jrpelegrina/lliurex-up-plasmoid)**: Plasmoid to show update notifications and LliureX-Up activity
+- **[lliurex-www](https://github.com/inclusa/lliurex-www)**: Adaptació de la pàgina principal del servidor de Lliurex 16 a un centre
+- **[lliurex-xdg-user-dirs](https://github.com/raurodse/lliurex-xdg-user-dirs)**: xdg user dirs update for LliureX systems
+- **[lliurexapp](https://github.com/dmontalva/lliurexapp)**: app para lliurex
+- **[LliurexBadLogin](https://github.com/elpaspafe/LliurexBadLogin)**: This is a prank.
+- **[LliurexNemo](https://github.com/sofiangrh/LliurexNemo)**: Metacity Theme
+- **[lliurexproxmox](https://github.com/arvicenteboix/lliurexproxmox)**: Sin descripción.
+- **[LliurexRepoBypass](https://github.com/PK2-Stimpy/LliurexRepoBypass)**: Sin descripción.
+- **[llx-hacks](https://github.com/joamuran/llx-hacks)**: Non oficial lliurex hacks. Just for testing.
+- **[llx-netinst](https://github.com/joamuran/llx-netinst)**: Lliurex Net Installer
+- **[llx-resource-browser](https://github.com/joamuran/llx-resource-browser)**: A cefpython app to launch some online resources (such as Zac Browser, a web browser for children with autism, and Mestre a Casa), and local LliureX Resources.
+- **[llx-shutdown-button-on-plank](https://github.com/joamuran/llx-shutdown-button-on-plank)**: Just a button for invoke lliurex-shutdowner from plank
+- **[lmd-lliurex-data](https://github.com/joamuran/lmd-lliurex-data)**: Some links, files and templates for using LTSP with LliureX.
+- **[lmd-server](https://github.com/joamuran/lmd-server)**: Version 2 of lliurex-ltsp-server, integrated in the LMD Project (LliureX LTSP 2.0), for thin cient creation and management.
+- **[n4d-ltsp](https://github.com/joamuran/n4d-ltsp)**: n4d plugin suite for LTSP under a #lliurex environment.
+- **[papelera-lliurex-net](https://github.com/TecnicoSai/papelera-lliurex-net)**: Sin descripción.
+- **[PYSH.SDK](https://github.com/wonnd3r/PYSH.SDK)**: PYSH.SDK helps you develop LliureX desktop apps easily!
+- **[python3-n4d-client](https://github.com/edupals/python3-n4d-client)**: Python 3 client library for LliureX's N4D rpc protocol
+- **[remote-installer-plasmoid](https://github.com/jrpelegrina/remote-installer-plasmoid)**: Plasmoid to show LliureX Remote Installer activity
+- **[UpdateManager](https://github.com/juanma1980/UpdateManager)**: Adaptation of python module UpdateManager from Ubuntu to Lliurex
+- **[usuarios_ldap](https://github.com/iesmarenostrumdev/usuarios_ldap)**: Script para crear usuarios y actualizar passwords LDAP en el servidor de Centro de Lliurex
+- **[zero-lliurex-keepass](https://github.com/mijuanlo/zero-lliurex-keepass)**: Sin descripción.
+
+### Proyectos Oficiales de LliureX
+
+#### Sin clasificar
+
+- **[accesshelper](https://github.com/lliurex/accesshelper)**: Wizard with accessibility settings
+- **[accesshelper-data](https://github.com/lliurex/accesshelper-data)**: Preconfigured profiles for accesshelper
+- **[activinspire-32bitdependsfor64bit-lliurex](https://github.com/lliurex/activinspire-32bitdependsfor64bit-lliurex)**: Metapackage that provides the depends for promethean boards
+- **[admin-center](https://github.com/lliurex/admin-center)**: Web interface to manage some LliureX server functionalities
+- **[admin-center-lliurex-apt](https://github.com/lliurex/admin-center-lliurex-apt)**: Gui module for LliureX admin-center, needed to configure /etc/apt/sources.list
+- **[admin-center-zerolink](https://github.com/lliurex/admin-center-zerolink)**: Desktops for main menu and ZeroCenter menu
+- **[ainur](https://github.com/lliurex/ainur)**: Sin descripción.
+- **[airapps-fixes](https://github.com/lliurex/airapps-fixes)**: Files invoked by air-installer for fix installation issues of air apps
+- **[airmanager](https://github.com/lliurex/airmanager)**: Air Manager provides an easy way for installing and manage adobe air packages.
+- **[alea](https://github.com/lliurex/alea)**: Sin descripción.
+- **[analytics-server](https://github.com/lliurex/analytics-server)**: Analytics report server for Lliurex
+- **[antlr-tools](https://github.com/lliurex/antlr-tools)**: Command line, graphical editor and mono cil for antlr parser generation tool
+- **[appimage-manager](https://github.com/lliurex/appimage-manager)**: Helper for manage appimages
+- **[appinfo](https://github.com/lliurex/appinfo)**: This app displays info from a package
+- **[arasuite](https://github.com/lliurex/arasuite)**:  Set of tools for augmentative and adaptative communication 
+- **[ardublock](https://github.com/lliurex/ardublock)**:  A graphical programming language for Arduino
+- **[arduino-ide](https://github.com/lliurex/arduino-ide)**: IDE for arduino
+- **[audacity-ai-noble](https://github.com/lliurex/audacity-ai-noble)**: Sin descripción.
+- **[audacity-ia-jammy](https://github.com/lliurex/audacity-ia-jammy)**: Sin descripción.
+- **[avahi](https://github.com/lliurex/avahi)**: Sin descripción.
+- **[baikonur](https://github.com/lliurex/baikonur)**: Lliurex custom build bot
+- **[bell-scheduler](https://github.com/lliurex/bell-scheduler)**: Gui to schedule alarms. It can play system sounds, youtube urls, play random files from a folder...
+- **[bell-scheduler-plasmoid](https://github.com/lliurex/bell-scheduler-plasmoid)**: Sin descripción.
+- **[blockly-arduino](https://github.com/lliurex/blockly-arduino)**: Includes deb with the blockly @ arduino code and a wizard for its installation and configuration
+- **[bluegriffon](https://github.com/lliurex/bluegriffon)**: Web editor based on the rendering engine of Firefox
+- **[boost1.67](https://github.com/lliurex/boost1.67)**: Sin descripción.
+- **[breeze-text-only](https://github.com/lliurex/breeze-text-only)**: SDDM Theme
+- **[brltty](https://github.com/lliurex/brltty)**: BRLTTY is a background process (daemon) providing access to the Linux/Unix console (when in text mode) for a blind person using a refreshable braille display.  (Backport from Eoan)
+- **[byob-snap](https://github.com/lliurex/byob-snap)**: A visual, drag-and-drop programming language
+- **[calamares-desktop-layout](https://github.com/lliurex/calamares-desktop-layout)**: Sin descripción.
+- **[calamares-lliurex-modules](https://github.com/lliurex/calamares-lliurex-modules)**: Sin descripción.
+- **[calamares-lliurex-settings](https://github.com/lliurex/calamares-lliurex-settings)**: Sin descripción.
+- **[calamares-system-addons-module](https://github.com/lliurex/calamares-system-addons-module)**: Sin descripción.
+- **[calamares-uiselector-module](https://github.com/lliurex/calamares-uiselector-module)**: Calamares module that enables installation process to select a default desktop layout
+- **[casimir-editor](https://github.com/lliurex/casimir-editor)**: WebOdf based text editor for dyslexics 
+- **[casper-mods](https://github.com/lliurex/casper-mods)**: Sin descripción.
+- **[cdc-mapper](https://github.com/lliurex/cdc-mapper)**: Sin descripción.
+- **[cdc-mapper-vboxusers](https://github.com/lliurex/cdc-mapper-vboxusers)**: Package to configure the necessary permissions so that users in the admin, teacher, and students groups can use VirtualBox
+- **[classroom-control-plasmoid](https://github.com/lliurex/classroom-control-plasmoid)**: A widget to control carts with ADI
+- **[classroom-mountmode](https://github.com/lliurex/classroom-mountmode)**: Apps to manage the mount mode in classroom
+- **[client-mount](https://github.com/lliurex/client-mount)**: Sin descripción.
+- **[client-register](https://github.com/lliurex/client-register)**: Tool to link a computer to a specific laptop cart
+- **[client-register-plasmoid](https://github.com/lliurex/client-register-plasmoid)**: Widget to quickly display the cart number to which the laptop is assigned
+- **[clipit-lliurex-data](https://github.com/lliurex/clipit-lliurex-data)**: Clipit custom configuration
+- **[debhelper](https://github.com/lliurex/debhelper)**: Sin descripción.
+- **[deferred-snap-install](https://github.com/lliurex/deferred-snap-install)**: Sin descripción.
+- **[deskedit](https://github.com/lliurex/deskedit)**: Desktop files editor for LliureX
+- **[desktream](https://github.com/lliurex/desktream)**: A utility to generate valid appstream info from a debian package tree
+- **[disable-apparmor](https://github.com/lliurex/disable-apparmor)**: Disable some apparmor services
+- **[disable-epoptes-client](https://github.com/lliurex/disable-epoptes-client)**: Package to disable epoptes-client on any classroom machine, client or server
+- **[docker-smart](https://github.com/lliurex/docker-smart)**: Sin descripción.
+- **[docker-starboard](https://github.com/lliurex/docker-starboard)**: Sin descripción.
+- **[dpkg-unlocker](https://github.com/lliurex/dpkg-unlocker)**: Tool to unlock Apt, Dpkg and LliureX-Up
+- **[dr-valentin](https://github.com/lliurex/dr-valentin)**: Lliurex Diagnostic tool
+- **[dr-valentin-client-common](https://github.com/lliurex/dr-valentin-client-common)**: Client tests for dr valentin
+- **[dr-valentin-common](https://github.com/lliurex/dr-valentin-common)**: Common tests for dr valentin
+- **[dr-valentin-server-common](https://github.com/lliurex/dr-valentin-server-common)**: Server tests for dr valentin
+- **[enmarcado](https://github.com/lliurex/enmarcado)**: Sin descripción.
+- **[epi](https://github.com/lliurex/epi)**: Installer for external apps
+- **[epoptes](https://github.com/lliurex/epoptes)**: Computer lab monitoring tool. Lliurex modified version
+- **[epoptes-client-register](https://github.com/lliurex/epoptes-client-register)**: App to register new computers in Epoptes-center-controller
+- **[eshare-newline-dongle](https://github.com/lliurex/eshare-newline-dongle)**: Sin descripción.
+- **[eviacam](https://github.com/lliurex/eviacam)**: webcam based mouse emulator. Forked from https://github.com/cmauri/eviacam
+- **[export-web-sites](https://github.com/lliurex/export-web-sites)**: App to export some lliurex sites: pmb and moodle
+- **[fakelib-notebook](https://github.com/lliurex/fakelib-notebook)**: Sin descripción.
+- **[festival-spanish-voices](https://github.com/lliurex/festival-spanish-voices)**: This is a diphone-based male Spanish voice for the Festival speech  synthesis system developed by the Consejeria de Innovacion, Ciencia y Empresa  of the Junta de Andalucia
+- **[festival-valcat-voices](https://github.com/lliurex/festival-valcat-voices)**: Valencian-catalan voices for festival
+- **[ffconversor](https://github.com/lliurex/ffconversor)**: Sin descripción.
+- **[firefox-esr](https://github.com/lliurex/firefox-esr)**: Custom build of firefox-esr
+- **[firefox-locale-ca-va](https://github.com/lliurex/firefox-locale-ca-va)**: Firefox langpack for valencian
+- **[first-aid-kit](https://github.com/lliurex/first-aid-kit)**: Sin descripción.
+- **[flash-java-insecure-perms](https://github.com/lliurex/flash-java-insecure-perms)**: Configure secure perms in flash and java
+- **[flatlock](https://github.com/lliurex/flatlock)**: block flatpak for users
+- **[fonts-atkinson](https://github.com/lliurex/fonts-atkinson)**: Atkinson-hyperlegible font
+- **[foo](https://github.com/lliurex/foo)**: test packages
+- **[fotoalbum](https://github.com/lliurex/fotoalbum)**: Sin descripción.
+- **[fuse-overlayfs](https://github.com/lliurex/fuse-overlayfs)**: Sin descripción.
+- **[fuse-xattrs](https://github.com/lliurex/fuse-xattrs)**: Sin descripción.
+- **[gbpconfig](https://github.com/lliurex/gbpconfig)**: Git-buildpackage config
+- **[gcompris](https://github.com/lliurex/gcompris)**: Educational software suite for children aged 2 to 10
+- **[gcompris-qt-voices](https://github.com/lliurex/gcompris-qt-voices)**: Voices for the educational game gcompris-qt
+- **[germinate](https://github.com/lliurex/germinate)**: Sin descripción.
+- **[gfxboot-theme-ubuntu](https://github.com/lliurex/gfxboot-theme-ubuntu)**: This is an LliureX theme for the gfxboot graphical boot loader extension. It  should be suitable for Ubuntu derivatives as well as Ubuntu itself.
+- **[hdmi-monitor-switch](https://github.com/lliurex/hdmi-monitor-switch)**: Script and rule for udev that poweroffs internal output when an external hdmi is plugged
+- **[HIG](https://github.com/lliurex/HIG)**: Human Guide Lines
+- **[hodor](https://github.com/lliurex/hodor)**: keep home folder safe
+- **[holiday-manager](https://github.com/lliurex/holiday-manager)**: Provides the API to manage holidays and Gtk component
+- **[home-eraser](https://github.com/lliurex/home-eraser)**: Automatic remove home directories for selected groups from server and fat clients
+- **[home-linker](https://github.com/lliurex/home-linker)**: Application to mount samba shared dirs on user login
+- **[hotpotatoes](https://github.com/lliurex/hotpotatoes)**: Tools to create Digital Educational Objects
+- **[hwdetector](https://github.com/lliurex/hwdetector)**: Simple system detector
+- **[initramfs-options](https://github.com/lliurex/initramfs-options)**: Sin descripción.
+- **[iptables](https://github.com/lliurex/iptables)**: bionic backport iptables for add support to suppl-group
+- **[ipxe](https://github.com/lliurex/ipxe)**: Sin descripción.
+- **[kconfig-dump](https://github.com/lliurex/kconfig-dump)**: Simple tool to dump a full kconfig file
+- **[kde-service-menu-reimage](https://github.com/lliurex/kde-service-menu-reimage)**: Sin descripción.
+- **[kde_translations](https://github.com/lliurex/kde_translations)**: Temporally project to process translations with weblate
+- **[keepass](https://github.com/lliurex/keepass)**: Sin descripción.
+- **[keepass-plugin-keepasshttp](https://github.com/lliurex/keepass-plugin-keepasshttp)**: Sin descripción.
+- **[kmixtest](https://github.com/lliurex/kmixtest)**: Qt test pdf generator
+- **[krfb](https://github.com/lliurex/krfb)**: Sin descripción.
+- **[krita-ai-diffusion](https://github.com/lliurex/krita-ai-diffusion)**: Sin descripción.
+- **[kscreen-system-settings](https://github.com/lliurex/kscreen-system-settings)**: Sin descripción.
+- **[kscreen_replicator](https://github.com/lliurex/kscreen_replicator)**: Script that sets the max common resolution for two output sources and activates screen mirroring between them
+- **[kscreenlocker](https://github.com/lliurex/kscreenlocker)**: Sin descripción.
+- **[kwin-colorcorrection-effect](https://github.com/lliurex/kwin-colorcorrection-effect)**: Kwin effect for helping with color blindness
+- **[kwin-focustrack-effect](https://github.com/lliurex/kwin-focustrack-effect)**: Kwin effect that draws a frame around the focused item in desktop
+- **[kwin-script-mouseframe](https://github.com/lliurex/kwin-script-mouseframe)**: Script for kwin that draws a frame around the pointer
+- **[kwin-script-mousestrip](https://github.com/lliurex/kwin-script-mousestrip)**: Kwin effect that displays a read strip around the mouse
+- **[kwin-script-rgbfilter](https://github.com/lliurex/kwin-script-rgbfilter)**: KWin script that applies a rgb filter to the screen
+- **[ldm](https://github.com/lliurex/ldm)**: LTSP Display manager. LliureX remix
+- **[ldm-lliurex-theme](https://github.com/lliurex/ldm-lliurex-theme)**: Sin descripción.
+- **[lgi](https://github.com/lliurex/lgi)**: LliureX Graphic Interface
+- **[libcrypt](https://github.com/lliurex/libcrypt)**: Sin descripción.
+- **[libcrypto](https://github.com/lliurex/libcrypto)**: Sin descripción.
+- **[libcurl3-foo](https://github.com/lliurex/libcurl3-foo)**: Foo package that provides libcurl3
+- **[libicu](https://github.com/lliurex/libicu)**: Sin descripción.
+- **[libmono-lliurex-utils](https://github.com/lliurex/libmono-lliurex-utils)**: Provides a CLI library for mono
+- **[libnss-lliurex](https://github.com/lliurex/libnss-lliurex)**: lliurex NSS plugin to list groups of CDC server
+- **[lightdm-running](https://github.com/lliurex/lightdm-running)**: Lightdm configuration for LliureX server and clients
+- **[live-build](https://github.com/lliurex/live-build)**: Sin descripción.
+- **[lliurex-abies2pmb](https://github.com/lliurex/lliurex-abies2pmb)**: Imports abies mdb to pmb
+- **[lliurex-access-control](https://github.com/lliurex/lliurex-access-control)**: Tool that allows you to control whether a user can use a computer 
+- **[lliurex-adobe-settings](https://github.com/lliurex/lliurex-adobe-settings)**: Sin descripción.
+- **[lliurex-apache-config](https://github.com/lliurex/lliurex-apache-config)**: Install and configure an Apache server
+- **[lliurex-apt-divert](https://github.com/lliurex/lliurex-apt-divert)**: Diverts custom apt from neon
+- **[lliurex-apt2](https://github.com/lliurex/lliurex-apt2)**: manage repositories from gui
+- **[lliurex-artwork](https://github.com/lliurex/lliurex-artwork)**: Lliurex theming: kwin theme, color scheme, desktop layout,...
+- **[lliurex-artwork-defaults](https://github.com/lliurex/lliurex-artwork-defaults)**: Sin descripción.
+- **[lliurex-artwork-fonts](https://github.com/lliurex/lliurex-artwork-fonts)**: Optional fonts for LliureX
+- **[lliurex-auto-upgrade](https://github.com/lliurex/lliurex-auto-upgrade)**: Sin descripción.
+- **[lliurex-autorun](https://github.com/lliurex/lliurex-autorun)**: Lliurex autorun launch autorun files
+- **[lliurex-backup](https://github.com/lliurex/lliurex-backup)**: GUI to backup and restore lliurex services and folders
+- **[lliurex-base-files](https://github.com/lliurex/lliurex-base-files)**: Sin descripción.
+- **[lliurex-cdc-control](https://github.com/lliurex/lliurex-cdc-control)**: Tool to enable o disable the integration with the CDC
+- **[lliurex-cdlocker](https://github.com/lliurex/lliurex-cdlocker)**: Locks drive tray for classroom computers
+- **[lliurex-certificates](https://github.com/lliurex/lliurex-certificates)**: GVA Certificates
+- **[lliurex-chboot](https://github.com/lliurex/lliurex-chboot)**: Sin descripción.
+- **[lliurex-classroom-actions](https://github.com/lliurex/lliurex-classroom-actions)**: sytray tool with quick classroom control actions
+- **[lliurex-classroom-env-configuration](https://github.com/lliurex/lliurex-classroom-env-configuration)**: Sin descripción.
+- **[lliurex-client-env-configuration](https://github.com/lliurex/lliurex-client-env-configuration)**: Environment configurations for LliureX Clients
+- **[lliurex-cmaptools](https://github.com/lliurex/lliurex-cmaptools)**: Packages that contains cmaptoos bin and custom files from LliureX
+- **[lliurex-common-utils](https://github.com/lliurex/lliurex-common-utils)**: LliureX utils
+- **[lliurex-conky](https://github.com/lliurex/lliurex-conky)**: LliurexCONKY configured special settings  - Show user, hostname, IP address and Lliurex Version  For LliureX
+- **[lliurex-connect](https://github.com/lliurex/lliurex-connect)**: Tools to connect Android tablets  with a LliureX Desktop
+- **[lliurex-cssh](https://github.com/lliurex/lliurex-cssh)**: Simple wrapper to install the Cluster SSH with lliurex pluggin
+- **[lliurex-cups-client](https://github.com/lliurex/lliurex-cups-client)**: Package for configure cups in client
+- **[lliurex-custom-desktops](https://github.com/lliurex/lliurex-custom-desktops)**: Sin descripción.
+- **[lliurex-custom-xrdp](https://github.com/lliurex/lliurex-custom-xrdp)**: xrdp extension that runs a run-parts directory before opening session
+- **[lliurex-deskreen](https://github.com/lliurex/lliurex-deskreen)**: Converte cualquier dispositivo en una pantalla secundaria para tu computadora
+- **[lliurex-desktop-layout-selector](https://github.com/lliurex/lliurex-desktop-layout-selector)**: Just a in-house Plasma look-and-feel selector tool
+- **[lliurex-desktops-keeper](https://github.com/lliurex/lliurex-desktops-keeper)**:  Lliurex Desktop keeper
+- **[lliurex-disable-discover-indicator](https://github.com/lliurex/lliurex-disable-discover-indicator)**: Package to hide discovernotifier indicator from systray (for new users)
+- **[lliurex-documentator](https://github.com/lliurex/lliurex-documentator)**: Shell script that generates internal documentation from partial documents.
+- **[lliurex-easy-sites](https://github.com/lliurex/lliurex-easy-sites)**: Contains lliurex-easy-sites
+- **[lliurex-emblemador](https://github.com/lliurex/lliurex-emblemador)**: LliureX Automatic emblem shared folders
+- **[lliurex-enterprise-mount](https://github.com/lliurex/lliurex-enterprise-mount)**: This package mounts shares everywhere
+- **[lliurex-extra-configs](https://github.com/lliurex/lliurex-extra-configs)**: Custom lliurex configurations for various packages
+- **[lliurex-firefox-plugins](https://github.com/lliurex/lliurex-firefox-plugins)**:  Package to allows install firefox plugins from server to clients
+- **[lliurex-firefox-settings](https://github.com/lliurex/lliurex-firefox-settings)**: Lliurex settings for Firefox
+- **[lliurex-fix-translations-kde](https://github.com/lliurex/lliurex-fix-translations-kde)**: Sin descripción.
+- **[lliurex-flash-installer](https://github.com/lliurex/lliurex-flash-installer)**: Package to install adobe-flashplugin and add canonical   repositories
+- **[lliurex-freeradius](https://github.com/lliurex/lliurex-freeradius)**: GUI to initialize freeradius service
+- **[lliurex-gdrive](https://github.com/lliurex/lliurex-gdrive)**: App to manage google drive accounts
+- **[lliurex-grub-custom](https://github.com/lliurex/lliurex-grub-custom)**: LliureX Grub configuration
+- **[lliurex-guard](https://github.com/lliurex/lliurex-guard)**: Easy interface to manage Squid3 filters
+- **[lliurex-guard-data](https://github.com/lliurex/lliurex-guard-data)**: Provides lists of domains for  LliureX Guard / Squid proxy
+- **[lliurex-gva-gate](https://github.com/lliurex/lliurex-gva-gate)**: GVA remote authentication and group management system
+- **[lliurex-gva-hwdb](https://github.com/lliurex/lliurex-gva-hwdb)**: Simple library and tool to check if a computer belongs to GVA hardware set
+- **[lliurex-gva-presets](https://github.com/lliurex/lliurex-gva-presets)**: Sin descripción.
+- **[lliurex-gva-quirks](https://github.com/lliurex/lliurex-gva-quirks)**: Sin descripción.
+- **[lliurex-help](https://github.com/lliurex/lliurex-help)**: A nwjs based desktop application for help documentation writen in markdown.
+- **[lliurex-homework-harvester](https://github.com/lliurex/lliurex-homework-harvester)**: Application to send files to teachers
+- **[lliurex-hot-fix](https://github.com/lliurex/lliurex-hot-fix)**: Sin descripción.
+- **[lliurex-hotpotatoes-data](https://github.com/lliurex/lliurex-hotpotatoes-data)**: This package adds configuration, icon and desktop files for hotpotatoes
+- **[lliurex-inventory](https://github.com/lliurex/lliurex-inventory)**: Sin descripción.
+- **[lliurex-inventory-agent](https://github.com/lliurex/lliurex-inventory-agent)**: Sin descripción.
+- **[lliurex-java-panel](https://github.com/lliurex/lliurex-java-panel)**:  Lliurex Java Panel Administration
+- **[lliurex-jclic-shared](https://github.com/lliurex/lliurex-jclic-shared)**: LliureX Jclic Library Service for LliureX classrooms and clients
+- **[lliurex-journald-settings](https://github.com/lliurex/lliurex-journald-settings)**: Sin descripción.
+- **[lliurex-kde-hotkeys](https://github.com/lliurex/lliurex-kde-hotkeys)**: Set of default kde hotkeys
+- **[lliurex-kdeconnect-disabler](https://github.com/lliurex/lliurex-kdeconnect-disabler)**: Sin descripción.
+- **[lliurex-keyring](https://github.com/lliurex/lliurex-keyring)**: Sin descripción.
+- **[lliurex-lab](https://github.com/lliurex/lliurex-lab)**: LliureX language laboratory tools
+- **[lliurex-langpack-kde](https://github.com/lliurex/lliurex-langpack-kde)**: Sin descripción.
+- **[lliurex-libreoffice-aula-settings](https://github.com/lliurex/lliurex-libreoffice-aula-settings)**: Libreoffice customization
+- **[lliurex-live-fixes](https://github.com/lliurex/lliurex-live-fixes)**: Dpkg fixes to create LliureX ISOs
+- **[lliurex-maker](https://github.com/lliurex/lliurex-maker)**: Sin descripción.
+- **[lliurex-megaphone](https://github.com/lliurex/lliurex-megaphone)**: Graphic interface than enables user to easily enable/disable pulseaudio loopback module
+- **[lliurex-menus](https://github.com/lliurex/lliurex-menus)**: Extra Apps and Shortcuts for LliureX
+- **[lliurex-meta](https://github.com/lliurex/lliurex-meta)**: Sin descripción.
+- **[lliurex-meta-maker](https://github.com/lliurex/lliurex-meta-maker)**: Sin descripción.
+- **[lliurex-meta-tools](https://github.com/lliurex/lliurex-meta-tools)**: Sin descripción.
+- **[lliurex-mime-settings](https://github.com/lliurex/lliurex-mime-settings)**: Lliurex mime configuration
+- **[lliurex-miniscreen](https://github.com/lliurex/lliurex-miniscreen)**: A Mini Screen to able people with motor disabilities  and children to interact easily with Interactive Digital Boards
+- **[lliurex-mirror](https://github.com/lliurex/lliurex-mirror)**: Tool to manage LliureX repositories
+- **[lliurex-mirror-redirect](https://github.com/lliurex/lliurex-mirror-redirect)**: Allows a slave server to use the mirror of the master server
+- **[lliurex-moodle](https://github.com/lliurex/lliurex-moodle)**: This package configures moodle to integrate it on LliureX environment
+- **[lliurex-moving-core](https://github.com/lliurex/lliurex-moving-core)**: Lliurex moving profile manager
+- **[lliurex-moving-editor](https://github.com/lliurex/lliurex-moving-editor)**:  Lliurex moving graphical interface settings manager
+- **[lliurex-ms-teams](https://github.com/lliurex/lliurex-ms-teams)**: Package to launch MS Teams with a chromium "app"
+- **[lliurex-news](https://github.com/lliurex/lliurex-news)**: Sin descripción.
+- **[lliurex-news-slideshow](https://github.com/lliurex/lliurex-news-slideshow)**: This software is the perfect complement to make slideshows from RSS service
+- **[lliurex-nextcloud](https://github.com/lliurex/lliurex-nextcloud)**: Scripts and n4d plugins to initialize nextcloud
+- **[lliurex-ntpdate](https://github.com/lliurex/lliurex-ntpdate)**: Configure service ntpdate  in the classroom client
+- **[lliurex-on-fire](https://github.com/lliurex/lliurex-on-fire)**: Lliurex add-on for firefox/chromium
+- **[lliurex-onedrive](https://github.com/lliurex/lliurex-onedrive)**: A gui for Onedrive client
+- **[lliurex-onedrive-plasmoid](https://github.com/lliurex/lliurex-onedrive-plasmoid)**: A widget for Lliurex OneDrive
+- **[lliurex-openmeetings](https://github.com/lliurex/lliurex-openmeetings)**: This package allows users to install openmeetings from zero-center
+- **[lliurex-openmeetings-data](https://github.com/lliurex/lliurex-openmeetings-data)**: Openmeetings tar.gz project
+- **[lliurex-perfilreset](https://github.com/lliurex/lliurex-perfilreset)**: Resets the desktop profile to LliureX defaults
+- **[lliurex-permission-control](https://github.com/lliurex/lliurex-permission-control)**: Tool to manage permissions
+- **[lliurex-plymouth-theme](https://github.com/lliurex/lliurex-plymouth-theme)**: Lliurex custom plymouth plugin
+- **[lliurex-pmb](https://github.com/lliurex/lliurex-pmb)**: This package configures pmb   on LliureX biblio environment
+- **[lliurex-polkit-settings](https://github.com/lliurex/lliurex-polkit-settings)**: Modify polkit variables
+- **[lliurex-pool-tools](https://github.com/lliurex/lliurex-pool-tools)**: Scripts to manage repository operations
+- **[lliurex-preseed](https://github.com/lliurex/lliurex-preseed)**: Sin descripción.
+- **[lliurex-printa-classroom](https://github.com/lliurex/lliurex-printa-classroom)**: PRINTA config for LliureX classroom
+- **[lliurex-profile-d](https://github.com/lliurex/lliurex-profile-d)**: Sin descripción.
+- **[lliurex-quota](https://github.com/lliurex/lliurex-quota)**: Quota's manager for LliureX
+- **[lliurex-quota-gui](https://github.com/lliurex/lliurex-quota-gui)**: Sin descripción.
+- **[lliurex-quota-plasmoid](https://github.com/lliurex/lliurex-quota-plasmoid)**: Sin descripción.
+- **[lliurex-remote-installer](https://github.com/lliurex/lliurex-remote-installer)**: lliurex-remote-installer
+- **[lliurex-remote-installer-plasmoid](https://github.com/lliurex/lliurex-remote-installer-plasmoid)**: A wiget to report Remote Installer activitiy
+- **[lliurex-resolver](https://github.com/lliurex/lliurex-resolver)**: This cli tool computes a list of dependencies, helping with pool maintaining
+- **[lliurex-robotics](https://github.com/lliurex/lliurex-robotics)**:  Udev rules to permit all users total access to some devices
+- **[lliurex-rsyslog-filters](https://github.com/lliurex/lliurex-rsyslog-filters)**: Add some filters to rsyslog
+- **[lliurex-screen-mirroring](https://github.com/lliurex/lliurex-screen-mirroring)**: Sin descripción.
+- **[lliurex-sddm-theme](https://github.com/lliurex/lliurex-sddm-theme)**: LliureX custom sddm theme
+- **[lliurex-server-page](https://github.com/lliurex/lliurex-server-page)**: Sin descripción.
+- **[lliurex-sgbd](https://github.com/lliurex/lliurex-sgbd)**: Several utilities to create and manage mysql databases
+- **[lliurex-shutdowner](https://github.com/lliurex/lliurex-shutdowner)**: Manage automatic clients shutdown using n4d calls
+- **[lliurex-smart](https://github.com/lliurex/lliurex-smart)**:  This package contains the: lliurex-smart resources
+- **[lliurex-smart-tagging](https://github.com/lliurex/lliurex-smart-tagging)**: Package to hot tag machines depending on certain logic
+- **[lliurex-smartcard-udev-fixer](https://github.com/lliurex/lliurex-smartcard-udev-fixer)**: Contains lliurex-smartcard-udev-fixer
+- **[lliurex-snapd-fix](https://github.com/lliurex/lliurex-snapd-fix)**: Sin descripción.
+- **[lliurex-ssh-login](https://github.com/lliurex/lliurex-ssh-login)**: Lliurex SSH LOGIN configured special settings
+- **[lliurex-statistics](https://github.com/lliurex/lliurex-statistics)**: Analytics reporting agent for Lliurex
+- **[lliurex-statistics-blacklist](https://github.com/lliurex/lliurex-statistics-blacklist)**: Blacklist 4 analytics agent
+- **[lliurex-store](https://github.com/lliurex/lliurex-store)**: LiureX Software store. Works with repositories, zomandos, snap and appimage.
+- **[lliurex-store-blacklist](https://github.com/lliurex/lliurex-store-blacklist)**: Blacklisted packages
+- **[lliurex-sudoers](https://github.com/lliurex/lliurex-sudoers)**: Configuration file to allow admins and llxadmin to gain root privileges
+- **[lliurex-swftools](https://github.com/lliurex/lliurex-swftools)**: Tools to convert different file types to swf
+- **[lliurex-tts](https://github.com/lliurex/lliurex-tts)**:  Some text to speech for  LliureX.
+- **[lliurex-tuxpaint-stamps](https://github.com/lliurex/lliurex-tuxpaint-stamps)**: LliureX Tux Paint is meant to be a simple drawing program,   with LLiureX official image
+- **[lliurex-unattended-upgrades](https://github.com/lliurex/lliurex-unattended-upgrades)**: package to stop unattended-upgraded from installing
+- **[lliurex-up](https://github.com/lliurex/lliurex-up)**: Tool to update the systen
+- **[lliurex-up-auto-upgrade](https://github.com/lliurex/lliurex-up-auto-upgrade)**: Provides systemd service and n4d-plugin to manage automatic system update with LliureX-Up
+- **[lliurex-up-plasmoid](https://github.com/lliurex/lliurex-up-plasmoid)**: Plasmoid to info about available updates
+- **[lliurex-valencianize](https://github.com/lliurex/lliurex-valencianize)**: Change default language to valencian
+- **[lliurex-version-timestamp](https://github.com/lliurex/lliurex-version-timestamp)**: Sin descripción.
+- **[lliurex-wifi-gva-control](https://github.com/lliurex/lliurex-wifi-gva-control)**: Tool to configure the educational WIFI of GVA
+- **[lliurex-www](https://github.com/lliurex/lliurex-www)**: This package installs server web site
+- **[lliurex.github.io](https://github.com/lliurex/lliurex.github.io)**: LliureX github's web page 
+- **[lliuwin-wizard](https://github.com/lliurex/lliuwin-wizard)**: Wizard for create user account
+- **[llum](https://github.com/lliurex/llum)**: LDAP User Manager
+- **[llx-alumnat-wifi](https://github.com/lliurex/llx-alumnat-wifi)**: Create a user for automatic login to the EscolesConectades Wi-Fi for students
+- **[llx-apt](https://github.com/lliurex/llx-apt)**: Sin descripción.
+- **[llx-bootmanager](https://github.com/lliurex/llx-bootmanager)**: Package to manage netboot options
+- **[llx-bootmanager-gui](https://github.com/lliurex/llx-bootmanager-gui)**: Sin descripción.
+- **[llx-edition-studio](https://github.com/lliurex/llx-edition-studio)**: Programs collage to record and edit video tutorial
+- **[llx-guest](https://github.com/lliurex/llx-guest)**: Create guest user to kde
+- **[llx-ltsp-xrandr](https://github.com/lliurex/llx-ltsp-xrandr)**: Special configuration for LTSP video cards
+- **[llx-netinstall](https://github.com/lliurex/llx-netinstall)**: LliureX netinstall configuration
+- **[llx-network-config](https://github.com/lliurex/llx-network-config)**: Gui to allow to edit network configuration after  server initialization
+- **[llx-pam-configs](https://github.com/lliurex/llx-pam-configs)**: LliureX Server & Client pam configuration
+- **[llx-qjack-pulse-integrator](https://github.com/lliurex/llx-qjack-pulse-integrator)**: Sin descripción.
+- **[llx-upgrade-release](https://github.com/lliurex/llx-upgrade-release)**: Experimental release upgrader for LliureX
+- **[llx-valencianitzador](https://github.com/lliurex/llx-valencianitzador)**: Valencianitzador de .pos
+- **[llxamp](https://github.com/lliurex/llxamp)**: Sin descripción.
+- **[llxansible](https://github.com/lliurex/llxansible)**: Sin descripción.
+- **[llxdoc-admin](https://github.com/lliurex/llxdoc-admin)**: Guía de Administración de LliureX Servidor
+- **[llxdoc-gc](https://github.com/lliurex/llxdoc-gc)**: Guía de Colaboración con LliureX
+- **[llxdoc-ltsp](https://github.com/lliurex/llxdoc-ltsp)**: Guía de Usuario de LliureX LTSP
+- **[llxdoc-update](https://github.com/lliurex/llxdoc-update)**: Guía de actualización de LliureX
+- **[llxfederation](https://github.com/lliurex/llxfederation)**: Sin descripción.
+- **[llxsrchelper](https://github.com/lliurex/llxsrchelper)**: Sin descripción.
+- **[lmd](https://github.com/lliurex/lmd)**: Package to manage LTSP
+- **[lmd-client](https://github.com/lliurex/lmd-client)**: Lliurex custom ltsp options
+- **[lsf](https://github.com/lliurex/lsf)**: LliureX System Framework
+- **[ltsp](https://github.com/lliurex/ltsp)**: Ltsp - LliureX Remix
+- **[make-mini-image](https://github.com/lliurex/make-mini-image)**: Mini-image maker
+- **[marcapaginas](https://github.com/lliurex/marcapaginas)**: Sin descripción.
+- **[moodle](https://github.com/lliurex/moodle)**: Package to install moodle file in lliurex environment
+- **[mrpdi](https://github.com/lliurex/mrpdi)**: MrPDI allows digital whiteboards to work under Gnu/Linux
+- **[mrpdi-cli](https://github.com/lliurex/mrpdi-cli)**: CLI tools for mrpdi
+- **[mrpdi-drivers](https://github.com/lliurex/mrpdi-drivers)**: Mainstream drivers kit enabling support for miscelanea of input devices
+- **[mrpdi-gui](https://github.com/lliurex/mrpdi-gui)**: Gtk Manager for mrpdi
+- **[mysql-tuneup](https://github.com/lliurex/mysql-tuneup)**: Configs for fine tuning mysql
+- **[n4d](https://github.com/lliurex/n4d)**: Xmlrpc server to allow the remote execution of pluggable functions
+- **[n4d-apache](https://github.com/lliurex/n4d-apache)**: N4D Package to configure Apache
+- **[n4d-autofs](https://github.com/lliurex/n4d-autofs)**: N4D Autofs plugin
+- **[n4d-backup-manager](https://github.com/lliurex/n4d-backup-manager)**: N4D Plugin to make/restore backups from specified apps
+- **[n4d-cdc](https://github.com/lliurex/n4d-cdc)**: Sin descripción.
+- **[n4d-cdlocker-client](https://github.com/lliurex/n4d-cdlocker-client)**: Locks client drive CD tray
+- **[n4d-cdlocker-server](https://github.com/lliurex/n4d-cdlocker-server)**:  Plugins supporting lliurex cdlocker server functionality
+- **[n4d-client-exe-consumer](https://github.com/lliurex/n4d-client-exe-consumer)**: Plugin to consume n4d-client-exe-manager scripts
+- **[n4d-client-exe-manager](https://github.com/lliurex/n4d-client-exe-manager)**: N4D plugin to configure serve scripts via n4d-client-exe-consumer
+- **[n4d-client-plugins](https://github.com/lliurex/n4d-client-plugins)**: N4D client plugins
+- **[n4d-clientvars](https://github.com/lliurex/n4d-clientvars)**: N4D client variables
+- **[n4d-cups](https://github.com/lliurex/n4d-cups)**:  n4d cups plugin
+- **[n4d-dnsmasq](https://github.com/lliurex/n4d-dnsmasq)**: N4D Package to configure DNSMASQ
+- **[n4d-epoptes-client](https://github.com/lliurex/n4d-epoptes-client)**: N4D Package to configure epoptes-client on every boot
+- **[n4d-epoptes-common](https://github.com/lliurex/n4d-epoptes-common)**: N4D epoptes common operations to enforce extra security
+- **[n4d-epoptes-desktop](https://github.com/lliurex/n4d-epoptes-desktop)**: N4D Plugin to manage epoptes-client in natfree networks
+- **[n4d-epoptes-server](https://github.com/lliurex/n4d-epoptes-server)**: N4D plugin to add epoptes some more n4d functionalities
+- **[n4d-escoles-conectades](https://github.com/lliurex/n4d-escoles-conectades)**: n4d plugin which help to stablish a networkmanager connection to GVA Escoles Conectades Wireless
+- **[n4d-freeradius](https://github.com/lliurex/n4d-freeradius)**: N4D plugin for configuring radius server
+- **[n4d-homecleaner](https://github.com/lliurex/n4d-homecleaner)**: n4d home cleaner plugin
+- **[n4d-hostname](https://github.com/lliurex/n4d-hostname)**: N4D server hostname configuration plugin
+- **[n4d-iptablesmanager](https://github.com/lliurex/n4d-iptablesmanager)**: Sin descripción.
+- **[n4d-kerberos](https://github.com/lliurex/n4d-kerberos)**: Kerberos configure utils
+- **[n4d-ldap](https://github.com/lliurex/n4d-ldap)**: N4D Package to configure LDAP
+- **[n4d-lliurex-base](https://github.com/lliurex/n4d-lliurex-base)**: N4D basic plugins
+- **[n4d-locale-manager](https://github.com/lliurex/n4d-locale-manager)**: Sin descripción.
+- **[n4d-moving-profiles](https://github.com/lliurex/n4d-moving-profiles)**: N4D plugin for configuring moving profiles
+- **[n4d-mysql](https://github.com/lliurex/n4d-mysql)**: N4d mysql plugin
+- **[n4d-netfolders](https://github.com/lliurex/n4d-netfolders)**: N4D plugin to configured samba network folders
+- **[n4d-network](https://github.com/lliurex/n4d-network)**: Sin descripción.
+- **[n4d-nfs](https://github.com/lliurex/n4d-nfs)**: N4D Plugin that offers nfs exportation functionalities
+- **[n4d-pamnss](https://github.com/lliurex/n4d-pamnss)**: N4D plugin to configure pamnss related files
+- **[n4d-proxy](https://github.com/lliurex/n4d-proxy)**: N4D Plugin to configure LliureX proxy
+- **[n4d-remote-gui-plugins](https://github.com/lliurex/n4d-remote-gui-plugins)**: N4D pluginthat allows execution of remote GUIs
+- **[n4d-samba](https://github.com/lliurex/n4d-samba)**: N4D Package to configure samba
+- **[n4d-server-plugins](https://github.com/lliurex/n4d-server-plugins)**: Sin descripción.
+- **[n4d-shutdowner-client](https://github.com/lliurex/n4d-shutdowner-client)**: Plugin allowing lliurex-shutdowner to shutdown clients
+- **[n4d-shutdowner-server](https://github.com/lliurex/n4d-shutdowner-server)**: Plugins supporting lliurex shutdowner server functionality
+- **[n4d-taskscheduler](https://github.com/lliurex/n4d-taskscheduler)**: TaskScheduler plugin for n4d
+- **[n4d-testing](https://github.com/lliurex/n4d-testing)**: Temporary repository for N4D v1.0
+- **[n4d-wifiedugva](https://github.com/lliurex/n4d-wifiedugva)**: Sin descripción.
+- **[natfree](https://github.com/lliurex/natfree)**: Sin descripción.
+- **[nerd-dictation-plasmoid](https://github.com/lliurex/nerd-dictation-plasmoid)**: Sin descripción.
+- **[netinstall-boot](https://github.com/lliurex/netinstall-boot)**: Sin descripción.
+- **[netinstall-kernel](https://github.com/lliurex/netinstall-kernel)**: Sin descripción.
+- **[netinstall-seeds](https://github.com/lliurex/netinstall-seeds)**: Sin descripción.
+- **[netplan](https://github.com/lliurex/netplan)**: Sin descripción.
+- **[news-admin](https://github.com/lliurex/news-admin)**: Sin descripción.
+- **[news-server](https://github.com/lliurex/news-server)**: Sin descripción.
+- **[nextcloud](https://github.com/lliurex/nextcloud)**: Package to install nextcloud files in lliurex
+- **[nextcloud-desktop](https://github.com/lliurex/nextcloud-desktop)**: 3.2.3 Backport from impish
+- **[nextcloud19](https://github.com/lliurex/nextcloud19)**: Deb to install nextcloud19 in LliureX
+- **[nextcloud21](https://github.com/lliurex/nextcloud21)**: Sin descripción.
+- **[node-webkit](https://github.com/lliurex/node-webkit)**:  Node-Webit package that depends on nwjs0.21
+- **[noteshrink-gui](https://github.com/lliurex/noteshrink-gui)**: Graphical interface to convert scans of handwritten notes to beautiful, compact PDFs
+- **[numptyphysics](https://github.com/lliurex/numptyphysics)**: Sin descripción.
+- **[nwjs0.21](https://github.com/lliurex/nwjs0.21)**: Sin descripción.
+- **[nwjs0.30](https://github.com/lliurex/nwjs0.30)**: Sin descripción.
+- **[open-sysclone](https://github.com/lliurex/open-sysclone)**: Sin descripción.
+- **[open-sysclone-system](https://github.com/lliurex/open-sysclone-system)**: Sin descripción.
+- **[openstereogram](https://github.com/lliurex/openstereogram)**: Sin descripción.
+- **[pam_autologin](https://github.com/lliurex/pam_autologin)**: PAM autologin module
+- **[panel-design-manager](https://github.com/lliurex/panel-design-manager)**: Sin descripción.
+- **[partitionmanager](https://github.com/lliurex/partitionmanager)**: Sin descripción.
+- **[pdfarranger](https://github.com/lliurex/pdfarranger)**: Sin descripción.
+- **[pdfarranger-pikepdf](https://github.com/lliurex/pdfarranger-pikepdf)**: Sin descripción.
+- **[pintascreen](https://github.com/lliurex/pintascreen)**: Sin descripción.
+- **[pmb5.0](https://github.com/lliurex/pmb5.0)**: Package to install pmb5.0 with docker
+- **[pmb7.0](https://github.com/lliurex/pmb7.0)**: Repository to custom PMB used in LliureX
+- **[pmb_base](https://github.com/lliurex/pmb_base)**: Sin descripción.
+- **[pmb_translations](https://github.com/lliurex/pmb_translations)**: Sin descripción.
+- **[polin](https://github.com/lliurex/polin)**: Eines per a l'assistència a les traduccions
+- **[presentations](https://github.com/lliurex/presentations)**: presentaciones para jornadas, cursos, etc.
+- **[printa](https://github.com/lliurex/printa)**: Printing service
+- **[promethean-compat-libs](https://github.com/lliurex/promethean-compat-libs)**: Legacy libs for promethean activinspire
+- **[promethean-fixboot](https://github.com/lliurex/promethean-fixboot)**: Deletes /dev/shm/pem.promethean on boot
+- **[pyromaths-qt](https://github.com/lliurex/pyromaths-qt)**: Sin descripción.
+- **[pyside2](https://github.com/lliurex/pyside2)**: Sin descripción.
+- **[pyside6](https://github.com/lliurex/pyside6)**: Sin descripción.
+- **[pysiogame](https://github.com/lliurex/pysiogame)**: Sin descripción.
+- **[pysycache-qcv](https://github.com/lliurex/pysycache-qcv)**: Added some translations for Valencia on pysycache
+- **[python-llxnet](https://github.com/lliurex/python-llxnet)**: Sin descripción.
+- **[python-llxvars](https://github.com/lliurex/python-llxvars)**: Python package containing LliureX  initialization values for N4D variables
+- **[python-qtermwidget](https://github.com/lliurex/python-qtermwidget)**: Sin descripción.
+- **[python-superqt](https://github.com/lliurex/python-superqt)**: Sin descripción.
+- **[python-support](https://github.com/lliurex/python-support)**: Automated rebuilding support for Python modules
+- **[python-typing-extensions](https://github.com/lliurex/python-typing-extensions)**: Sin descripción.
+- **[python-uinput](https://github.com/lliurex/python-uinput)**: : Pythonic API to Linux uinput kernel module (Python2) 
+- **[python3-app2menu](https://github.com/lliurex/python3-app2menu)**: library for generate desktop files
+- **[python3-appconfig](https://github.com/lliurex/python3-appconfig)**: Lib for managing config files for local apps or n4d servers
+- **[python3-appsedu](https://github.com/lliurex/python3-appsedu)**: Appsedu web scraper
+- **[python3-imutils](https://github.com/lliurex/python3-imutils)**: imutils is a package that provides convenience functions for basic image processing tasks such as translation, rotation, resizing, skeletonization, and more
+- **[python3-llxaccessibility](https://github.com/lliurex/python3-llxaccessibility)**: Python3 module for centralize the accessibility options of LliureX
+- **[python3-qtextrawidgets](https://github.com/lliurex/python3-qtextrawidgets)**: Custom PySide2 widgets
+- **[python3-rebost](https://github.com/lliurex/python3-rebost)**: Python3 module for the rebost software store
+- **[python3-repoman](https://github.com/lliurex/python3-repoman)**: python module for manage software sources
+- **[python3-software-properties-lliurex](https://github.com/lliurex/python3-software-properties-lliurex)**: Diversion for ppa.py file from python3-software-properties (ssl fix)
+- **[python3-taskscheduler](https://github.com/lliurex/python3-taskscheduler)**: Python module for cron
+- **[qml-module-gva-gate](https://github.com/lliurex/qml-module-gva-gate)**: Provides access to gva-gate api
+- **[qml-module-lliurex-ui](https://github.com/lliurex/qml-module-lliurex-ui)**: qml module with widgets and tools used on lliurex environment (sddm, login, live wizard, ...)
+- **[qmltermwidget](https://github.com/lliurex/qmltermwidget)**: Sin descripción.
+- **[qtdatavis3d](https://github.com/lliurex/qtdatavis3d)**: Sin descripción.
+- **[qtremoteobjects](https://github.com/lliurex/qtremoteobjects)**: Sin descripción.
+- **[qtscxml](https://github.com/lliurex/qtscxml)**: Sin descripción.
+- **[rebost](https://github.com/lliurex/rebost)**: Rebost is a software management system for LliureX.
+- **[rebost-data](https://github.com/lliurex/rebost-data)**: appstream data for rebost
+- **[rebost-metadata](https://github.com/lliurex/rebost-metadata)**: Metadata - splitted from rebost-data
+- **[repoman](https://github.com/lliurex/repoman)**: Repository Manager for LliureX
+- **[resources-launcher](https://github.com/lliurex/resources-launcher)**: Launcher for the educational resources
+- **[robolliurex](https://github.com/lliurex/robolliurex)**: Robolliurex is a software which allows to use classic Lego RCX brick
+- **[rtl88x2ce](https://github.com/lliurex/rtl88x2ce)**: Sin descripción.
+- **[ruby-aubio](https://github.com/lliurex/ruby-aubio)**: Sin descripción.
+- **[ruby-rubame](https://github.com/lliurex/ruby-rubame)**: Sin descripción.
+- **[ruby-sys-proctable](https://github.com/lliurex/ruby-sys-proctable)**: Sin descripción.
+- **[ruby-websocket](https://github.com/lliurex/ruby-websocket)**: Sin descripción.
+- **[ruby-xmlrpc](https://github.com/lliurex/ruby-xmlrpc)**: Sin descripción.
+- **[ruby2.7](https://github.com/lliurex/ruby2.7)**: Sin descripción.
+- **[runomatic](https://github.com/lliurex/runomatic)**: Simple full-screen app launcher that embeds launched apps in tabs
+- **[runovnc](https://github.com/lliurex/runovnc)**: gvncviewer fork for use in runomatic
+- **[s4a](https://github.com/lliurex/s4a)**:  A customized version of Scratch $ Arduino
+- **[sagora](https://github.com/lliurex/sagora)**: Stream live music software
+- **[samba](https://github.com/lliurex/samba)**: Sin descripción.
+- **[schoolmedia](https://github.com/lliurex/schoolmedia)**: Sin descripción.
+- **[screensaver_manager](https://github.com/lliurex/screensaver_manager)**: Enable o disable screensaver to user
+- **[simplayer](https://github.com/lliurex/simplayer)**: Sin descripción.
+- **[sinadura](https://github.com/lliurex/sinadura)**: Installer for Sinadura
+- **[software-unlocker](https://github.com/lliurex/software-unlocker)**: Gui for lock/unlock software management under lliurex
+- **[sonic-pi](https://github.com/lliurex/sonic-pi)**: Sin descripción.
+- **[sonicpi-pulseaudio-compat](https://github.com/lliurex/sonicpi-pulseaudio-compat)**: Wrapper for executing sonicpi if jackd is not in use
+- **[squid-ssl](https://github.com/lliurex/squid-ssl)**: SSL-enabled Squid 
+- **[store](https://github.com/lliurex/store)**: Gui for appsedu web / General purpose
+- **[supercollider](https://github.com/lliurex/supercollider)**: Sin descripción.
+- **[supercollider-sc3-plugins](https://github.com/lliurex/supercollider-sc3-plugins)**: Sin descripción.
+- **[sync-on-server-ready](https://github.com/lliurex/sync-on-server-ready)**: Sin descripción.
+- **[syslinux](https://github.com/lliurex/syslinux)**: Sin descripción.
+- **[syslinux-themes-ubuntu](https://github.com/lliurex/syslinux-themes-ubuntu)**: This package contains the graphical bootloader theme
+- **[system-unlinked-server](https://github.com/lliurex/system-unlinked-server)**: Brings up the internal network interface if needed
+- **[taskscheduler](https://github.com/lliurex/taskscheduler)**: Schedule pre-configured tasks on your LliureX system
+- **[telegram-installer](https://github.com/lliurex/telegram-installer)**: LliureX Telegram installer
+- **[test-translation](https://github.com/lliurex/test-translation)**: Sin descripción.
+- **[thunderbird-locale-ca-va](https://github.com/lliurex/thunderbird-locale-ca-va)**: va langpack for thunderbird
+- **[tuxpaint](https://github.com/lliurex/tuxpaint)**: A paint program for young children
+- **[tuxpaint-config](https://github.com/lliurex/tuxpaint-config)**: Configuration tool for Tux Paint
+- **[ubiquity](https://github.com/lliurex/ubiquity)**: Sin descripción.
+- **[ubiquity-desktop-layout](https://github.com/lliurex/ubiquity-desktop-layout)**: Sin descripción.
+- **[ubiquity-extrapackages](https://github.com/lliurex/ubiquity-extrapackages)**: Sin descripción.
+- **[ubiquity-hooks](https://github.com/lliurex/ubiquity-hooks)**: Sin descripción.
+- **[ubiquity-slideshow-lliurex](https://github.com/lliurex/ubiquity-slideshow-lliurex)**: Sin descripción.
+- **[ubiquity-system-addons](https://github.com/lliurex/ubiquity-system-addons)**: Sin descripción.
+- **[update-hosts](https://github.com/lliurex/update-hosts)**: Sin descripción.
+- **[user-mount-check](https://github.com/lliurex/user-mount-check)**: Package to test network mounts
+- **[vigilia](https://github.com/lliurex/vigilia)**: Sin descripción.
+- **[wxwidgets3.2](https://github.com/lliurex/wxwidgets3.2)**: Sin descripción.
+- **[xdg-user-dirs](https://github.com/lliurex/xdg-user-dirs)**: Sin descripción.
+- **[xf86-input-nextwindow](https://github.com/lliurex/xf86-input-nextwindow)**: Sin descripción.
+- **[xmlrpcnet](https://github.com/lliurex/xmlrpcnet)**: Mono XMLRPC libraries
+- **[xournalpp](https://github.com/lliurex/xournalpp)**: Sin descripción.
+- **[xpanimated-yb](https://github.com/lliurex/xpanimated-yb)**: X cursor with focus on visibility
+- **[xpdf](https://github.com/lliurex/xpdf)**: Backport from impish 
+- **[xpra](https://github.com/lliurex/xpra)**: Tool to detach/reattach running X programas (like Screen for X)
+- **[xpra-www-data](https://github.com/lliurex/xpra-www-data)**: www folder for xpra
+- **[ydotool](https://github.com/lliurex/ydotool)**: Sin descripción.
+- **[youtube-dl](https://github.com/lliurex/youtube-dl)**: youtube-dl is a small command-line program to download videos
+- **[zero-center](https://github.com/lliurex/zero-center)**: Lliurex control center is a gtk frontend that enables user to administrate a lliurex based system. Its extensible through new scripts.
+- **[zero-fp](https://github.com/lliurex/zero-fp)**: Package collection to Fp o r modules education.
+- **[zero-installer-kids](https://github.com/lliurex/zero-installer-kids)**: Sin descripción.
+- **[zero-installer-resourceapps](https://github.com/lliurex/zero-installer-resourceapps)**: Sin descripción.
+- **[zero-jclic-reports](https://github.com/lliurex/zero-jclic-reports)**: Configuration for jclic-reportserver
+- **[zero-lliurex-3d-print](https://github.com/lliurex/zero-lliurex-3d-print)**: Sin descripción.
+- **[zero-lliurex-accessibility](https://github.com/lliurex/zero-lliurex-accessibility)**: Accessibility for LliureX
+- **[zero-lliurex-adobereader](https://github.com/lliurex/zero-lliurex-adobereader)**: LliureX Adobe Reader installer
+- **[zero-lliurex-arasuite](https://github.com/lliurex/zero-lliurex-arasuite)**: Lliurex AraSuite installer
+- **[zero-lliurex-cdc](https://github.com/lliurex/zero-lliurex-cdc)**: Zomando to install cdc packages
+- **[zero-lliurex-clientize](https://github.com/lliurex/zero-lliurex-clientize)**: Zomando to install minimal client meta package
+- **[zero-lliurex-cmaptools](https://github.com/lliurex/zero-lliurex-cmaptools)**: LliureX CmapTools Installer
+- **[zero-lliurex-dni](https://github.com/lliurex/zero-lliurex-dni)**: Install DNI-E in firefox and thunderbird
+- **[zero-lliurex-docker](https://github.com/lliurex/zero-lliurex-docker)**: Sin descripción.
+- **[zero-lliurex-flavours](https://github.com/lliurex/zero-lliurex-flavours)**: Flavours Selection Tool for changing between LliureX flavour
+- **[zero-lliurex-gearth](https://github.com/lliurex/zero-lliurex-gearth)**: Lliurex Google Earth installer
+- **[zero-lliurex-installers](https://github.com/lliurex/zero-lliurex-installers)**: Some application installers for LliureX
+- **[zero-lliurex-itaca](https://github.com/lliurex/zero-lliurex-itaca)**: Wizard to install browser for Itaca
+- **[zero-lliurex-jamulus](https://github.com/lliurex/zero-lliurex-jamulus)**: Zero installer for Jamulus Server
+- **[zero-lliurex-jclic-biblio](https://github.com/lliurex/zero-lliurex-jclic-biblio)**: JCLIC Library Installer
+- **[zero-lliurex-jitsi](https://github.com/lliurex/zero-lliurex-jitsi)**: Sin descripción.
+- **[zero-lliurex-keepass](https://github.com/lliurex/zero-lliurex-keepass)**: Sin descripción.
+- **[zero-lliurex-musica](https://github.com/lliurex/zero-lliurex-musica)**: Zomando for Music education
+- **[zero-lliurex-nextcloud19](https://github.com/lliurex/zero-lliurex-nextcloud19)**: Wizard to update nextcloud15 to nextcloud19
+- **[zero-lliurex-openboard](https://github.com/lliurex/zero-lliurex-openboard)**: Openboard installer for LliureX
+- **[zero-lliurex-pmb](https://github.com/lliurex/zero-lliurex-pmb)**: PMB Installer for LliureX
+- **[zero-lliurex-printers](https://github.com/lliurex/zero-lliurex-printers)**: EPI to install printers drivers.
+- **[zero-lliurex-s4a](https://github.com/lliurex/zero-lliurex-s4a)**: Installer for S4A
+- **[zero-lliurex-sagora](https://github.com/lliurex/zero-lliurex-sagora)**: Agora Sonora jam session server
+- **[zero-lliurex-scratch2](https://github.com/lliurex/zero-lliurex-scratch2)**: Scratch2 offline editor installer
+- **[zero-lliurex-scratch3](https://github.com/lliurex/zero-lliurex-scratch3)**: Zero installer for scratch offline editor
+- **[zero-lliurex-sketchup](https://github.com/lliurex/zero-lliurex-sketchup)**: Google Sketchup Installer
+- **[zero-lliurex-smart](https://github.com/lliurex/zero-lliurex-smart)**: Zero-center helper, It downloads and installs lliurex-smart package
+- **[zero-lliurex-smart-ng](https://github.com/lliurex/zero-lliurex-smart-ng)**: Sin descripción.
+- **[zero-lliurex-starboard](https://github.com/lliurex/zero-lliurex-starboard)**: Sin descripción.
+- **[zero-lliurex-touch](https://github.com/lliurex/zero-lliurex-touch)**: Wizard to install everything necessary to adapt the LliureX user experience to a touch device
+- **[zero-lliurex-transparent-proxy](https://github.com/lliurex/zero-lliurex-transparent-proxy)**: Transparent proxy management
+- **[zero-robolliurex](https://github.com/lliurex/zero-robolliurex)**: Zomando to install robolliurex
+- **[zero-server-wizard](https://github.com/lliurex/zero-server-wizard)**: Sin descripción.
+<!-- PROJECTS_END -->
+
+## Aplicaciones
+
+*Aquí se listarán aplicaciones de escritorio o web interesantes para Lliurex.*
+
+## Herramientas
+
+*Utilidades y herramientas para facilitar el trabajo con Lliurex.*
+
+## Desarrollo
+
+*Librerías y herramientas para desarrolladores.*
+
+## Recursos
+
+*Documentación, guías, artículos y otros recursos útiles.*
+
+## Cómo Regenerar la Lista
+
+Puedes regenerar la lista de proyectos manualmente ejecutando el siguiente comando. Esto es útil si quieres ver los cambios inmediatamente o si quieres usar una ordenación diferente.
+
+Por defecto, los proyectos se ordenan alfabéticamente. También puedes ordenarlos por la fecha de la última actualización:
+
+```bash
+# Ordenar alfabéticamente (por defecto)
+python3 scripts/generate_readme.py --sort-by name
+
+# Ordenar por última actualización
+python3 scripts/generate_readme.py --sort-by update
+```
+
+## Cómo Contribuir
+
+Este repositorio se actualiza automáticamente cada semana. Si creas un nuevo repositorio en GitHub relacionado con Lliurex, simplemente asegúrate de incluir en su nombre, descripción, README o topics alguna mención a "lliurex" para que sea detectado por nuestro proceso automático de búsqueda.
+
+Los flujos de trabajo de GitHub Actions se encargan de actualizar el `projects.yaml` y el `README.md` automáticamente. El README se puede generar con dos órdenes de clasificación distintas, la predeterminada es por nombre y la alternativa por fecha de actualización.
+
+## Licencia
+
+Este repositorio se distribuye bajo la [Licencia MIT](LICENSE).
