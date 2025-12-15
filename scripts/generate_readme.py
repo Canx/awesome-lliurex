@@ -3,27 +3,9 @@ import yaml
 import re
 import os
 import argparse
-import requests
 from datetime import datetime
 
 # --- Functions for fetching and sorting ---
-
-def get_last_update(repo_url):
-    """Fetches the last push date from the GitHub API."""
-    api_url = repo_url.replace("https://github.com/", "https://api.github.com/repos/")
-    try:
-        # Using a token if available for higher rate limits
-        headers = {}
-        if 'GH_TOKEN' in os.environ:
-            headers['Authorization'] = f"token {os.environ['GH_TOKEN']}"
-        
-        response = requests.get(api_url, headers=headers)
-        response.raise_for_status()
-        repo_data = response.json()
-        return repo_data.get('pushed_at', '1970-01-01T00:00:00Z')
-    except requests.exceptions.RequestException as e:
-        print(f"Error fetching {api_url}: {e}")
-        return '1970-01-01T00:00:00Z'
 
 def sort_projects(projects, sort_by):
     """Sorts projects by name or last update."""
@@ -31,11 +13,6 @@ def sort_projects(projects, sort_by):
         return sorted(projects, key=lambda p: p['name'].lower())
     
     if sort_by == 'update':
-        print("Fetching last update dates... (this may take a while)")
-        for project in projects:
-            if 'last_update' not in project: # Avoid re-fetching
-                project['last_update'] = get_last_update(project['url'])
-        
         return sorted(projects, key=lambda p: datetime.strptime(p.get('last_update', '1970-01-01T00:00:00Z'), '%Y-%m-%dT%H:%M:%SZ'), reverse=True)
     
     return projects

@@ -3,6 +3,7 @@
 Una lista curada de software, herramientas y recursos increíbles para el ecosistema Lliurex, con un enfoque en proyectos mantenidos por la comunidad.
 
 **Nota:** Esta lista se actualiza automáticamente cada semana. También puedes ver esta lista ordenada [por fecha de última actualización](README_by_date.md).
+Las fechas de actualización se obtienen al ejecutar el script `scripts/find_new_projects.py`.
 
 ## Contenidos
 

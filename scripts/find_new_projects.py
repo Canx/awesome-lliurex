@@ -507,6 +507,7 @@ def main(github_token: str = None, gemini_api_key: str = None, batch_size: int =
 
         for repo in batch:
             repo_url = repo['html_url']
+            last_update = repo.get('pushed_at')
 
             if repo_url in processed_found_repo_urls: # Skip if already processed from search results
                 continue
@@ -515,6 +516,7 @@ def main(github_token: str = None, gemini_api_key: str = None, batch_size: int =
 
             if repo_url in existing_projects_map:
                 existing_project = existing_projects_map[repo_url]
+                existing_project['last_update'] = last_update
 
                 if existing_project.get('category') == "Sin clasificar":
                     print(f"\nRe-classifying existing project: {repo['full_name']}")
@@ -560,7 +562,8 @@ def main(github_token: str = None, gemini_api_key: str = None, batch_size: int =
                     'url': repo_url,
                     'description': repo.get('description', 'Sin descripción.') or 'Sin descripción.',
                     'category': category,
-                    'official': is_official
+                    'official': is_official,
+                    'last_update': last_update
                 }
                 batch_projects.append(new_project_entry)
                 new_projects_added += 1
@@ -574,9 +577,6 @@ def main(github_token: str = None, gemini_api_key: str = None, batch_size: int =
 
         # Update the projects file with all projects processed so far
         update_projects_batch(yaml_path, all_projects)
-
-        # Also update the README.md file progresively
-        update_readme_progressively()
 
     # After processing all found repositories, we no longer include projects that
     # were in the original file but were not found in the GitHub search
@@ -597,13 +597,11 @@ def main(github_token: str = None, gemini_api_key: str = None, batch_size: int =
         # Update the projects file one final time without the missing projects
         update_projects_batch(yaml_path, all_projects)
 
-        # Also update the README.md file one final time
-        update_readme_progressively()
-
     if new_projects_added > 0 or projects_reclassified > 0:
         print(f"\nAdded {new_projects_added} new projects and re-classified {projects_reclassified} projects. Final update completed...")
     else:
         print("\nNo new projects found or projects to re-classify.")
+
 
 
 if __name__ == "__main__":
