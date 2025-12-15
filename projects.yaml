@@ -196,6 +196,12 @@ projects:
   description: Sin descripción.
   category: Sin clasificar
   official: true
+- name: cdc-mapper-vboxusers
+  url: https://github.com/lliurex/cdc-mapper-vboxusers
+  description: Package to configure the necessary permissions so that users in the
+    admin, teacher, and students groups can use VirtualBox
+  category: Sin clasificar
+  official: true
 - name: classroom-control-plasmoid
   url: https://github.com/lliurex/classroom-control-plasmoid
   description: A widget to control carts with ADI
@@ -2479,29 +2485,6 @@ projects:
   description: Sin descripción.
   category: Sin clasificar
   official: true
-- name: ASIR-ISO
-  url: https://github.com/aberlanas/ASIR-ISO
-  description: Materiales para el módulo de ISO de ASIR
-  category: Sin clasificar
-  official: false
-- name: AyudantePMB
-  url: https://github.com/da-bid/AyudantePMB
-  description: Ayuda a crear acciones por lotes como crear libros o crear grupos en
-    el programa de gestión de biblioteca PMB
-  category: Sin clasificar
-  official: false
-- name: CPD_INSTITUT
-  url: https://github.com/marcbrines2003/CPD_INSTITUT
-  description: Centre de procesament de dades virtual que simula les necessitats de
-    una infraestructura tecnològica, per solventar un problema d'emmagatzematge a
-    l'IES Jaume II El Just
-  category: Sin clasificar
-  official: false
-- name: Instalar-ubuntu
-  url: https://github.com/madroboot/Instalar-ubuntu
-  description: Sin descripción.
-  category: Sin clasificar
-  official: false
 - name: LliuCrack
   url: https://github.com/elpaspafe/LliuCrack
   description: Cracking "Lliurex" the SO used in the schools of "Comunitat Valenciana"
@@ -2522,107 +2505,14 @@ projects:
   description: Sin descripción.
   category: Sin clasificar
   official: false
-- name: Massive-Unix-Identifier
-  url: https://github.com/andycharlespoenas/Massive-Unix-Identifier
-  description: Massive Unix Identifier
-  category: Sin clasificar
-  official: false
 - name: PYSH.SDK
   url: https://github.com/wonnd3r/PYSH.SDK
   description: PYSH.SDK helps you develop LliureX desktop apps easily!
   category: Sin clasificar
   official: false
-- name: SOR
-  url: https://github.com/manviny/SOR
-  description: Sin descripción.
-  category: Sin clasificar
-  official: false
-- name: Scripts_inventario_informatico
-  url: https://github.com/robinjgomez/Scripts_inventario_informatico
-  description: Scripts para Windows y Linux usados em le recogida de datos de inventario
-    informático de los centros educativos de la omunidad Valenciana
-  category: Sin clasificar
-  official: false
-- name: Sistemas-operativos
-  url: https://github.com/Joralofer/Sistemas-operativos
-  description: Repositorio cib las tareas entregadas de Aules la semaba pasada
-  category: Sin clasificar
-  official: false
 - name: UpdateManager
   url: https://github.com/juanma1980/UpdateManager
   description: Adaptation of python module UpdateManager from Ubuntu to Lliurex
-  category: Sin clasificar
-  official: false
-- name: Ventoy
-  url: https://github.com/ventoy/Ventoy
-  description: A new bootable USB solution.
-  category: Sin clasificar
-  official: false
-- name: Ventoy
-  url: https://github.com/nonamezhangsan/Ventoy
-  description: Sin descripción.
-  category: Sin clasificar
-  official: false
-- name: Ventoy
-  url: https://github.com/danielrsa97/Ventoy
-  description: Sin descripción.
-  category: Sin clasificar
-  official: false
-- name: Ventoy
-  url: https://github.com/retr0-13/Ventoy
-  description: Sin descripción.
-  category: Sin clasificar
-  official: false
-- name: Ventoy-bootable-usb
-  url: https://github.com/Marketgame99/Ventoy-bootable-usb
-  description: Sin descripción.
-  category: Sin clasificar
-  official: false
-- name: Ventoy1
-  url: https://github.com/Tirklee/Ventoy1
-  description: Sin descripción.
-  category: Sin clasificar
-  official: false
-- name: VentoyBack
-  url: https://github.com/mxfade/VentoyBack
-  description: Sin descripción.
-  category: Sin clasificar
-  official: false
-- name: VentoyCopi
-  url: https://github.com/Alexis38A/VentoyCopi
-  description: Sin descripción.
-  category: Sin clasificar
-  official: false
-- name: VentoySupportedOS
-  url: https://github.com/imjustbackup/VentoySupportedOS
-  description: List of supported OS's for Ventoy
-  category: Sin clasificar
-  official: false
-- name: aisoy
-  url: https://github.com/datunie/aisoy
-  description: Codi per al robot aisoy
-  category: Sin clasificar
-  official: false
-- name: alfonsoserranoalbert
-  url: https://github.com/alfonsoserranoalbert/alfonsoserranoalbert
-  description: Sin descripción.
-  category: Sin clasificar
-  official: false
-- name: ansible-apache-mysql
-  url: https://github.com/ranguitamartin/ansible-apache-mysql
-  description: This proyect use ansible for installation  webserver and DB( apache
-    with PHP and mysql)
-  category: Sin clasificar
-  official: false
-- name: appimage.github.io
-  url: https://github.com/AppImage/appimage.github.io
-  description: Given an URL to an AppImage, the GitHub action in this project inspects
-    the AppImage and puts it into a community-maintained catalog
-  category: Sin clasificar
-  official: false
-- name: aurex-meta
-  url: https://github.com/luisgg/aurex-meta
-  description: Sin descripción.
   category: Sin clasificar
   official: false
 - name: awesome
@@ -2633,16 +2523,6 @@ projects:
 - name: awesome-lliurex
   url: https://github.com/Canx/awesome-lliurex
   description: Sin descripción.
-  category: Sin clasificar
-  official: false
-- name: awesome-stars
-  url: https://github.com/shredthaGNAR/awesome-stars
-  description: Sin descripción.
-  category: Sin clasificar
-  official: false
-- name: awesome-telegram
-  url: https://github.com/Marzal/awesome-telegram
-  description: mirror of https://gitlab.com/listados/awesome-telegram
   category: Sin clasificar
   official: false
 - name: bellscheduler-dre
@@ -2657,57 +2537,10 @@ projects:
     Lliurex para raspberry pi
   category: Sin clasificar
   official: false
-- name: blender
-  url: https://github.com/manviny/blender
-  description: Sin descripción.
-  category: Sin clasificar
-  official: false
-- name: chrootvpn
-  url: https://github.com/ruyrybeyro/chrootvpn
-  description: Checkpoint R80+ VPN client chroot wrapper
-  category: Sin clasificar
-  official: false
-- name: clickcontrol
-  url: https://github.com/benigaslo/clickcontrol
-  description: Sin descripción.
-  category: Sin clasificar
-  official: false
-- name: clone_ventoy
-  url: https://github.com/geffreycc/clone_ventoy
-  description: Sin descripción.
-  category: Sin clasificar
-  official: false
-- name: distro-api
-  url: https://github.com/devnyxie/distro-api
-  description: Explore over 900 Linux distributions with Distro API. Get detailed
-    data on each distro, perfect for developers and Linux enthusiasts.
-  category: Sin clasificar
-  official: false
-- name: dubstdemon
-  url: https://github.com/albertp0rter/dubstdemon
-  description: Sin descripción.
-  category: Sin clasificar
-  official: false
 - name: edupals-n4d-toolkit
   url: https://github.com/edupals/edupals-n4d-toolkit
   description: A C++ toolkit based on edupals-base-toolkit for dealing with lliurex
     n4d (xml-rpc) connections
-  category: Sin clasificar
-  official: false
-- name: hackbyNEXUS
-  url: https://github.com/NEXUSKITKAT/hackbyNEXUS
-  description: Es un script para quitar la pantalla de bloqueo de Epoptes
-  category: Sin clasificar
-  official: false
-- name: icons
-  url: https://github.com/M-L-P/icons
-  description: Collections of the logos of all active OSes, which can be used for
-    Multi-OSes_Bootloaders, such as rEFInd, CloverBootloader, and so on.
-  category: Sin clasificar
-  official: false
-- name: kisamono
-  url: https://github.com/kisamono/kisamono
-  description: Config files for my GitHub profile.
   category: Sin clasificar
   official: false
 - name: ksetwallpaper
@@ -2715,34 +2548,9 @@ projects:
   description: Change KDE wallpaper at startup (lliurex)
   category: Sin clasificar
   official: false
-- name: kwin-colorcorrection-effect
-  url: https://github.com/juanma1980/kwin-colorcorrection-effect
-  description: Effect for kwin that uses shaders for adressing color blindness issues
-  category: Sin clasificar
-  official: false
-- name: latex
-  url: https://github.com/inclusa/latex
-  description: Recull de templates i procediments
-  category: Sin clasificar
-  official: false
 - name: ldm-lliurex-theme
   url: https://github.com/joamuran/ldm-lliurex-theme
   description: LDM them for lliurex-ltsp
-  category: Sin clasificar
-  official: false
-- name: library
-  url: https://github.com/library7192025/library
-  description: Sin descripción.
-  category: Sin clasificar
-  official: false
-- name: libreappimagehub101.github.io
-  url: https://github.com/libreappimagehub101/libreappimagehub101.github.io
-  description: Sin descripción.
-  category: Sin clasificar
-  official: false
-- name: list-of-my-starred-repos
-  url: https://github.com/shredthaGNAR/list-of-my-starred-repos
-  description: Sin descripción.
   category: Sin clasificar
   official: false
 - name: lliurex-admin-course
@@ -2853,11 +2661,6 @@ projects:
     Resources.
   category: Sin clasificar
   official: false
-- name: llx-resource-markt
-  url: https://github.com/joamuran/llx-resource-markt
-  description: Web Market to educational resources download.
-  category: Sin clasificar
-  official: false
 - name: llx-shutdown-button-on-plank
   url: https://github.com/joamuran/llx-shutdown-button-on-plank
   description: Just a button for invoke lliurex-shutdowner from plank
@@ -2874,60 +2677,14 @@ projects:
     LTSP 2.0), for thin cient creation and management.
   category: Sin clasificar
   official: false
-- name: my-awesome-starred
-  url: https://github.com/shredthaGNAR/my-awesome-starred
-  description: Sin descripción.
-  category: Sin clasificar
-  official: false
-- name: my-awesome-stars
-  url: https://github.com/shredthaGNAR/my-awesome-stars
-  description: my list of github stars fork
-  category: Sin clasificar
-  official: false
-- name: my-gnarly-stars
-  url: https://github.com/shredthaGNAR/my-gnarly-stars
-  description: Sin descripción.
-  category: Sin clasificar
-  official: false
 - name: n4d-ltsp
   url: https://github.com/joamuran/n4d-ltsp
   description: 'n4d plugin suite for LTSP under a #lliurex environment.'
   category: Sin clasificar
   official: false
-- name: n4dGtkLoginComponent
-  url: https://github.com/edupals/n4dGtkLoginComponent
-  description: Sin descripción.
-  category: Sin clasificar
-  official: false
-- name: nautilus-properties-previous-versions
-  url: https://github.com/xabim/nautilus-properties-previous-versions
-  description: Extension to Nautilus with Nautilus-Python to work with .snapshot folders
-    in a network share
-  category: Sin clasificar
-  official: false
 - name: papelera-lliurex-net
   url: https://github.com/TecnicoSai/papelera-lliurex-net
   description: Sin descripción.
-  category: Sin clasificar
-  official: false
-- name: pmb-xarxallibres-bionic
-  url: https://github.com/aberlanas/pmb-xarxallibres-bionic
-  description: A PMB Modified for XarxaLlibres
-  category: Sin clasificar
-  official: false
-- name: pmb-xarxallibres-next
-  url: https://github.com/aberlanas/pmb-xarxallibres-next
-  description: pmb-xarxallibres-next
-  category: Sin clasificar
-  official: false
-- name: proves
-  url: https://github.com/migarcia/proves
-  description: Sin descripción.
-  category: Sin clasificar
-  official: false
-- name: python-sorting
-  url: https://github.com/WidziKasztany/python-sorting
-  description: Python Sorting Program
   category: Sin clasificar
   official: false
 - name: python3-n4d-client
@@ -2940,89 +2697,10 @@ projects:
   description: Plasmoid to show LliureX Remote Installer activity
   category: Sin clasificar
   official: false
-- name: repo-ejercicio1
-  url: https://github.com/jfelis/repo-ejercicio1
-  description: Repositorio de ejemplo en clase de EDD
-  category: Sin clasificar
-  official: false
-- name: rojalex
-  url: https://github.com/rgmf/rojalex
-  description: Scripts para montar Linux Mint en las aulas de informática en el IES
-    La Encantá
-  category: Sin clasificar
-  official: false
-- name: sasogu.github.io
-  url: https://github.com/sasogu/sasogu.github.io
-  description: Espai personal per a compartir
-  category: Sin clasificar
-  official: false
-- name: sesion7-tarea-grupo-grupopedro
-  url: https://github.com/organizacion-sesion-3-nacho-santonja/sesion7-tarea-grupo-grupopedro
-  description: sesion7-tarea-grupo-grupopedro created by GitHub Classroom
-  category: Sin clasificar
-  official: false
-- name: sistemasOperativos
-  url: https://github.com/hugoarcuri/sistemasOperativos
-  description: Sin descripción.
-  category: Sin clasificar
-  official: false
-- name: smartdre
-  url: https://github.com/aosucas499/smartdre
-  description: A script to download a docker image, install dependencies and run the
-    drivers/software  for old digital boards "SmartBoard" in new ubuntu based distros.
-  category: Sin clasificar
-  official: false
-- name: starboardre
-  url: https://github.com/aosucas499/starboardre
-  description: A script to download a docker image, install dependencies and run the
-    drivers/software for old digital boards "Hitachi StarBoard" in new ubuntu based
-    distros.
-  category: Sin clasificar
-  official: false
-- name: system
-  url: https://github.com/theintrokey/system
-  description: Sin descripción.
-  category: Sin clasificar
-  official: false
-- name: taskscheduler
-  url: https://github.com/juanma1980/taskscheduler
-  description: Simple taskmanager that lets the user make some basic task schedule
-  category: Sin clasificar
-  official: false
 - name: usuarios_ldap
   url: https://github.com/iesmarenostrumdev/usuarios_ldap
   description: Script para crear usuarios y actualizar passwords LDAP en el servidor
     de Centro de Lliurex
-  category: Sin clasificar
-  official: false
-- name: ventoy
-  url: https://github.com/sarblohw/ventoy
-  description: Sin descripción.
-  category: Sin clasificar
-  official: false
-- name: ventoy
-  url: https://github.com/kgranum963/ventoy
-  description: Sin descripción.
-  category: Sin clasificar
-  official: false
-- name: ventoy
-  url: https://github.com/miguel7penteado/ventoy
-  description: Gerenciador de Carregamento gráfico Ventoy
-  category: Sin clasificar
-  official: false
-- name: ventoy
-  url: https://github.com/kylemanel/ventoy
-  description: Sin descripción.
-  category: Sin clasificar
-  official: false
-- name: vt
-  url: https://github.com/rdp-studio/vt
-  description: Sin descripción.
-  category: Sin clasificar
-  official: false
-- name: wonnd3r
-  url: https://github.com/wonnd3r/wonnd3r
-  description: Sin descripción.
   category: Sin clasificar
   official: false
 - name: zero-lliurex-keepass

@@ -18,8 +18,10 @@ except ImportError:
 # --- Constants ---
 PROJECTS_YAML_PATH = "projects.yaml"
 GITHUB_API_URL = "https://api.github.com"
-# We can expand this query to be more specific if needed
-GITHUB_SEARCH_QUERY = "lliurex in:name,description,readme,topics"
+# Search only in name and description to avoid false positives from topics
+# Searching in topics can produce many false positives as any repository
+# with related topics might be incorrectly included
+GITHUB_SEARCH_QUERY = "lliurex in:name,description"
 
 
 
@@ -106,21 +108,64 @@ def search_github_repos(query: str, token: str = None) -> List[Dict[str, Any]]:
     return all_items
 
 def get_readme_content(repo_full_name: str, token: str) -> str:
-    """Fetches the README content for a given repository."""
+    """Fetches the README content for a given repository, trying different possible names and branches."""
     headers = {
         "Authorization": f"token {token}",
         "Accept": "application/vnd.github.v3.raw" # Get raw content
     }
-    url = f"{GITHUB_API_URL}/repos/{repo_full_name}/readme"
-    
+
+    # First, try the standard README endpoint which automatically finds the README
+    standard_url = f"{GITHUB_API_URL}/repos/{repo_full_name}/readme"
+
     try:
-        response = requests.get(url, headers=headers)
+        response = requests.get(standard_url, headers=headers)
         response.raise_for_status()
-        # Decode from bytes to string
         return response.text
-    except requests.exceptions.HTTPError as e:
-        print(f"Could not fetch README for {repo_full_name}: {e}")
-        return ""
+    except requests.exceptions.HTTPError:
+        # If standard README endpoint fails, try specific file names with contents endpoint
+        possible_readme_names = [
+            "README.md", "readme.md", "README", "readme",
+            "Readme.md", "ReadMe.md", "README.MD", "readme.MD",
+            "Readme", "ReadMe", "README.txt", "readme.txt"
+        ]
+
+        # Try to get default branch first to use in requests
+        try:
+            repo_info_response = requests.get(f"{GITHUB_API_URL}/repos/{repo_full_name}", headers=headers)
+            repo_info_response.raise_for_status()
+            default_branch = repo_info_response.json().get('default_branch', 'main')
+        except:
+            # If we can't get the default branch, try main and master
+            default_branch = 'main'
+
+        possible_branches = [default_branch, 'master', 'main']
+
+        for branch in possible_branches:
+            for readme_name in possible_readme_names:
+                url = f"{GITHUB_API_URL}/repos/{repo_full_name}/contents/{readme_name}?ref={branch}"
+
+                try:
+                    response = requests.get(url, headers=headers)
+                    response.raise_for_status()
+
+                    # For the contents endpoint, we get JSON with base64 encoded content
+                    content_json = response.json()
+                    if 'content' in content_json:
+                        import base64
+                        content = base64.b64decode(content_json['content']).decode('utf-8')
+                        return content
+                except requests.exceptions.HTTPError as e:
+                    if response.status_code == 404:
+                        continue  # Try the next file
+                    else:
+                        print(f"Could not fetch README file {readme_name} from branch {branch} for {repo_full_name}: {e}")
+                        continue
+                except Exception as e:
+                    print(f"Unexpected error while fetching README file {readme_name} from branch {branch} for {repo_full_name}: {e}")
+                    continue
+
+    print(f"Could not fetch README for {repo_full_name}: tried various file names and branches.")
+    return ""
 
 # Variable global para almacenar modelos disponibles (para evitar múltiples llamadas a la API)
 AVAILABLE_GEMINI_MODELS = None
@@ -533,26 +578,23 @@ def main(github_token: str = None, gemini_api_key: str = None, batch_size: int =
         # Also update the README.md file progresively
         update_readme_progressively()
 
-    # After processing all found repositories, make sure to include any projects that
+    # After processing all found repositories, we no longer include projects that
     # were in the original file but were not found in the GitHub search
     # These are projects that may have been deleted from GitHub or don't match search criteria anymore
+    # Removing these projects from the list to keep the YAML file up to date
     original_urls = set(existing_projects_map.keys())
     processed_urls = processed_found_repo_urls
     unprocessed_original_urls = original_urls - processed_urls
 
     if unprocessed_original_urls:
+        print(f"Found {len(unprocessed_original_urls)} projects that were not found in GitHub search and will be removed:")
         for url in unprocessed_original_urls:
-            project = existing_projects_map[url]
-            # Add to all_projects if not already there
-            if not any(p['url'] == url for p in all_projects):
-                all_projects.append(project)
+            print(f"  - {url}")
 
-        # Initialize the 'official' property for any existing projects that don't have it yet (for backward compatibility)
-        for project in all_projects:
-            if 'official' not in project:
-                project['official'] = project['url'].startswith('https://github.com/lliurex/')
+        # Remove projects that were not found in the search from the all_projects list
+        all_projects = [p for p in all_projects if p['url'] not in unprocessed_original_urls]
 
-        # Update the projects file one final time to include unprocessed original projects
+        # Update the projects file one final time without the missing projects
         update_projects_batch(yaml_path, all_projects)
 
         # Also update the README.md file one final time
