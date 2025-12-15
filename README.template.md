@@ -20,30 +20,49 @@ Una lista curada de software, herramientas y recursos increíbles para el ecosis
 
 #### Sin clasificar
 
+- **[ASIR-ISO](https://github.com/aberlanas/ASIR-ISO)**: Materiales para el módulo de ISO de ASIR
+- **[AyudantePMB](https://github.com/da-bid/AyudantePMB)**: Ayuda a crear acciones por lotes como crear libros o crear grupos en el programa de gestión de biblioteca PMB
+- **[CPD_INSTITUT](https://github.com/marcbrines2003/CPD_INSTITUT)**: Centre de procesament de dades virtual que simula les necessitats de una infraestructura tecnològica, per solventar un problema d'emmagatzematge a l'IES Jaume II El Just
+- **[Instalar-ubuntu](https://github.com/madroboot/Instalar-ubuntu)**: Sin descripción.
+- **[LliuCrack](https://github.com/elpaspafe/LliuCrack)**: Cracking "Lliurex" the SO used in the schools of "Comunitat Valenciana"
+- **[LliurexBadLogin](https://github.com/elpaspafe/LliurexBadLogin)**: This is a prank.
+- **[LliurexNemo](https://github.com/sofiangrh/LliurexNemo)**: Metacity Theme
+- **[LliurexRepoBypass](https://github.com/PK2-Stimpy/LliurexRepoBypass)**: Sin descripción.
+- **[Massive-Unix-Identifier](https://github.com/andycharlespoenas/Massive-Unix-Identifier)**: Massive Unix Identifier
+- **[PYSH.SDK](https://github.com/wonnd3r/PYSH.SDK)**: PYSH.SDK helps you develop LliureX desktop apps easily!
+- **[SOR](https://github.com/manviny/SOR)**: Sin descripción.
+- **[Scripts_inventario_informatico](https://github.com/robinjgomez/Scripts_inventario_informatico)**: Scripts para Windows y Linux usados em le recogida de datos de inventario informático de los centros educativos de la omunidad Valenciana
+- **[Sistemas-operativos](https://github.com/Joralofer/Sistemas-operativos)**: Repositorio cib las tareas entregadas de Aules la semaba pasada
+- **[UpdateManager](https://github.com/juanma1980/UpdateManager)**: Adaptation of python module UpdateManager from Ubuntu to Lliurex
+- **[Ventoy](https://github.com/ventoy/Ventoy)**: A new bootable USB solution.
+- **[Ventoy](https://github.com/nonamezhangsan/Ventoy)**: Sin descripción.
+- **[Ventoy](https://github.com/danielrsa97/Ventoy)**: Sin descripción.
+- **[Ventoy](https://github.com/retr0-13/Ventoy)**: Sin descripción.
+- **[Ventoy-bootable-usb](https://github.com/Marketgame99/Ventoy-bootable-usb)**: Sin descripción.
+- **[Ventoy1](https://github.com/Tirklee/Ventoy1)**: Sin descripción.
+- **[VentoyBack](https://github.com/mxfade/VentoyBack)**: Sin descripción.
+- **[VentoyCopi](https://github.com/Alexis38A/VentoyCopi)**: Sin descripción.
+- **[VentoySupportedOS](https://github.com/imjustbackup/VentoySupportedOS)**: List of supported OS's for Ventoy
 - **[aisoy](https://github.com/datunie/aisoy)**: Codi per al robot aisoy
 - **[alfonsoserranoalbert](https://github.com/alfonsoserranoalbert/alfonsoserranoalbert)**: Sin descripción.
 - **[ansible-apache-mysql](https://github.com/ranguitamartin/ansible-apache-mysql)**: This proyect use ansible for installation  webserver and DB( apache with PHP and mysql)
 - **[appimage.github.io](https://github.com/AppImage/appimage.github.io)**: Given an URL to an AppImage, the GitHub action in this project inspects the AppImage and puts it into a community-maintained catalog
-- **[ASIR-ISO](https://github.com/aberlanas/ASIR-ISO)**: Materiales para el módulo de ISO de ASIR
 - **[aurex-meta](https://github.com/luisgg/aurex-meta)**: Sin descripción.
 - **[awesome](https://github.com/comunitatlliurex/awesome)**: Awesome Comunitat Lliurex
 - **[awesome-lliurex](https://github.com/Canx/awesome-lliurex)**: Sin descripción.
 - **[awesome-stars](https://github.com/shredthaGNAR/awesome-stars)**: Sin descripción.
 - **[awesome-telegram](https://github.com/Marzal/awesome-telegram)**: mirror of https://gitlab.com/listados/awesome-telegram
-- **[AyudantePMB](https://github.com/da-bid/AyudantePMB)**: Ayuda a crear acciones por lotes como crear libros o crear grupos en el programa de gestión de biblioteca PMB
 - **[bellscheduler-dre](https://github.com/aosucas499/bellscheduler-dre)**: Aplicación dockerizada de la aplicación Bell-scheduler del sistema Lliurex.
 - **[bellscheduler-pi](https://github.com/aosucas499/bellscheduler-pi)**: Aplicación dockerizada de la aplicación Bell-scheduler del sistema Lliurex para raspberry pi
 - **[blender](https://github.com/manviny/blender)**: Sin descripción.
 - **[chrootvpn](https://github.com/ruyrybeyro/chrootvpn)**: Checkpoint R80+ VPN client chroot wrapper
 - **[clickcontrol](https://github.com/benigaslo/clickcontrol)**: Sin descripción.
 - **[clone_ventoy](https://github.com/geffreycc/clone_ventoy)**: Sin descripción.
-- **[CPD_INSTITUT](https://github.com/marcbrines2003/CPD_INSTITUT)**: Centre de procesament de dades virtual que simula les necessitats de una infraestructura tecnològica, per solventar un problema d'emmagatzematge a l'IES Jaume II El Just
 - **[distro-api](https://github.com/devnyxie/distro-api)**: Explore over 900 Linux distributions with Distro API. Get detailed data on each distro, perfect for developers and Linux enthusiasts.
 - **[dubstdemon](https://github.com/albertp0rter/dubstdemon)**: Sin descripción.
 - **[edupals-n4d-toolkit](https://github.com/edupals/edupals-n4d-toolkit)**: A C++ toolkit based on edupals-base-toolkit for dealing with lliurex n4d (xml-rpc) connections
 - **[hackbyNEXUS](https://github.com/NEXUSKITKAT/hackbyNEXUS)**: Es un script para quitar la pantalla de bloqueo de Epoptes
 - **[icons](https://github.com/M-L-P/icons)**: Collections of the logos of all active OSes, which can be used for Multi-OSes_Bootloaders, such as rEFInd, CloverBootloader, and so on.
-- **[Instalar-ubuntu](https://github.com/madroboot/Instalar-ubuntu)**: Sin descripción.
 - **[kisamono](https://github.com/kisamono/kisamono)**: Config files for my GitHub profile.
 - **[ksetwallpaper](https://github.com/Canx/ksetwallpaper)**: Change KDE wallpaper at startup (lliurex)
 - **[kwin-colorcorrection-effect](https://github.com/juanma1980/kwin-colorcorrection-effect)**: Effect for kwin that uses shaders for adressing color blindness issues
@@ -52,7 +71,6 @@ Una lista curada de software, herramientas y recursos increíbles para el ecosis
 - **[library](https://github.com/library7192025/library)**: Sin descripción.
 - **[libreappimagehub101.github.io](https://github.com/libreappimagehub101/libreappimagehub101.github.io)**: Sin descripción.
 - **[list-of-my-starred-repos](https://github.com/shredthaGNAR/list-of-my-starred-repos)**: Sin descripción.
-- **[LliuCrack](https://github.com/elpaspafe/LliuCrack)**: Cracking "Lliurex" the SO used in the schools of "Comunitat Valenciana"
 - **[lliurex-admin-course](https://github.com/chverma/lliurex-admin-course)**: Sin descripción.
 - **[lliurex-downloader](https://github.com/fercavi/lliurex-downloader)**: lliurex-downloader
 - **[lliurex-epoptes-exploit](https://github.com/unai-d/lliurex-epoptes-exploit)**: Single Python file that exploits a LliureX's Epoptes vulnerability in order to gain access to any computer.
@@ -70,10 +88,7 @@ Una lista curada de software, herramientas y recursos increíbles para el ecosis
 - **[lliurex-www](https://github.com/inclusa/lliurex-www)**: Adaptació de la pàgina principal del servidor de Lliurex 16 a un centre
 - **[lliurex-xdg-user-dirs](https://github.com/raurodse/lliurex-xdg-user-dirs)**: xdg user dirs update for LliureX systems
 - **[lliurexapp](https://github.com/dmontalva/lliurexapp)**: app para lliurex
-- **[LliurexBadLogin](https://github.com/elpaspafe/LliurexBadLogin)**: This is a prank.
-- **[LliurexNemo](https://github.com/sofiangrh/LliurexNemo)**: Metacity Theme
 - **[lliurexproxmox](https://github.com/arvicenteboix/lliurexproxmox)**: Sin descripción.
-- **[LliurexRepoBypass](https://github.com/PK2-Stimpy/LliurexRepoBypass)**: Sin descripción.
 - **[llx-hacks](https://github.com/joamuran/llx-hacks)**: Non oficial lliurex hacks. Just for testing.
 - **[llx-netinst](https://github.com/joamuran/llx-netinst)**: Lliurex Net Installer
 - **[llx-resource-browser](https://github.com/joamuran/llx-resource-browser)**: A cefpython app to launch some online resources (such as Zac Browser, a web browser for children with autism, and Mestre a Casa), and local LliureX Resources.
@@ -81,7 +96,6 @@ Una lista curada de software, herramientas y recursos increíbles para el ecosis
 - **[llx-shutdown-button-on-plank](https://github.com/joamuran/llx-shutdown-button-on-plank)**: Just a button for invoke lliurex-shutdowner from plank
 - **[lmd-lliurex-data](https://github.com/joamuran/lmd-lliurex-data)**: Some links, files and templates for using LTSP with LliureX.
 - **[lmd-server](https://github.com/joamuran/lmd-server)**: Version 2 of lliurex-ltsp-server, integrated in the LMD Project (LliureX LTSP 2.0), for thin cient creation and management.
-- **[Massive-Unix-Identifier](https://github.com/andycharlespoenas/Massive-Unix-Identifier)**: Massive Unix Identifier
 - **[my-awesome-starred](https://github.com/shredthaGNAR/my-awesome-starred)**: Sin descripción.
 - **[my-awesome-stars](https://github.com/shredthaGNAR/my-awesome-stars)**: my list of github stars fork
 - **[my-gnarly-stars](https://github.com/shredthaGNAR/my-gnarly-stars)**: Sin descripción.
@@ -92,37 +106,23 @@ Una lista curada de software, herramientas y recursos increíbles para el ecosis
 - **[pmb-xarxallibres-bionic](https://github.com/aberlanas/pmb-xarxallibres-bionic)**: A PMB Modified for XarxaLlibres
 - **[pmb-xarxallibres-next](https://github.com/aberlanas/pmb-xarxallibres-next)**: pmb-xarxallibres-next
 - **[proves](https://github.com/migarcia/proves)**: Sin descripción.
-- **[PYSH.SDK](https://github.com/wonnd3r/PYSH.SDK)**: PYSH.SDK helps you develop LliureX desktop apps easily!
 - **[python-sorting](https://github.com/WidziKasztany/python-sorting)**: Python Sorting Program
 - **[python3-n4d-client](https://github.com/edupals/python3-n4d-client)**: Python 3 client library for LliureX's N4D rpc protocol
 - **[remote-installer-plasmoid](https://github.com/jrpelegrina/remote-installer-plasmoid)**: Plasmoid to show LliureX Remote Installer activity
 - **[repo-ejercicio1](https://github.com/jfelis/repo-ejercicio1)**: Repositorio de ejemplo en clase de EDD
 - **[rojalex](https://github.com/rgmf/rojalex)**: Scripts para montar Linux Mint en las aulas de informática en el IES La Encantá
 - **[sasogu.github.io](https://github.com/sasogu/sasogu.github.io)**: Espai personal per a compartir
-- **[Scripts_inventario_informatico](https://github.com/robinjgomez/Scripts_inventario_informatico)**: Scripts para Windows y Linux usados em le recogida de datos de inventario informático de los centros educativos de la omunidad Valenciana
 - **[sesion7-tarea-grupo-grupopedro](https://github.com/organizacion-sesion-3-nacho-santonja/sesion7-tarea-grupo-grupopedro)**: sesion7-tarea-grupo-grupopedro created by GitHub Classroom
-- **[Sistemas-operativos](https://github.com/Joralofer/Sistemas-operativos)**: Repositorio cib las tareas entregadas de Aules la semaba pasada
 - **[sistemasOperativos](https://github.com/hugoarcuri/sistemasOperativos)**: Sin descripción.
 - **[smartdre](https://github.com/aosucas499/smartdre)**: A script to download a docker image, install dependencies and run the drivers/software  for old digital boards "SmartBoard" in new ubuntu based distros.
-- **[SOR](https://github.com/manviny/SOR)**: Sin descripción.
 - **[starboardre](https://github.com/aosucas499/starboardre)**: A script to download a docker image, install dependencies and run the drivers/software for old digital boards "Hitachi StarBoard" in new ubuntu based distros.
 - **[system](https://github.com/theintrokey/system)**: Sin descripción.
 - **[taskscheduler](https://github.com/juanma1980/taskscheduler)**: Simple taskmanager that lets the user make some basic task schedule
-- **[UpdateManager](https://github.com/juanma1980/UpdateManager)**: Adaptation of python module UpdateManager from Ubuntu to Lliurex
 - **[usuarios_ldap](https://github.com/iesmarenostrumdev/usuarios_ldap)**: Script para crear usuarios y actualizar passwords LDAP en el servidor de Centro de Lliurex
-- **[Ventoy](https://github.com/ventoy/Ventoy)**: A new bootable USB solution.
-- **[Ventoy](https://github.com/nonamezhangsan/Ventoy)**: Sin descripción.
-- **[Ventoy](https://github.com/danielrsa97/Ventoy)**: Sin descripción.
-- **[Ventoy](https://github.com/retr0-13/Ventoy)**: Sin descripción.
 - **[ventoy](https://github.com/sarblohw/ventoy)**: Sin descripción.
 - **[ventoy](https://github.com/kgranum963/ventoy)**: Sin descripción.
 - **[ventoy](https://github.com/miguel7penteado/ventoy)**: Gerenciador de Carregamento gráfico Ventoy
 - **[ventoy](https://github.com/kylemanel/ventoy)**: Sin descripción.
-- **[Ventoy-bootable-usb](https://github.com/Marketgame99/Ventoy-bootable-usb)**: Sin descripción.
-- **[Ventoy1](https://github.com/Tirklee/Ventoy1)**: Sin descripción.
-- **[VentoyBack](https://github.com/mxfade/VentoyBack)**: Sin descripción.
-- **[VentoyCopi](https://github.com/Alexis38A/VentoyCopi)**: Sin descripción.
-- **[VentoySupportedOS](https://github.com/imjustbackup/VentoySupportedOS)**: List of supported OS's for Ventoy
 - **[vt](https://github.com/rdp-studio/vt)**: Sin descripción.
 - **[wonnd3r](https://github.com/wonnd3r/wonnd3r)**: Sin descripción.
 - **[zero-lliurex-keepass](https://github.com/mijuanlo/zero-lliurex-keepass)**: Sin descripción.
@@ -131,6 +131,7 @@ Una lista curada de software, herramientas y recursos increíbles para el ecosis
 
 #### Sin clasificar
 
+- **[HIG](https://github.com/lliurex/HIG)**: Human Guide Lines
 - **[accesshelper](https://github.com/lliurex/accesshelper)**: Wizard with accessibility settings
 - **[accesshelper-data](https://github.com/lliurex/accesshelper-data)**: Preconfigured profiles for accesshelper
 - **[activinspire-32bitdependsfor64bit-lliurex](https://github.com/lliurex/activinspire-32bitdependsfor64bit-lliurex)**: Metapackage that provides the depends for promethean boards
@@ -214,7 +215,6 @@ Una lista curada de software, herramientas y recursos increíbles para el ecosis
 - **[germinate](https://github.com/lliurex/germinate)**: Sin descripción.
 - **[gfxboot-theme-ubuntu](https://github.com/lliurex/gfxboot-theme-ubuntu)**: This is an LliureX theme for the gfxboot graphical boot loader extension. It  should be suitable for Ubuntu derivatives as well as Ubuntu itself.
 - **[hdmi-monitor-switch](https://github.com/lliurex/hdmi-monitor-switch)**: Script and rule for udev that poweroffs internal output when an external hdmi is plugged
-- **[HIG](https://github.com/lliurex/HIG)**: Human Guide Lines
 - **[hodor](https://github.com/lliurex/hodor)**: keep home folder safe
 - **[holiday-manager](https://github.com/lliurex/holiday-manager)**: Provides the API to manage holidays and Gtk component
 - **[home-eraser](https://github.com/lliurex/home-eraser)**: Automatic remove home directories for selected groups from server and fat clients

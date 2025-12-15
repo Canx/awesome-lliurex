@@ -2,31 +2,44 @@
 import yaml
 import re
 import os
+import argparse
+import requests
+from datetime import datetime
 
-# Get the absolute path of the script's directory
-script_dir = os.path.dirname(os.path.abspath(__file__))
-# Get the project root directory by going one level up
-project_root = os.path.dirname(script_dir)
+# --- Functions for fetching and sorting ---
 
-# Construct absolute paths for the files
-projects_file = os.path.join(project_root, 'projects.yaml')
-readme_file = os.path.join(project_root, 'README.md')
+def get_last_update(repo_url):
+    """Fetches the last push date from the GitHub API."""
+    api_url = repo_url.replace("https://github.com/", "https://api.github.com/repos/")
+    try:
+        # Using a token if available for higher rate limits
+        headers = {}
+        if 'GH_TOKEN' in os.environ:
+            headers['Authorization'] = f"token {os.environ['GH_TOKEN']}"
+        
+        response = requests.get(api_url, headers=headers)
+        response.raise_for_status()
+        repo_data = response.json()
+        return repo_data.get('pushed_at', '1970-01-01T00:00:00Z')
+    except requests.exceptions.RequestException as e:
+        print(f"Error fetching {api_url}: {e}")
+        return '1970-01-01T00:00:00Z'
 
-# Read projects data
-with open(projects_file, 'r', encoding='utf-8') as f:
-    data = yaml.safe_load(f)
+def sort_projects(projects, sort_by):
+    """Sorts projects by name or last update."""
+    if sort_by == 'name':
+        return sorted(projects, key=lambda p: p['name'].lower())
+    
+    if sort_by == 'update':
+        print("Fetching last update dates... (this may take a while)")
+        for project in projects:
+            if 'last_update' not in project: # Avoid re-fetching
+                project['last_update'] = get_last_update(project['url'])
+        
+        return sorted(projects, key=lambda p: datetime.strptime(p.get('last_update', '1970-01-01T00:00:00Z'), '%Y-%m-%dT%H:%M:%SZ'), reverse=True)
+    
+    return projects
 
-# Separate official and third-party projects
-official_projects = []
-third_party_projects = []
-
-for project in data.get('projects', []):
-    if project.get('official', False):
-        official_projects.append(project)
-    else:
-        third_party_projects.append(project)
-
-# Function to group projects by category
 def group_by_category(projects):
     """Groups projects by category, with 'Sin clasificar' first."""
     categories = {}
@@ -39,57 +52,115 @@ def group_by_category(projects):
     # Sort categories: 'Sin clasificar' first, then alphabetically
     sorted_categories = []
     if 'Sin clasificar' in categories:
-        sorted_categories.append(('Sin clasificar', categories['Sin clasificar']))
+        # Sort projects within 'Sin clasificar' before adding
+        sorted_projects = sorted(categories['Sin clasificar'], key=lambda p: p['name'].lower())
+        sorted_categories.append(('Sin clasificar', sorted_projects))
 
     # Add other categories alphabetically
     for cat in sorted(categories.keys()):
         if cat != 'Sin clasificar':
-            sorted_categories.append((cat, categories[cat]))
+            # Sort projects within each category
+            sorted_projects = sorted(categories[cat], key=lambda p: p['name'].lower())
+            sorted_categories.append((cat, sorted_projects))
 
     return sorted_categories
 
-# Generate markdown content with separate sections
-markdown_content = ""
+# --- Main script execution ---
 
-# First: Community projects
-if third_party_projects:
-    markdown_content += "### Proyectos de la Comunidad\n\n"
-    grouped = group_by_category(third_party_projects)
-    for category, projects in grouped:
-        markdown_content += f"#### {category}\n\n"
-        for project in projects:
-            markdown_content += f"- **[{project['name']}]({project['url']})**: {project['description']}\n"
-        markdown_content += "\n"
+def main():
+    # --- Argument parsing ---
+    parser = argparse.ArgumentParser(description="Generate README with sorted project lists.")
+    parser.add_argument(
+        '--sort-by',
+        choices=['name', 'update'],
+        default='name',
+        help="Sort projects by 'name' (alphabetical) or 'update' (last commit date)."
+    )
+    parser.add_argument(
+        '--output',
+        default='README.md',
+        help="Output file name (e.g., README.md, README_by_date.md)."
+    )
+    args = parser.parse_args()
 
-# Second: Official projects
-if official_projects:
-    markdown_content += "### Proyectos Oficiales de LliureX\n\n"
-    grouped = group_by_category(official_projects)
-    for category, projects in grouped:
-        markdown_content += f"#### {category}\n\n"
-        for project in projects:
-            markdown_content += f"- **[{project['name']}]({project['url']})**: {project['description']}\n"
-        markdown_content += "\n"
+    # --- File paths ---
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    project_root = os.path.dirname(script_dir)
+    projects_file = os.path.join(project_root, 'projects.yaml')
+    template_file = os.path.join(project_root, 'README.template.md')
+    output_file = os.path.join(project_root, args.output)
 
-# Remove the trailing newline
-markdown_content = markdown_content.rstrip()
+    # --- Read and process projects ---
+    with open(projects_file, 'r', encoding='utf-8') as f:
+        data = yaml.safe_load(f)
 
-# Read README.md content
-with open(readme_file, 'r', encoding='utf-8') as f:
-    readme_content = f.read()
+    official_projects = []
+    third_party_projects = []
+    for project in data.get('projects', []):
+        if project.get('official', False):
+            official_projects.append(project)
+        else:
+            third_party_projects.append(project)
 
-# Replace the content between the markers
-# Using re.DOTALL to make '.' match newlines
-pattern = r"(<!-- PROJECTS_START -->)(.*)(<!-- PROJECTS_END -->)"
-new_readme_content = re.sub(
-    pattern,
-    f"\\1\n{markdown_content}\n\\3",
-    readme_content,
-    flags=re.DOTALL
-)
+    # --- Sort project lists ---
+    print(f"Sorting projects by: {args.sort_by}")
+    official_projects = sort_projects(official_projects, args.sort_by)
+    third_party_projects = sort_projects(third_party_projects, args.sort_by)
 
-# Write the updated content back to README.md
-with open(readme_file, 'w', encoding='utf-8') as f:
-    f.write(new_readme_content)
+    # --- Generate Markdown content ---
+    markdown_content = ""
 
-print("README.md has been successfully updated.")
+    # Community projects
+    if third_party_projects:
+        markdown_content += "### Proyectos de la Comunidad\n\n"
+        # When sorting by update, we still group by category, but projects within are sorted by the primary key
+        grouped = group_by_category(third_party_projects)
+        for category, projects_in_cat in grouped:
+            markdown_content += f"#### {category}\n\n"
+            # Here we re-sort if the main sort was 'update'
+            sorted_list = sort_projects(projects_in_cat, args.sort_by)
+            for project in sorted_list:
+                 if args.sort_by == 'update' and 'last_update' in project:
+                    date_str = datetime.strptime(project['last_update'], '%Y-%m-%dT%H:%M:%SZ').strftime('%Y-%m-%d')
+                    markdown_content += f"- **[{project['name']}]({project['url']})**: {project['description']} (Actualizado: {date_str})\n"
+                 else:
+                    markdown_content += f"- **[{project['name']}]({project['url']})**: {project['description']}\n"
+            markdown_content += "\n"
+
+    # Official projects
+    if official_projects:
+        markdown_content += "### Proyectos Oficiales de LliureX\n\n"
+        grouped = group_by_category(official_projects)
+        for category, projects_in_cat in grouped:
+            markdown_content += f"#### {category}\n\n"
+            sorted_list = sort_projects(projects_in_cat, args.sort_by)
+            for project in sorted_list:
+                if args.sort_by == 'update' and 'last_update' in project:
+                    date_str = datetime.strptime(project['last_update'], '%Y-%m-%dT%H:%M:%SZ').strftime('%Y-%m-%d')
+                    markdown_content += f"- **[{project['name']}]({project['url']})**: {project['description']} (Actualizado: {date_str})\n"
+                else:
+                    markdown_content += f"- **[{project['name']}]({project['url']})**: {project['description']}\n"
+            markdown_content += "\n"
+
+
+    markdown_content = markdown_content.rstrip()
+
+    # --- Update README ---
+    with open(template_file, 'r', encoding='utf-8') as f:
+        readme_content = f.read()
+
+    pattern = r"(<!-- PROJECTS_START -->)(.*)(<!-- PROJECTS_END -->)"
+    new_readme_content = re.sub(
+        pattern,
+        f"\\1\n{markdown_content}\n\\3",
+        readme_content,
+        flags=re.DOTALL
+    )
+
+    with open(output_file, 'w', encoding='utf-8') as f:
+        f.write(new_readme_content)
+
+    print(f"{output_file} has been successfully updated.")
+
+if __name__ == "__main__":
+    main()

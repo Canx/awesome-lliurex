@@ -19,19 +19,24 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11' # Use a stable Python version compatible with all dependencies
+          python-version: '3.11'
 
       - name: Install dependencies
         run: pip install -r requirements.txt
         
-      - name: Generate README
-        run: python scripts/generate_readme.py
+      - name: Generate README sorted by name
+        run: python scripts/generate_readme.py --sort-by name --output README.md
+
+      - name: Generate README sorted by update
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/generate_readme.py --sort-by update --output README_by_date.md
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "docs(readme): Automatically update README.md"
-          file_pattern: README.md
+          commit_message: "docs(readme): Automatically update README files"
+          file_pattern: "README.md README_by_date.md"
           commit_user_name: "github-actions[bot]"
           commit_user_email: "github-actions[bot]@users.noreply.github.com"
           commit_author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
