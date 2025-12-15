@@ -8,10 +8,16 @@ from datetime import datetime
 def sort_projects(projects, sort_by):
     """Sorts projects by official status first, then by the specified key."""
     if sort_by == 'name':
+        # Sort by name, official projects first
         return sorted(projects, key=lambda p: (not p.get('official', False), p['name'].lower()))
     
     if sort_by == 'update':
-        return sorted(projects, key=lambda p: (not p.get('official', False), datetime.strptime(p.get('last_update', '1970-01-01T00:00:00Z'), '%Y-%m-%dT%H:%M:%SZ')), reverse=True)
+        # Sort by date (newest first), then by official status (official projects first)
+        # We do this in two steps to handle mixed ascending/descending order.
+        # First, sort by date descending
+        sorted_by_date = sorted(projects, key=lambda p: datetime.strptime(p.get('last_update', '1970-01-01T00:00:00Z') or '1970-01-01T00:00:00Z', '%Y-%m-%dT%H:%M:%SZ'), reverse=True)
+        # Then, sort by official status (official first)
+        return sorted(sorted_by_date, key=lambda p: not p.get('official', False))
     
     return projects
 
