@@ -25,18 +25,18 @@ jobs:
         run: pip install -r requirements.txt
         
       - name: Generate README sorted by name
-        run: python scripts/generate_readme.py --sort-by name --output README.md
+        run: python scripts/generate_readme.py --sort-by name --output README_ALPHABETICAL.md
 
       - name: Generate README sorted by update
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/generate_readme.py --sort-by update --output README_by_date.md
+        run: python scripts/generate_readme.py --sort-by update --output README_BY_DATE.md
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "docs(readme): Automatically update README files"
-          file_pattern: "README.md README_by_date.md"
+          commit_message: "docs(readme): Automatically update project lists"
+          file_pattern: "README.md README_ALPHABETICAL.md README_BY_DATE.md"
           commit_user_name: "github-actions[bot]"
           commit_user_email: "github-actions[bot]@users.noreply.github.com"
           commit_author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
